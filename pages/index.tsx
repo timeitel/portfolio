@@ -5,23 +5,27 @@ import AboutMe from './aboutme';
 import Landing from './landing';
 import Contact from './contact';
 import Footer from './footer';
+import Navbar from './navbar';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Tim Eitel | Software Engineer</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <Head>
+          <title>Tim Eitel | Software Engineer</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
 
-      <main className={styles.main}>
-        <Landing />
-        <AboutMe />
-        <Portfolio />
-        <Contact />
-      </main>
+        <main className={styles.main}>
+          <Landing />
+          <AboutMe />
+          <Portfolio />
+          <Contact />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
