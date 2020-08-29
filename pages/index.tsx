@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Portfolio from './portfolio';
-import AboutMe from './aboutme';
-import Landing from './landing';
-import Contact from './contact';
-import Footer from './footer';
-import Navbar from './navbar';
+import Portfolio from '../components/portfolio';
+import AboutMe from '../components/aboutme';
+import Landing from '../components/landing';
+import Contact from '../components/contact';
+import Footer from '../components/footer';
+import Navbar from '../components/navbar';
 
 export default function Home() {
   return (
