@@ -1,7 +1,7 @@
 export default function Landing() {
   return (
-    <section className='h-screen bg-gray-600'>
-      <h1>Landing</h1>
+    <section className='h-screen w-full'>
+      <h1 className='text-c-white grid'>Landing</h1>
     </section>
   );
 }

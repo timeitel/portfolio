@@ -10,13 +10,13 @@ import Navbar from './navbar';
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Tim Eitel | Software Engineer</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       <Navbar />
       <div className={styles.container}>
-        <Head>
-          <title>Tim Eitel | Software Engineer</title>
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
-
         <main className={styles.main}>
           <Landing />
           <AboutMe />

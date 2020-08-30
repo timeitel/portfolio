@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className='bg-gray-900 h-12 w-full sticky top-0 flex justify-between items-center p-1 text-white'>
+    <header className='h-16 w-full sticky top-0 flex justify-between items-center p-5 text-white'>
       <div className='flex items-center'>
         <svg
           className='fill-current h-8 w-8 mr-2'
@@ -22,7 +22,7 @@ export default function Navbar() {
         <span>Tim Eitel</span>
       </div>
       <nav className='flex'>
-        <a href='/TimEitel-Resume.pdf' download className='btn btn-blue'>
+        <a href='/timeitel-resume.pdf' download className='btn btn-blue'>
           Resume
         </a>
       </nav>
