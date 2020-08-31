@@ -8,8 +8,8 @@ module.exports = {
         'c-grey-1': '#e3e3e3',
         'c-grey-2': '#99a1a6',
         'c-grey-3': '#656a70',
-        'c-dark': '#1b1d1f',
-        'c-black': '#000000'
+        'c-dark-1': '#1b1d1f',
+        'c-dark-2': '#0f1011',
       }
     }
   },
