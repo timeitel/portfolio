@@ -6,6 +6,7 @@ import Landing from '../components/landing';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
+import Experience from '../components/experience';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <main className={styles.main}>
           <Landing />
           <AboutMe />
+          <Experience />
           <Portfolio />
           <Contact />
         </main>

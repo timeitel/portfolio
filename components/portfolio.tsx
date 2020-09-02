@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Portfolio() {
   return (
-    <section>
+    <section id='portfolio'>
       <div className={styles.grid}>
         <a href='https://nextjs.org/docs' className={styles.card}>
           <h3>Documentation &rarr;</h3>

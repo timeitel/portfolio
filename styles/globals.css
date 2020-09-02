@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -27,7 +28,7 @@ body {
 }
 
 .btn {
-  border-radius: 5px;
+  border-radius: 6px;
   @apply font-bold py-2 px-4;
 }
 
@@ -37,6 +38,15 @@ body {
 
 .btn-blue:hover {
   @apply bg-blue-700;
+}
+
+.btn-outline-blue {
+  border: 1px solid #0069d9;
+  color: #0069d9;
+}
+
+.btn-outline-blue:hover {
+  background: rgba(0, 105, 217, 0.2);
 }
 
 section {
