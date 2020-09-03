@@ -10,6 +10,9 @@ export default function Landing() {
       <div className={styles.title}>
         <h1>Tim Eitel</h1>
         <h4>Software Engineer</h4>
+        <a href='#about' className='cta'>
+          Find out more
+        </a>
       </div>
     </section>
   );

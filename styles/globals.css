@@ -28,7 +28,6 @@ body {
 }
 
 .btn {
-  border-radius: 6px;
   @apply font-bold py-2 px-4;
 }
 
@@ -63,4 +62,33 @@ section {
   section {
     padding: 0 7.5rem;
   }
+}
+
+.cta {
+  text-decoration: none;
+  position: relative;
+  webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.cta:before {
+  @apply bg-c-blue;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+.cta:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
