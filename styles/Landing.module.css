@@ -38,4 +38,9 @@
   background: #000;
   padding: 11px 18px;
   font-size: 1rem;
+  transition: background 0.25s ease-in 0.15s;
+}
+
+.title a:hover {
+  @apply bg-c-blue;
 }

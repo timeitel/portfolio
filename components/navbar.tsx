@@ -10,23 +10,23 @@ export default function Navbar() {
       </div>
       <nav className='flex'>
         <ul className={styles.nav__ul}>
-          <li className='mr-6'>
+          <li className={styles.nav__li}>
             <a href='#about'>About</a>
           </li>
-          <li className='mr-6'>
+          <li className={styles.nav__li}>
             <a href='#experience'>Experience</a>
           </li>
-          <li className='mr-6'>
+          <li className={styles.nav__li}>
             <a href='#portfolio'>Portfolio</a>
           </li>
-          <li className='mr-6'>
+          <li className={styles.nav__li}>
             <a href='#contact'>Contact</a>
           </li>
           <li>
             <a
               href='/timeitel-resume.pdf'
               download
-              className='btn btn-outline-blue'
+              className='btn btn-outline-blue cta'
             >
               Resume
             </a>

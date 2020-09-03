@@ -42,6 +42,7 @@ body {
 .btn-outline-blue {
   border: 1px solid #0069d9;
   color: #0069d9;
+  transition: background 0.25s ease-in 0.15s;
 }
 
 .btn-outline-blue:hover {
@@ -67,12 +68,8 @@ section {
 .cta {
   text-decoration: none;
   position: relative;
-  webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  -ms-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
 }
+
 .cta:before {
   @apply bg-c-blue;
   content: '';
@@ -87,6 +84,7 @@ section {
   -webkit-transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
   transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
 }
+
 .cta:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);

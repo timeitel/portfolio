@@ -9,11 +9,40 @@
   display: flex;
 }
 
-.nav__ul li {
+.nav__li {
   cursor: pointer;
+  text-decoration: none;
+  margin-right: 24px;
+  position: relative;
+  webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
   @apply text-c-grey-2;
 }
 
-.nav__ul li:hover {
+.nav__li:hover {
   @apply text-c-white;
+}
+
+.nav__li:before {
+  @apply bg-c-white;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+
+.nav__li:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
