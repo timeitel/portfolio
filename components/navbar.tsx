@@ -24,7 +24,7 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href='/timeitel.pdf'
+              href='timeitel-resume.pdf'
               download
               className='btn btn-outline-blue cta'
             >
