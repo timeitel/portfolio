@@ -1,4 +1,4 @@
-import styles from '../styles/Navbar.module.css';
+import styles from '../assets/styles/Navbar.module.css';
 
 export default function Navbar() {
   const logo = 'Tim { Eitel }';
@@ -24,7 +24,7 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href='/timeitel-resume.pdf'
+              href='/timeitel.pdf'
               download
               className='btn btn-outline-blue cta'
             >
