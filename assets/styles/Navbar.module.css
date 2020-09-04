@@ -12,7 +12,7 @@
 .nav__li {
   cursor: pointer;
   text-decoration: none;
-  margin-right: 24px;
+  margin-right: 32px;
   position: relative;
   webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;
@@ -45,4 +45,22 @@
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.nav__li {
+  display: none;
+}
+
+.menu {
+  display: block;
+}
+
+@media only screen and (min-width: 680px) {
+  .nav__li {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
 }
