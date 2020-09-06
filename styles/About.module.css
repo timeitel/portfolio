@@ -1,0 +1,18 @@
+#about {
+  background: #fff;
+}
+
+#profilepic {
+  border-radius: 20px;
+  background-image: url('../public/static/images/profile-pic.jpg');
+  background-size: cover;
+  background-position: top center;
+  height: 250px;
+  width: 250px;
+  margin: 0 40px;
+}
+
+#aboutlist {
+  columns: 2;
+  width: 80%;
+}

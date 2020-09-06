@@ -67,7 +67,7 @@
   }
 
   .title {
-    @apply text-c-white;
+    color: white;
     font-size: 3.25rem;
     left: 50%;
     position: absolute;
@@ -82,4 +82,8 @@
     left: 50%;
     transform: translate(-50%, 85%);
   }
+}
+
+.cta {
+  @apply bg-c-blue;
 }

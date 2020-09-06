@@ -3,13 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'c-blue': '#0069d9',
-        'c-white': '#ffffff',
-        'c-grey-1': '#e3e3e3',
-        'c-grey-2': '#99a1a6',
-        'c-grey-3': '#656a70',
-        'c-dark-1': '#1b1d1f',
-        'c-dark-2': '#0f1011',
+        'c-blue': 'var(--c-blue)',
+        'c-grey-1': 'var(--c-grey-1)',
+        'c-grey-2': 'var(--c-grey-2)',
+        'c-grey-3': 'var (--c-grey-3)',
+        'c-dark-1': 'var(--c-dark-1)',
+        'c-dark-2': 'var(--c-dark-2)',
       }
     }
   },

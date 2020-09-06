@@ -28,11 +28,11 @@
 }
 
 .nav__li:hover {
-  @apply text-c-white;
+  color: white;
 }
 
 .nav__li:before {
-  @apply bg-c-white;
+  background: white;
   content: '';
   position: absolute;
   width: 100%;
