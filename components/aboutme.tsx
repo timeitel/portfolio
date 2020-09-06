@@ -2,10 +2,10 @@ import styles from '../styles/About.module.css';
 
 export default function AboutMe() {
   return (
-    <section id={styles.about} className='h-screen bg-blue-300 section__header'>
+    <section id={styles.about} className='section__header pb-20'>
       <h1 className='font-black section__title'>About Me</h1>
-      <div className='flex'>
-        <div className='w-4/6'>
+      <div className={styles.aboutlayout}>
+        <div className='w-4/6:md'>
           <p className='mt-4'>
             Hi there, I'm Tim. I'm a software engineer based in Perth, WA.
           </p>

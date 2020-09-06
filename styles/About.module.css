@@ -10,9 +10,29 @@
   height: 250px;
   width: 250px;
   margin: 0 40px;
+  display: none;
 }
 
 #aboutlist {
   columns: 2;
-  width: 80%;
+}
+
+.aboutlayout {
+  display: block;
+}
+
+@media only screen and (min-width: 550px) {
+  #aboutlist {
+    width: 80%;
+  }
+
+  .aboutlayout {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #profilepic {
+    display: block;
+  }
 }
