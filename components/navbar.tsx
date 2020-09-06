@@ -5,7 +5,9 @@ export default function Navbar() {
 
   return (
     <header className={styles.header}>
-      <a href='/'>{logo}</a>
+      <a href='/' className={styles.logo}>
+        {logo}
+      </a>
       <nav className='flex'>
         <ul className={styles.nav__ul}>
           <li className={styles.nav__li}>
@@ -33,13 +35,9 @@ export default function Navbar() {
             <svg
               viewBox='0 0 20 20'
               fill='currentColor'
-              className='menu-alt4 w-6 h-6'
+              className='w-6 h-6 ml-3'
             >
-              <path
-                fill-rule='evenodd'
-                d='M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-                clip-rule='evenodd'
-              ></path>
+              <path d='M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'></path>
             </svg>
           </li>
         </ul>

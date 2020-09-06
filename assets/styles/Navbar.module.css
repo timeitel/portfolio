@@ -5,6 +5,11 @@
   z-index: 1;
 }
 
+.logo {
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
 .nav__ul {
   display: flex;
 }
