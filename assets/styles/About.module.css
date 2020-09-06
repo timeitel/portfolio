@@ -1,0 +1,13 @@
+#about {
+  background: #fff;
+}
+
+#about::before {
+  content: '';
+  background: red;
+}
+
+.list li::before {
+  content: '▹';
+  color: black;
+}

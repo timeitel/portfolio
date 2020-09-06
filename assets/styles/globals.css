@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
+  @apply text-c-grey-3;
 }
 
 a {
@@ -51,6 +52,25 @@ body {
 
 section {
   padding: 0 1.25rem;
+}
+
+.section__header {
+  padding-top: 5rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 1px;
+  margin-left: 20px;
+  @apply bg-c-grey-2;
 }
 
 @media only screen and (min-width: 550px) {
