@@ -1,4 +1,4 @@
-import styles from '../styles/Experience.module.css';
+import styles from '../styles/Experience.module.scss';
 
 export default function Experience() {
   return (
