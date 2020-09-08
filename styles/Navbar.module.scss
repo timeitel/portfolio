@@ -1,5 +1,5 @@
 .header {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem;
   position: absolute;
   @apply h-16 w-full top-0 flex justify-between items-center text-white;
   z-index: 1;
@@ -60,7 +60,13 @@
   display: block;
 }
 
-@media only screen and (min-width: $medium) {
+@media only screen and (min-width: 550px) {
+  .header {
+    padding: 1.25rem 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 680px) {
   .nav__li {
     display: block;
   }

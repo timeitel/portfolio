@@ -55,6 +55,7 @@ body {
 
 section {
   padding: 0 1.25rem;
+  width: 100%;
 }
 
 .section__header {
@@ -62,19 +63,27 @@ section {
 }
 
 .section__title {
-  font-size: 3.4rem;
+  font-size: 3rem;
   line-height: 0.9;
   font-weight: 700;
 }
 
 .section__subtitle {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin: 0.5rem 0 1.25rem;
   font-weight: 500;
 }
 
-@media only screen and (min-width: $small) {
+@media only screen and (min-width: 550px) {
+  .section__title {
+    font-size: 3.4rem;
+  }
+
+  .section__subtitle {
+    font-size: 2.25rem;
+  }
+
   section {
     padding: 0 2.5rem;
   }

@@ -17,6 +17,12 @@ export default function Experience() {
           <span className='text-c-blue mr-4'>02.</span>Where I've Worked
         </h3>
       </hgroup>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+        natus, odit consequuntur aut incidunt laudantium eos fuga omnis
+        repellendus dolorem. Labore nulla in rem quaerat nisi reprehenderit
+        delectus, ratione deleniti.
+      </p>
     </section>
   );
 }

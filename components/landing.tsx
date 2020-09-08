@@ -2,7 +2,7 @@ import styles from '../styles/Landing.module.scss';
 
 export default function Landing() {
   return (
-    <section className='h-screen w-full relative'>
+    <section className='h-screen relative'>
       <div className={styles.intro}>
         <h2 className={styles.intro__hi}>Hi there,</h2>
         <h2>I'm</h2>

@@ -2,7 +2,7 @@ import styles from '../styles/About.module.scss';
 
 export default function AboutMe() {
   return (
-    <section id={styles.about} className='section__header pb-20 h-screen'>
+    <section id={styles.about} className='section__header pb-20'>
       <hgroup>
         <h2
           id={styles.title}
