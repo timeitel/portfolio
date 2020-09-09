@@ -15,10 +15,10 @@ export default function AboutMe() {
         </hgroup>
         <div className={styles.aboutcontainer}>
           <div className={styles.abouttext}>
-            <p>Hi I'm Tim, a software engineer based in Perth, WA.</p>
-            <p>
-              I enjoy building fast and beautiful apps for all devices, either
-              from legacy projects or from scratch.
+            <p>Hi I'm Tim, a software developer based in Perth, WA.</p>
+            <p className='mt-2'>
+              I enjoy building fast and beautiful apps for all devices, whether
+              upgrading a legacy project or starting from scratch.
             </p>
             <p className='mt-2'>
               Since graduating from the{' '}
@@ -38,23 +38,28 @@ export default function AboutMe() {
             </p>
             <h6 className='mt-2 text-c-dark-1 font-semibold'>Web</h6>
             <ul className='list'>
-              <li>JavaScript (ES6+ & TS)</li>
+              <li>TypeScript</li>
               <li>React</li>
               <li>Vue</li>
               <li>HTML & (S)CSS</li>
-              <li>C# & .NET</li>
-              <li>Dart & Flutter</li>
+              <li>.NET</li>
+              <li>Flutter</li>
             </ul>
             <h6 className='mt-2 text-c-dark-1 font-semibold'>Data</h6>
             <ul className='list'>
               <li>SQL & NoSQL</li>
-              <li>RESTful & GraphQL APIs</li>
+              <li>Power BI</li>
+              <li>REST & GraphQL APIs</li>
+              <li>D3.js</li>
             </ul>
-            <h6 className='mt-2 text-c-dark-1 font-semibold'>Cloud</h6>
+            <h6 className='mt-2 text-c-dark-1 font-semibold'>
+              Cloud & Automation
+            </h6>
             <ul className='list'>
               <li>Azure & AWS</li>
               <li>DevOps (CI / CD)</li>
               <li>Cloud functions</li>
+              <li>Unit & integration testing</li>
             </ul>
           </div>
           {/* <div className={styles.profilepic}></div> */}

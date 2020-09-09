@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tim Eitel | Software Engineer</title>
+        <title>Tim Eitel | Software Developer</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
