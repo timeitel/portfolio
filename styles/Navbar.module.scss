@@ -1,7 +1,13 @@
 .header {
   padding: 1.25rem;
   position: absolute;
-  @apply h-16 w-full top-0 flex justify-between items-center text-white;
+  height: 4rem;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
   z-index: 1;
 }
 
@@ -12,6 +18,7 @@
 
 .nav__ul {
   display: flex;
+  align-items: center;
 }
 
 .nav__li {
@@ -19,12 +26,8 @@
   text-decoration: none;
   margin-right: 32px;
   position: relative;
-  webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  -ms-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
-  @apply text-c-grey-2;
+  color: var(--c-grey-2);
 }
 
 .nav__li:hover {

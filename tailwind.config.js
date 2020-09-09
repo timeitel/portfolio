@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'c-blue': 'var(--c-blue)',
+        'c-blue-1': 'var(--c-blue-1)',
+        'c-blue-2': 'var(--c-blue-2)',
         'c-grey-1': 'var(--c-grey-1)',
         'c-grey-2': 'var(--c-grey-2)',
         'c-grey-3': 'var (--c-grey-3)',

@@ -2,7 +2,7 @@ import styles from '../styles/About.module.scss';
 
 export default function AboutMe() {
   return (
-    <section id={styles.about} className='section__header pb-20'>
+    <section id={styles.about}>
       <hgroup>
         <h2
           id={styles.title}
@@ -11,7 +11,7 @@ export default function AboutMe() {
           Tech Stack &
         </h2>
         <h3 className='section__subtitle text-c-dark-1'>
-          <span className='text-c-blue mr-4'>01.</span>About Me
+          <span>01.</span>About Me
         </h3>
       </hgroup>
       <div className={styles.aboutlayout}>
@@ -20,36 +20,43 @@ export default function AboutMe() {
             Hi I'm Tim, a software engineer based in Perth, WA.
           </p>
           <p>
-            I enjoy building fast and beautiful apps for the internet, for all
-            devices from desktop to mobile.
+            I enjoy building fast and beautiful apps for all devices, either
+            from legacy projects or from scratch.
           </p>
           <p className='mt-2'>
-            While at the University of Western Australia and then after
-            graduating, I've been working with a team in the RPS Energy segment.
-            From here, I get to work on both .NET enterprise and modern
-            JavaScript single-page apps. I've been working on data modelling,
-            data visualization and data-rich apps with these technologies
-            projects.
+            Since graduating from the{' '}
+            <span className='text-c-blue-1'>
+              University of Western Australia
+            </span>
+            , I've been working with a team in{' '}
+            <span className='text-c-blue-1'>RPS Energy</span>. From here, I get
+            to work on a range of projects from .NET and Azure enterprise to
+            modern JavaScript apps. These projects include data-rich interaction
+            from modelling to visualization using Power BI and JavaScript.
           </p>
           <p className='mt-2'>
             I'm flexible with what tech I use, but here's what I've been working
             with lately:
           </p>
-          <h6 className='mt-2 text-c-blue font-semibold'>Web</h6>
+          <h6 className='mt-2 text-c-dark-1 font-semibold'>Web</h6>
           <ul id={styles.aboutlist} className='list'>
-            <li>JavaScript (ES6+)</li>
+            <li>JavaScript (ES6+ & TS)</li>
             <li>React</li>
             <li>Vue</li>
-            <li>HTML & CSS</li>
+            <li>HTML & (S)CSS</li>
             <li>C# & .NET</li>
             <li>Dart & Flutter</li>
           </ul>
-          <h6 className='mt-2 text-c-blue font-semibold'>Dev</h6>
+          <h6 className='mt-2 text-c-dark-1 font-semibold'>Data</h6>
           <ul id={styles.aboutlist} className='list'>
-            <li>Azure / Google Cloud</li>
+            <li>SQL & NoSQL</li>
+            <li>RESTful & GraphQL APIs</li>
+          </ul>
+          <h6 className='mt-2 text-c-dark-1 font-semibold'>Cloud</h6>
+          <ul id={styles.aboutlist} className='list'>
+            <li>Azure & AWS</li>
             <li>DevOps (CI / CD)</li>
-            <li>SQL / NoSQL data</li>
-            <li>HTTP / REST APIs</li>
+            <li>Cloud functions</li>
           </ul>
         </div>
         <div className={styles.profilepic}></div>
