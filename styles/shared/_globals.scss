@@ -78,11 +78,15 @@ section {
   }
 }
 
-.list li::before {
-  content: '▹';
-  color: var(--c-blue-1);
-  font-size: 18px;
-  padding-right: 5px;
+.list {
+  columns: 2;
+
+  li::before {
+    content: '▹';
+    color: var(--c-blue-1);
+    font-size: 18px;
+    padding-right: 5px;
+  }
 }
 
 @media only screen and (min-width: $small) {

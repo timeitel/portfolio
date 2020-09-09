@@ -1,37 +1,40 @@
-#about {
-  background: #fff;
-}
-
-.profilepic {
-  border-radius: 2px;
-  background-image: url('../public/static/images/profile-pic.jpg');
-  background-size: cover;
-  background-position: top center;
-  display: none;
-  width: 650px;
-  filter: grayscale(80%);
+.container {
+  background: white;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #aboutlist {
   columns: 2;
 }
 
-.aboutlayout {
-  display: block;
+.aboutcontainer {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media only screen and (min-width: 550px) {
-  #aboutlist {
-    width: 80%;
-  }
+.abouttext {
+  max-width: 580px;
+}
 
-  .aboutlayout {
-    display: flex;
+.imagecontainer {
+  display: none;
+  margin-left: 60px;
+  width: 40%;
+
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: 300px;
   }
 }
 
-@media only screen and (min-width: 760px) {
-  .profilepic {
+@media only screen and (min-width: 820px) {
+  .imagecontainer {
     display: block;
+  }
+
+  .abouttext {
+    width: 60%;
   }
 }
