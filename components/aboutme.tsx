@@ -28,9 +28,8 @@ export default function AboutMe() {
               , I've been working with a team in{' '}
               <span className='text-c-blue-1'>RPS Energy</span>. From here, I
               get to work on a range of projects from .NET and Azure enterprise
-              to modern JavaScript apps. These projects include data-rich
-              interaction from modelling to visualization using Power BI and
-              JavaScript.
+              to modern JavaScript apps. These projects vary from business logic
+              to interactive data modelling and data visualization.
             </p>
             <p className='mt-2'>
               I'm flexible with what tech I use, but here's what I've been
@@ -49,7 +48,8 @@ export default function AboutMe() {
             <ul className='list'>
               <li>SQL & NoSQL</li>
               <li>Power BI</li>
-              <li>REST & GraphQL APIs</li>
+              <li className={styles.desktop}>REST & GraphQL APIs</li>
+              <li className={styles.mobile}>REST & GraphQL</li>
               <li>D3.js</li>
             </ul>
             <h6 className='mt-2 text-c-dark-1 font-semibold'>
@@ -59,10 +59,10 @@ export default function AboutMe() {
               <li>Azure & AWS</li>
               <li>DevOps (CI / CD)</li>
               <li>Cloud functions</li>
-              <li>Unit & integration testing</li>
+              <li className={styles.desktop}>Unit & integration testing</li>
+              <li className={styles.mobile}>Testing</li>
             </ul>
           </div>
-          {/* <div className={styles.profilepic}></div> */}
           <div className={styles.imagecontainer}>
             <img src='./static/images/profile-pic.jpg' />
           </div>
