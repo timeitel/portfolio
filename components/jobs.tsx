@@ -16,22 +16,17 @@ export default function Jobs() {
         <h5 className={styles.time}>February 2019 - Present</h5>
         <ul className={styles.duties}>
           <li className='list-item'>
-            Update legacy .NET and Azure enterprise project through requirements
-            gathering and surveying to identify and implement key technical
-            features desired by stakeholders. This improved customer relations
-            and secured continual and increased software license revenue.
+            Update legacy, enterprise project through requirements gathering and
+            communicating with stakeholders.
           </li>
           <li className='list-item'>
-            Develop internal software for subsea gas modelling and other
-            business logic using JavaScript. Customize the specific querying and
-            interactive UI requirements using a GCP and NoSQL backend.
+            Develop internal software for data modelling, visualization and
+            productivity tools.
           </li>
           <li className='list-item'>
-            Create Power BI reports and dashboards using an on-premises SQL
-            server for project management to view utilisation rates and project
-            status / breakdown. • Apply strong interpersonal skills in a broad
-            range of settings from liaising with stakeholders and customers to
-            client-facing workshops and site audits on offshore oil rigs.
+            Communicate in a broad range of settings from liaising with
+            stakeholders and customers to client-facing workshops and site
+            audits on offshore oil rigs.
           </li>
         </ul>
       </div>
