@@ -18,7 +18,7 @@ export default function AboutMe() {
             <p>Hi I'm Tim, a software developer based in Perth, WA.</p>
             <p className='mt-2'>
               I enjoy building fast and beautiful apps for all devices, whether
-              upgrading a legacy project or starting from scratch.
+              updating a legacy project or starting from scratch.
             </p>
             <p className='mt-2'>
               Since graduating from the{' '}
@@ -28,8 +28,8 @@ export default function AboutMe() {
               , I've been working with a team in{' '}
               <span className='text-c-blue-1'>RPS Energy</span>. From here, I
               get to work on a range of projects from .NET and Azure enterprise
-              to modern JavaScript apps. These projects vary from business logic
-              to interactive data modelling and data visualization.
+              to modern JavaScript apps. These projects apply business logic
+              with interactive data modelling, data visualization and animation.
             </p>
             <p className='mt-2'>
               I'm flexible with what tech I use, but here's what I've been

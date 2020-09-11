@@ -89,6 +89,13 @@ section {
   }
 }
 
+.list-item::before {
+  content: '▹';
+  color: var(--c-blue-1);
+  font-size: 18px;
+  padding-right: 5px;
+}
+
 @media only screen and (min-width: $small) {
   .section__title {
     font-size: 3.4rem;
