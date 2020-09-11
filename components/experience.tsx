@@ -3,7 +3,7 @@ import Jobs from './jobs';
 
 export default function Experience() {
   return (
-    <section id='experience' className='h-screen bg-c-dark-1'>
+    <section id='experience' className='bg-c-dark-1'>
       <div className={styles.container}>
         <hgroup className='mb-16'>
           <h2
