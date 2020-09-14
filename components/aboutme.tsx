@@ -15,10 +15,10 @@ export default function AboutMe() {
         </hgroup>
         <div className={styles.aboutcontainer}>
           <div className={styles.abouttext}>
-            <p>Hi I'm Tim, a software developer based in Perth, WA.</p>
-            <p className='mt-2'>
-              I enjoy building fast and beautiful apps for all devices, whether
-              updating a legacy project or starting from scratch.
+            <p>
+              Hi I'm Tim, a software developer based in Perth, WA. I enjoy
+              building fast and beautiful apps for all devices, whether updating
+              a legacy project or starting from scratch.
             </p>
             <p className='mt-2'>
               Since graduating from the{' '}
