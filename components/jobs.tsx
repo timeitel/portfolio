@@ -1,7 +1,9 @@
 import styles from '../styles/Jobs.module.scss';
 import Job from './job';
+import { useState } from 'react';
 
 export default function Jobs() {
+  const [active, setActive] = useState(0);
   const dutyList: string[] = [
     'Update legacy, enterprise project through requirements gathering and communicating with stakeholders.',
     'Develop internal software for data modelling, visualization and productivity tools.',
@@ -9,9 +11,9 @@ export default function Jobs() {
   ];
   const companies: string[] = ['RPS', 'Trilogy', 'PwC'];
 
-  const items = companies.map((company) => {
+  const items = companies.map((company, i) => {
     return (
-      <li key={company} className={styles.tab}>
+      <li onClick={() => setActive(i)} key={company} className={styles.tab}>
         {company}
       </li>
     );
@@ -25,6 +27,8 @@ export default function Jobs() {
         company='RPS'
         duties={dutyList}
         time='Jan 2020 - Feb 2021'
+        id={1}
+        isActive={true}
       />
     </div>
   );
