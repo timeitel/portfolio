@@ -7,7 +7,6 @@ type JobProps = {
   duties: string[];
   time: string;
   isActive: boolean;
-  id: number;
 };
 
 const Job: FC<JobProps> = ({ title, company, time, duties, isActive }) => {
