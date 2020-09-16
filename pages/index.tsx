@@ -1,3 +1,5 @@
+import fs from 'fs';
+import matter from 'gray-matter';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Portfolio from '../components/portfolio';
@@ -8,7 +10,7 @@ import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Experience from '../components/experience';
 
-export default function Home() {
+export default function Home({ jobs }) {
   return (
     <>
       <Head>
@@ -30,4 +32,26 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(`${process.cwd()}/content/jobs`);
+
+  const jobs = files.map((filename) => {
+    const markdownWithMetadata = fs
+      .readFileSync(`content/jobs/${filename}`)
+      .toString();
+
+    const { data } = matter(markdownWithMetadata);
+
+    return {
+      ...data
+    };
+  });
+
+  return {
+    props: {
+      jobs
+    }
+  };
 }
