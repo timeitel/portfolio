@@ -23,7 +23,7 @@ export default function Home({ jobs }) {
         <main className={styles.main}>
           <Landing />
           <AboutMe />
-          <Experience />
+          <Experience jobs={jobs} />
           <Portfolio />
           <Contact />
         </main>
@@ -42,10 +42,15 @@ export async function getStaticProps() {
       .readFileSync(`content/jobs/${filename}`)
       .toString();
 
-    const { data } = matter(markdownWithMetadata);
+    const { content, data } = matter(markdownWithMetadata);
+    const duties = content
+      .replace(/(\r\n|\n|\r)/gm, '')
+      .split('- ')
+      .filter(Boolean);
 
     return {
-      ...data
+      data,
+      duties
     };
   });
 

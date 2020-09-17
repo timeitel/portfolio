@@ -1,7 +1,7 @@
 import styles from '../styles/Experience.module.scss';
 import Jobs from './jobs';
 
-export default function Experience() {
+export default function Experience({ jobs }) {
   return (
     <section id='experience' className='bg-c-dark-1'>
       <div className={styles.container}>
@@ -16,7 +16,7 @@ export default function Experience() {
             <span>02.</span>Where I've Worked
           </h3>
         </hgroup>
-        <Jobs />
+        <Jobs jobs={jobs} />
       </div>
     </section>
   );
