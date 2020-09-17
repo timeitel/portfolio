@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 export default function Jobs({ jobs }) {
   const [active, setActive] = useState(0);
-  const companies: string[] = ['RPS', 'PwC', 'Empired', 'GradReady'];
+
+  const companies: string[] = jobs.map((j) => j.data.company);
 
   const tabs = companies.map((company, i) => {
     return (
