@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/Landing.module.scss';
 
-export default function Landing() {
+const Landing: FC<{}> = () => {
   return (
     <section className='h-screen relative'>
       <div className={styles.intro}>
@@ -16,4 +17,6 @@ export default function Landing() {
       </div>
     </section>
   );
-}
+};
+
+export default Landing;

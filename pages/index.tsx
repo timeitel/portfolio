@@ -9,8 +9,21 @@ import Contact from '../components/contact';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import Experience from '../components/experience';
+import { FC } from 'react';
+import { GetStaticProps } from 'next';
 
-export default function Home({ jobs }) {
+type JobsProps = {
+  jobs: {
+    data: {
+      company: string;
+      title: string;
+      dates: string;
+    };
+    duties: string[];
+  }[];
+};
+
+const Home: FC<JobsProps> = ({ jobs }) => {
   return (
     <>
       <Head>
@@ -32,9 +45,11 @@ export default function Home({ jobs }) {
       </div>
     </>
   );
-}
+};
 
-export async function getStaticProps() {
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync(`${process.cwd()}/content/jobs`);
 
   const jobs = files.map((filename) => {
@@ -59,4 +74,4 @@ export async function getStaticProps() {
       jobs
     }
   };
-}
+};

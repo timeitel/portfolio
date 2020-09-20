@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/Home.module.scss';
 
-export default function Portfolio() {
+const Portfolio: FC<{}> = () => {
   return (
     <section id='portfolio' className='bg-white h-screen'>
       <hgroup>
@@ -16,4 +17,6 @@ export default function Portfolio() {
       </hgroup>
     </section>
   );
-}
+};
+
+export default Portfolio;

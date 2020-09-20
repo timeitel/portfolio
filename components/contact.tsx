@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/Contact.module.scss';
 
-export default function Contact() {
+const Contact: FC<{}> = () => {
   return (
     <section id='contact' className='h-screen bg-c-dark-1'>
       <hgroup>
@@ -34,4 +35,6 @@ export default function Contact() {
       </a>
     </section>
   );
-}
+};
+
+export default Contact;

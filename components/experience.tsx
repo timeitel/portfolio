@@ -1,7 +1,12 @@
+import { FC } from 'react';
 import styles from '../styles/Experience.module.scss';
 import Jobs from './jobs';
 
-export default function Experience({ jobs }) {
+type JobsProps = {
+  jobs: {};
+};
+
+const Experience: FC<JobsProps> = ({ jobs }) => {
   return (
     <section id='experience' className='bg-c-dark-1'>
       <div className={styles.container}>
@@ -20,4 +25,6 @@ export default function Experience({ jobs }) {
       </div>
     </section>
   );
-}
+};
+
+export default Experience;

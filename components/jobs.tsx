@@ -1,8 +1,19 @@
 import styles from '../styles/Jobs.module.scss';
 import Job from './job';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-export default function Jobs({ jobs }) {
+type JobsProps = {
+  jobs: {
+    data: {
+      company: string;
+      title: string;
+      dates: string;
+    };
+    duties: string[];
+  }[];
+};
+
+const Jobs: FC<JobsProps> = ({ jobs }) => {
   const [active, setActive] = useState(0);
 
   const companies: string[] = jobs.map((j) => j.data.company);
@@ -38,4 +49,6 @@ export default function Jobs({ jobs }) {
       {jobList}
     </div>
   );
-}
+};
+
+export default Jobs;

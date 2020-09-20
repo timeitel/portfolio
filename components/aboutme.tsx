@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/About.module.scss';
 
-export default function AboutMe() {
+const AboutMe: FC<{}> = () => {
   return (
     <section id='about' className='bg-white'>
       <div className={styles.container}>
@@ -70,4 +71,6 @@ export default function AboutMe() {
       </div>
     </section>
   );
-}
+};
+
+export default AboutMe;

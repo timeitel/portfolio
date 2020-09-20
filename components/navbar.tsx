@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/Navbar.module.scss';
 
-export default function Navbar() {
+const Navbar: FC<{}> = () => {
   const logo = 'Tim { Eitel }';
 
   return (
@@ -53,4 +54,6 @@ export default function Navbar() {
       </nav>
     </header>
   );
-}
+};
+
+export default Navbar;

@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../styles/Home.module.scss';
 
-export default function Footer() {
+const Footer: FC<{}> = () => {
   return (
     <footer className={styles.footer}>
       <a
@@ -16,4 +17,6 @@ export default function Footer() {
       </a>
     </footer>
   );
-}
+};
+
+export default Footer;
