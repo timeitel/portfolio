@@ -1,17 +1,7 @@
-import styles from '../styles/Jobs.module.scss';
-import Job from './job';
+import styles from './Jobs.module.scss';
+import Job from '../Job/job';
 import { FC, useState } from 'react';
-
-type JobsProps = {
-  jobs: {
-    data: {
-      company: string;
-      title: string;
-      dates: string;
-    };
-    duties: string[];
-  }[];
-};
+import { JobsProps } from '../../shared/libs/util';
 
 const Jobs: FC<JobsProps> = ({ jobs }) => {
   const [active, setActive] = useState(0);

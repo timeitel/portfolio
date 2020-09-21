@@ -1,27 +1,17 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
-import Portfolio from '../components/portfolio';
-import AboutMe from '../components/aboutme';
-import Landing from '../components/landing';
-import Contact from '../components/contact';
-import Footer from '../components/footer';
-import Navbar from '../components/navbar';
-import Experience from '../components/experience';
+import styles from '../shared/styles/Home.module.scss';
+import Portfolio from '../components/Portfolio/portfolio';
+import AboutMe from '../components/AboutMe/aboutme';
+import Landing from '../components/Landing/landing';
+import Contact from '../components/Contact/contact';
+import Footer from '../components/Footer/footer';
+import Navbar from '../components/Navbar/navbar';
+import Experience from '../components/Experience/experience';
 import { FC } from 'react';
 import { GetStaticProps } from 'next';
-
-type JobsProps = {
-  jobs: {
-    data: {
-      company: string;
-      title: string;
-      dates: string;
-    };
-    duties: string[];
-  }[];
-};
+import { JobsProps } from '../shared/libs/util';
 
 const Home: FC<JobsProps> = ({ jobs }) => {
   return (

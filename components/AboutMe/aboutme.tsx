@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from '../styles/About.module.scss';
+import styles from './About.module.scss';
 
 const AboutMe: FC<{}> = () => {
   return (
@@ -65,7 +65,7 @@ const AboutMe: FC<{}> = () => {
             </ul>
           </div>
           <div className={styles.imagecontainer}>
-            <img src='./static/images/profile-pic.jpg' />
+            <img src='./profile-pic.jpg' />
           </div>
         </div>
       </div>

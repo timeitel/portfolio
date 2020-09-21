@@ -1,10 +1,7 @@
 import { FC } from 'react';
-import styles from '../styles/Experience.module.scss';
-import Jobs from './jobs';
-
-type JobsProps = {
-  jobs: {};
-};
+import styles from './Experience.module.scss';
+import Jobs from '../Jobs/jobs';
+import { JobsProps } from '../../shared/libs/util';
 
 const Experience: FC<JobsProps> = ({ jobs }) => {
   return (

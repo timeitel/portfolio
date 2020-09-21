@@ -1,13 +1,6 @@
-import styles from '../styles/Job.module.scss';
+import styles from './Job.module.scss';
 import { FC } from 'react';
-
-type JobProps = {
-  company: string;
-  title: string;
-  duties: string[];
-  time: string;
-  isActive: boolean;
-};
+import { JobProps } from '../../shared/libs/util';
 
 const Job: FC<JobProps> = ({ title, company, time, duties, isActive }) => {
   const dutyItems = duties.map((duty) => {
