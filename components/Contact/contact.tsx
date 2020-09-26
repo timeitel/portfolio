@@ -3,7 +3,7 @@ import styles from './Contact.module.scss';
 
 const Contact: FC<{}> = () => {
   return (
-    <section id='contact' className='h-screen bg-c-dark-1'>
+    <section id='contact' className='h-screen bg-c-dark-1 text-center'>
       <hgroup>
         <h2 className='font-black section__title text-c-dark-2'>
           Get In Touch
