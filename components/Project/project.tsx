@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from '../../shared/components/Button';
+import { Button } from '../../shared/Button';
 import styles from './Project.module.scss';
 
 const project: FC<{}> = ({}) => {

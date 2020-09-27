@@ -11,7 +11,7 @@ import Navbar from '../components/Navbar/navbar';
 import Experience from '../components/Experience/experience';
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-import { JobsProps } from '../shared/libs/util';
+import { JobsProps } from '../util/types';
 
 const Home: FC<JobsProps> = ({ jobs }) => {
   return (
