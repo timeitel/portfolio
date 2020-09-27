@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import styles from './Landing.module.scss';
 
 const Landing: FC<{}> = () => {

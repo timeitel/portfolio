@@ -1,9 +1,11 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
+import { Button } from '../../shared/components/Button';
 import styles from './Project.module.scss';
 
 const project: FC<{}> = ({}) => {
   return (
     <div className={styles.wrapper}>
+      <Button>Testing</Button>
       <div>
         <h2>Featured Project</h2>
         <h3>Poker Night</h3>

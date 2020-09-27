@@ -1,5 +1,5 @@
 import styles from './Job.module.scss';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { JobProps } from '../../shared/libs/util';
 
 const Job: FC<JobProps> = ({ title, company, time, duties, isActive }) => {

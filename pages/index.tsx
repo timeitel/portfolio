@@ -9,7 +9,7 @@ import Contact from '../components/Contact/contact';
 import Footer from '../components/Footer/footer';
 import Navbar from '../components/Navbar/navbar';
 import Experience from '../components/Experience/experience';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
 import { JobsProps } from '../shared/libs/util';
 

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import styles from './Experience.module.scss';
 import Jobs from '../Jobs/jobs';
 import { JobsProps } from '../../shared/libs/util';
