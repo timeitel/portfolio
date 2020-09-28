@@ -25,7 +25,7 @@ const Navbar: FC<{}> = () => {
             <a href='#contact'>Contact</a>
           </li>
           <li>
-            <S.Link className='flex' href='timeitel-resume.pdf'>
+            <S.Link className='flex' target='_blank' href='timeitel-resume.pdf'>
               Resume
               <svg
                 className='w-6 h-6 ml-2'
