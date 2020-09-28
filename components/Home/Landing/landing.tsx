@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Landing.module.scss';
-import * as S from '../../shared/Button';
+import * as S from '../../shared/styles';
 
 const Landing: FC<{}> = () => {
   return (

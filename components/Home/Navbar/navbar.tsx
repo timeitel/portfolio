@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import * as S from '../../shared/Button';
+import * as S from '../../shared/styles';
 import styles from './Navbar.module.scss';
 
 const Navbar: FC<{}> = () => {

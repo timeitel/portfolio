@@ -1,23 +1,26 @@
 import React, { FC } from 'react';
-import { Button } from '../../shared/Button';
-import styles from './Project.module.scss';
+import { HGroup, Figure, FigureCaption } from './styles';
+import * as S from '../../shared/styles';
 
-const project: FC<{}> = ({}) => {
+type ProjectProps = {
+  image: string;
+};
+
+const project: FC<ProjectProps> = ({ image }) => {
   return (
-    <div className={styles.wrapper}>
-      <div>
-        <h2>Featured Project</h2>
-        <h3>Poker Night</h3>
+    <Figure>
+      <HGroup>
+        <S.Title>Featured Project</S.Title>
+        <S.Subtitle>Poker Night</S.Subtitle>
         <h4></h4>
-      </div>
-      <img src='' alt='' />
-      <div>
+      </HGroup>
+      <img src={image} alt='' />
+      <FigureCaption>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eum
         tempora delectus assumenda dolores officiis iusto quod nostrum, mollitia
         adipisci!
-      </div>
-      <div>These are the tags</div>
-    </div>
+      </FigureCaption>
+    </Figure>
   );
 };
 
