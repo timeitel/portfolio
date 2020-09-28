@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import * as S from '../../shared/styles';
 import styles from './Navbar.module.scss';
 
 const Navbar: FC<{}> = () => {
@@ -24,12 +25,8 @@ const Navbar: FC<{}> = () => {
             <a href='#contact'>Contact</a>
           </li>
           <li>
-            <a
-              href='timeitel-resume.pdf'
-              download
-              className='btn btn-outline-blue cta flex'
-            >
-              <span>Resume</span>
+            <S.Link className='flex' href='timeitel-resume.pdf'>
+              Resume
               <svg
                 className='w-6 h-6 ml-2'
                 fill='none'
@@ -39,7 +36,7 @@ const Navbar: FC<{}> = () => {
               >
                 <path d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'></path>
               </svg>
-            </a>
+            </S.Link>
           </li>
           <li>
             <svg
