@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Landing.module.scss';
+import * as S from '../../shared/styles';
 
 const Landing: FC<{}> = () => {
   return (
@@ -11,9 +12,9 @@ const Landing: FC<{}> = () => {
       <div className={styles.title}>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
-        <a href='#about' className={`${styles.cta} cta`}>
+        <S.Link primary className={styles.cta} href='#about'>
           Find out more
-        </a>
+        </S.Link>
       </div>
     </section>
   );

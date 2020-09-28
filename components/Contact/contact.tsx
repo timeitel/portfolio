@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Contact.module.scss';
+import * as S from '../../shared/styles';
 
 const Contact: FC<{}> = () => {
   return (
@@ -18,9 +19,10 @@ const Contact: FC<{}> = () => {
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
       </div>
-      <a
-        className={`btn-main flex mt-4 ${styles.sayhello}`}
-        href='mailto: timeitel@outlook.com'
+      <S.Link
+        primary
+        className={styles.sayhello}
+        href='mailto:timeitel@outlook.com'
       >
         <svg
           className='w-6 h-6 mr-2'
@@ -32,7 +34,7 @@ const Contact: FC<{}> = () => {
           <path d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'></path>
         </svg>
         Say Hello
-      </a>
+      </S.Link>
     </section>
   );
 };
