@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styles from '../../shared/styles/Home.module.scss';
+import styles from '../../../styles/Home.module.scss';
 import s from './Portfolio.module.scss';
 import Project from '../Project/project';
 

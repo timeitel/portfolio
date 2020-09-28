@@ -1,4 +1,18 @@
-@import './_variables.scss';
+:root {
+  --c-blue-1: #0069d9;
+  --c-blue-2: #2b6cb0;
+  --c-blue-3: rgba(0, 105, 217, 0.1);
+  --c-grey-1: #e3e3e3;
+  --c-grey-2: #99a1a6;
+  --c-grey-3: #656a70;
+  --c-dark-1: #1b1d1f;
+  --c-dark-2: #0f1011;
+}
+
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+$x-large: 1280px;
 
 html,
 body {

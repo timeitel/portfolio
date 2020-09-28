@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Contact.module.scss';
-import * as S from '../../shared/styles';
+import * as S from '../../shared/Button';
 
 const Contact: FC<{}> = () => {
   return (
