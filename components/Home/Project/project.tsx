@@ -8,7 +8,7 @@ type ProjectProps = {
 const project: FC<ProjectProps> = ({ image }) => {
   return (
     <S.Project>
-      <img src='7aprons.png' alt='' />
+      <img src={image} alt='' />
 
       <S.ProjectContent>
         <S.HGroup>

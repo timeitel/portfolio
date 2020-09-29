@@ -17,7 +17,9 @@ const Portfolio: FC<{}> = () => {
           <span>03.</span>Portfolio
         </h3>
       </hgroup>
-      <Project />
+      <Project image='7aprons.png' />
+      <Project image='7aprons.png' />
+      <Project image='7aprons.png' />
     </section>
   );
 };
