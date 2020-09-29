@@ -47,6 +47,7 @@ export const Title = styled.h2`
   font-size: 3rem;
   line-height: 0.9;
   font-weight: 700;
+  color: ${(props) => props.color};
 `;
 
 export const Subtitle = styled.h3`

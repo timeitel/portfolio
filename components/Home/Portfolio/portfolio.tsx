@@ -6,7 +6,7 @@ import Project from '../Project/project';
 const Portfolio: FC<{}> = () => {
   return (
     <section id='portfolio' className={s.wrapper}>
-      <hgroup>
+      <hgroup className='mb-16'>
         <h2
           id={styles.title}
           className='font-black section__title text-c-dark-2'
