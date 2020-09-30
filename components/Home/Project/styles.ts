@@ -55,7 +55,7 @@ export const Project = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, 1fr);
-  margin: 150px 0;
+  margin: 100px 0 150px;
 
   img {
     grid-area: 1 / 1 / -1 / 8;

@@ -41,6 +41,7 @@ export const Button = styled.button`
 
 export const Link = styled.a`
   ${ButtonStyles}
+  display: inline-flex;
 `;
 
 export const Title = styled.h2`
