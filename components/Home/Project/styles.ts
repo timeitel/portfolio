@@ -24,6 +24,7 @@ export const FigureCaption = styled.figcaption`
   color: #99a1a6;
   background: #1b1d1f;
   margin-right: 2rem;
+  border-radius: 5px;
 `;
 
 export const ProjectSubtitle = styled.div`
@@ -54,11 +55,12 @@ export const Project = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, 1fr);
-  margin-bottom: 100px;
+  margin: 150px 0;
 
   img {
     grid-area: 1 / 1 / -1 / 8;
     height: 100%;
+    border-radius: 2px;
     object-fit: cover;
     object-position: center;
   }

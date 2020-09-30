@@ -22,7 +22,7 @@ const project: FC<ProjectProps> = ({ image }) => {
         </S.FigureCaption>
         <S.ProjectTags>
           <li>Vanilla / Static</li>
-          <li>React</li>
+          <li>eCommerce</li>
           <li>Vue</li>
         </S.ProjectTags>
         <S.ProjectLinks>
