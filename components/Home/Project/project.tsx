@@ -9,7 +9,7 @@ const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
 
   return (
     <S.Project>
-      <img src={image} alt='' />
+      <img src={image} alt='Image for Project' />
 
       <S.ProjectContent>
         <S.HGroup>
