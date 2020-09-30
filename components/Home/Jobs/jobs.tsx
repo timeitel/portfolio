@@ -1,7 +1,7 @@
 import styles from './Jobs.module.scss';
 import Job from '../Job/job';
 import React, { FC, useState } from 'react';
-import { JobsProps } from '../../util/types';
+import { JobsProps } from '../../../util/types';
 
 const Jobs: FC<JobsProps> = ({ jobs }) => {
   const [active, setActive] = useState(0);

@@ -16,3 +16,15 @@ export type JobsProps = {
     duties: string[];
   }[];
 };
+
+export type ProjectProps = {
+  title: string;
+  tags: string;
+  image: string;
+  url: string;
+  github: string;
+};
+
+export type ProjectsProps = {
+  projects: ProjectProps[];
+};

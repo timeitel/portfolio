@@ -11,9 +11,14 @@ import Navbar from '../components/Home/Navbar/navbar';
 import Experience from '../components/Home/Experience/experience';
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-import { JobsProps } from '../util/types';
+import { JobsProps, ProjectProps } from '../util/types';
 
-const Home: FC<JobsProps> = ({ jobs }) => {
+type mdProps = {
+  jobs: JobsProps;
+  projects: ProjectProps[];
+};
+
+const Home: FC<mdProps> = ({ jobs, projects }) => {
   return (
     <>
       <Head>
@@ -27,7 +32,7 @@ const Home: FC<JobsProps> = ({ jobs }) => {
           <Landing />
           <AboutMe />
           <Experience jobs={jobs} />
-          <Portfolio />
+          <Portfolio projects={projects} />
           <Contact />
         </main>
 
@@ -40,9 +45,10 @@ const Home: FC<JobsProps> = ({ jobs }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const files = fs.readdirSync(`${process.cwd()}/content/jobs`);
+  const jobFiles = fs.readdirSync(`${process.cwd()}/content/jobs`);
+  const projectFiles = fs.readdirSync(`${process.cwd()}/content/projects`);
 
-  const jobs = files.map((filename) => {
+  const jobs = jobFiles.map((filename) => {
     const markdownWithMetadata = fs
       .readFileSync(`content/jobs/${filename}`)
       .toString();
@@ -59,9 +65,23 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
+  const projects = projectFiles.map((filename) => {
+    const markdownWithMetadata = fs
+      .readFileSync(`content/projects/${filename}`)
+      .toString();
+
+    const { content, data } = matter(markdownWithMetadata);
+
+    return {
+      ...data,
+      content
+    };
+  });
+
   return {
     props: {
-      jobs
+      jobs,
+      projects
     }
   };
 };

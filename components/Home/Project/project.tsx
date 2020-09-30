@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import * as S from './styles';
+import { ProjectProps } from '../../../util/types';
 
-type ProjectProps = {
-  image: string;
-};
+const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
+  // const tagList = tags.map((t) => {
+  //   return <li></li>;
+  // });
 
-const project: FC<ProjectProps> = ({ image }) => {
   return (
     <S.Project>
       <img src={image} alt='' />
@@ -13,7 +14,7 @@ const project: FC<ProjectProps> = ({ image }) => {
       <S.ProjectContent>
         <S.HGroup>
           <S.ProjectSubtitle>Featured Project</S.ProjectSubtitle>
-          <S.ProjectTitle>Poker Night</S.ProjectTitle>
+          <S.ProjectTitle>{title}</S.ProjectTitle>
         </S.HGroup>
         <S.FigureCaption>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eum
@@ -27,7 +28,7 @@ const project: FC<ProjectProps> = ({ image }) => {
         </S.ProjectTags>
         <S.ProjectLinks>
           <li>
-            <a href='https://github.com/timeitel/7aprons' target='_blank'>
+            <a href={github} target='_blank'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -35,16 +36,16 @@ const project: FC<ProjectProps> = ({ image }) => {
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
                   d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
                 ></path>
               </svg>
             </a>
           </li>
           <li>
-            <a href='https://www.7aprons.com/' target='_blank'>
+            <a href={url} target='_blank'>
               <svg
                 fill='none'
                 stroke='currentColor'
@@ -52,9 +53,9 @@ const project: FC<ProjectProps> = ({ image }) => {
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
                   d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
                 ></path>
               </svg>

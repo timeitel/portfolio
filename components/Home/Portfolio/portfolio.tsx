@@ -3,8 +3,22 @@ import styles from '../../../styles/Home.module.scss';
 import s from './Portfolio.module.scss';
 import Project from '../Project/project';
 import { Button } from '../../shared/styles';
+import { ProjectsProps } from '../../../util/types';
 
-const Portfolio: FC<{}> = () => {
+const Portfolio: FC<ProjectsProps> = ({ projects }) => {
+  const projectList = projects.map((p) => {
+    return (
+      <Project
+        github={p.github}
+        image={p.image}
+        tags={p.tags}
+        title={p.title}
+        url={p.url}
+        key={p.title}
+      />
+    );
+  });
+
   return (
     <section id='portfolio' className={s.wrapper}>
       <hgroup>
@@ -18,9 +32,7 @@ const Portfolio: FC<{}> = () => {
           <span>03.</span>Portfolio
         </h3>
       </hgroup>
-      <Project image='7aprons.png' />
-      <Project image='color-search.png' />
-      <Project image='poker-night.png' />
+      {projectList}
       <div className='text-center'>
         <p>Want to see more projects?</p>
         <Button className='mx-auto mt-4'>Browse Github</Button>
