@@ -3,9 +3,10 @@ import * as S from './styles';
 import { ProjectProps } from '../../../util/types';
 
 const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
-  // const tagList = tags.map((t) => {
-  //   return <li></li>;
-  // });
+  const tagsArray = tags.split(', ');
+  const tagItems = tagsArray.map((tag) => {
+    return <li key={tag}>{tag}</li>;
+  });
 
   return (
     <S.Project>
@@ -21,11 +22,7 @@ const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
           tempora delectus assumenda dolores officiis iusto quod nostrum,
           mollitia adipisci!
         </S.FigureCaption>
-        <S.ProjectTags>
-          <li>Vanilla / Static</li>
-          <li>eCommerce</li>
-          <li>Vue</li>
-        </S.ProjectTags>
+        <S.ProjectTags>{tagItems}</S.ProjectTags>
         <S.ProjectLinks>
           <li>
             <a href={github} target='_blank'>

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styles from '../../../styles/Home.module.scss';
 import s from './Portfolio.module.scss';
 import Project from '../Project/project';
-import { Button, Link } from '../../shared/styles';
+import { Link } from '../../shared/styles';
 import { ProjectsProps } from '../../../util/types';
 
 const Portfolio: FC<ProjectsProps> = ({ projects }) => {
