@@ -2,11 +2,19 @@ import React, { FC } from 'react';
 import * as S from './styles';
 import { ProjectProps } from '../../../util/types';
 
-const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
+const project: FC<ProjectProps> = ({
+  github,
+  tags,
+  title,
+  url,
+  image,
+  content
+}) => {
   const tagsArray = tags.split(', ');
   const tagItems = tagsArray.map((tag) => {
     return <li key={tag}>{tag}</li>;
   });
+  const projectDescription = content.replace(/(\r\n|\n|\r)/gm, '');
 
   return (
     <S.Project>
@@ -17,11 +25,7 @@ const project: FC<ProjectProps> = ({ github, tags, title, url, image }) => {
           <S.ProjectSubtitle>Featured Project</S.ProjectSubtitle>
           <S.ProjectTitle>{title}</S.ProjectTitle>
         </S.HGroup>
-        <S.FigureCaption>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eum
-          tempora delectus assumenda dolores officiis iusto quod nostrum,
-          mollitia adipisci!
-        </S.FigureCaption>
+        <S.FigureCaption>{projectDescription}</S.FigureCaption>
         <S.ProjectTags>{tagItems}</S.ProjectTags>
         <S.ProjectLinks>
           <li>

@@ -13,6 +13,7 @@ export type ProjectProps = {
   image: string;
   url: string;
   github: string;
+  content: string;
 };
 
 export type ProjectsProps = {

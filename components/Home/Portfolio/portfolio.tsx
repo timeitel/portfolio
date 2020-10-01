@@ -10,6 +10,7 @@ const Portfolio: FC<ProjectsProps> = ({ projects }) => {
     return (
       <Project
         github={p.github}
+        content={p.content}
         image={p.image}
         tags={p.tags}
         title={p.title}
