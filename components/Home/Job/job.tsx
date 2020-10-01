@@ -1,6 +1,5 @@
 import styles from './Job.module.scss';
 import React, { FC } from 'react';
-import { JobProps } from '../../../util/types';
 
 type BodyProps = {
   title: string;
@@ -24,7 +23,9 @@ const Job: FC<BodyProps> = (props) => {
       <div className={styles.contentwrapper}>
         <h4 className={styles.role}>
           <span>{props.title}</span>
-          <span className='text-c-blue-1'> @ {props.company}</span>
+          <span className='text-c-blue-1'>
+            <span className='whitespace-no-wrap'> @ {props.company}</span>
+          </span>
         </h4>
         <h5 className={styles.time}>{props.time}</h5>
         <ul className={styles.duties}>{dutyItems}</ul>

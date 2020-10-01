@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import styles from './Contact.module.scss';
 import * as S from '../../shared/styles';
 
 const Contact: FC<{}> = () => {
@@ -19,7 +18,11 @@ const Contact: FC<{}> = () => {
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
       </div>
-      <S.Link primary className='mt-24' href='mailto:timeitel@outlook.com'>
+      <S.Link
+        primary
+        className='mt-12 mb-24'
+        href='mailto:timeitel@outlook.com'
+      >
         <svg
           className='w-6 h-6 mr-2'
           fill='none'
