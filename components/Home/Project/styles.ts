@@ -67,6 +67,18 @@ export const Project = styled.div`
 
   ${ProjectContent} {
     grid-area: 1 / 6 / -1 / -1;
+    z-index: 2;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      grid-area: 1 / 1 / -1 / 10;
+      opacity: 0.2;
+    }
+
+    ${ProjectContent} {
+      grid-area: 1 / 2 / -1 / -1;
+    }
   }
 `;
 
@@ -80,6 +92,10 @@ export const ProjectTags = styled.ul`
     padding: 1rem;
     border-radius: 5px;
     font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    color: #a0aec0;
   }
 `;
 
