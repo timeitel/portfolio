@@ -11,10 +11,10 @@ import Navbar from '../components/Home/Navbar/navbar';
 import Experience from '../components/Home/Experience/experience';
 import React, { FC } from 'react';
 import { GetStaticProps } from 'next';
-import { JobsProps, ProjectProps } from '../util/types';
+import { JobProps, ProjectProps } from '../util/types';
 
 type mdProps = {
-  jobs: JobsProps;
+  jobs: JobProps[];
   projects: ProjectProps[];
 };
 

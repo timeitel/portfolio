@@ -1,20 +1,10 @@
 export type JobProps = {
-  company: string;
-  title: string;
+  data: {
+    company: string;
+    dates: string;
+    title: string;
+  };
   duties: string[];
-  time: string;
-  isActive: boolean;
-};
-
-export type JobsProps = {
-  jobs: {
-    data: {
-      company: string;
-      title: string;
-      dates: string;
-    };
-    duties: string[];
-  }[];
 };
 
 export type ProjectProps = {

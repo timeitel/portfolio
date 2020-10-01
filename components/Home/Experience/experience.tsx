@@ -1,9 +1,13 @@
 import React, { FC } from 'react';
 import styles from './Experience.module.scss';
 import Jobs from '../Jobs/jobs';
-import { JobsProps } from '../../../util/types';
+import { JobProps } from '../../../util/types';
 
-const Experience: FC<JobsProps> = ({ jobs }) => {
+type ExperienceProps = {
+  jobs: JobProps[];
+};
+
+const Experience: FC<ExperienceProps> = ({ jobs }) => {
   return (
     <section id='experience' className='bg-c-dark-1'>
       <div className={styles.container}>
