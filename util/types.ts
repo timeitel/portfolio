@@ -1,4 +1,4 @@
-export type JobProps = {
+export type JobProp = {
   data: {
     company: string;
     dates: string;
@@ -7,7 +7,7 @@ export type JobProps = {
   duties: string[];
 };
 
-export type ProjectProps = {
+export type ProjectProp = {
   title: string;
   tags: string;
   image: string;
@@ -17,5 +17,5 @@ export type ProjectProps = {
 };
 
 export type ProjectsProps = {
-  projects: ProjectProps[];
+  projects: ProjectProp[];
 };
