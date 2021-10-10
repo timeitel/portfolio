@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nexport default function Experience() {\n  return __jsx(\"section\", {\n    id: \"experience\",\n    className: \"h-screen bg-blue-300\"\n  }, __jsx(\"h1\", {\n    className: \"font-black\"\n  }, \"Experience\"));\n}","map":null,"metadata":{},"sourceType":"module"}
