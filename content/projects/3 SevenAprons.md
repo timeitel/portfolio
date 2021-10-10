@@ -6,4 +6,4 @@ url: https://www.sevenaprons.com/
 github: https://github.com/timeitel/seven-aprons
 ---
 
-Website and online ordering of a local WA restaurant serving Malay cuisine.
+Website for a rotating menu and online ordering of Malay cuisine for a local WA restaurant.

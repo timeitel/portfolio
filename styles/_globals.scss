@@ -5,7 +5,7 @@
   --c-grey-1: #e3e3e3;
   --c-grey-2: #99a1a6;
   --c-grey-3: #656a70;
-  --c-dark-1: #1b1d1f;
+  --c-dark-1: #212121;
   --c-dark-2: #0f1011;
 }
 
@@ -73,7 +73,7 @@ section {
 
   &:before {
     background: var(--c-blue-1);
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 1px;
@@ -95,7 +95,7 @@ section {
   columns: 2;
 
   li::before {
-    content: '▹';
+    content: "▹";
     color: var(--c-blue-1);
     font-size: 18px;
     padding-right: 5px;
@@ -103,7 +103,7 @@ section {
 }
 
 .list-item::before {
-  content: '▹';
+  content: "▹";
   color: var(--c-blue-1);
   font-size: 18px;
   padding-right: 5px;

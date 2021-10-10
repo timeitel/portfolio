@@ -25,7 +25,8 @@ const Portfolio: FC<ProjectsProps> = ({ projects }) => {
       <hgroup>
         <h2
           id={styles.title}
-          className="font-black section__title text-c-dark-1"
+          className="font-black section__title"
+          style={{ color: "#424242" }}
         >
           Some Things I've Built
         </h2>
