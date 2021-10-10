@@ -6,4 +6,4 @@ url:
 github:
 ---
 
-This is the test description for the poker snap app.
+Leaderboard mobile app for tracking Poker tournaments.
