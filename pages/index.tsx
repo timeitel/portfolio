@@ -46,7 +46,9 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const jobFiles = fs.readdirSync(`${process.cwd()}/content/jobs`).reverse();
-  const projectFiles = fs.readdirSync(`${process.cwd()}/content/projects`);
+  const projectFiles = fs
+    .readdirSync(`${process.cwd()}/content/projects`)
+    .reverse();
 
   const jobs = jobFiles.map((filename) => {
     const markdownWithMetadata = fs
