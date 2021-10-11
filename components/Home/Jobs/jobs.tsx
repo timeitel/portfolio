@@ -1,13 +1,13 @@
 import styles from "./Jobs.module.scss";
-import Job from "../Job/job";
 import React, { FC, useState } from "react";
+import { Job } from "../Job/job";
 import { JobProp } from "../../../util/types";
 
 interface Props {
   jobs: JobProp[];
 }
 
-const Jobs: FC<Props> = ({ jobs }) => {
+export const Jobs: FC<Props> = ({ jobs }) => {
   const [active, setActive] = useState(0);
   const companies = jobs.map((j) => j.data.company);
 
@@ -31,7 +31,7 @@ const Jobs: FC<Props> = ({ jobs }) => {
         duties={duties}
         time={job.dates}
         key={i}
-        isActive={i === active}
+        active={i === active}
       />
     );
   });
@@ -43,5 +43,3 @@ const Jobs: FC<Props> = ({ jobs }) => {
     </div>
   );
 };
-
-export default Jobs;

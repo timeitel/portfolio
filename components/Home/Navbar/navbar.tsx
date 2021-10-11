@@ -3,12 +3,10 @@ import * as S from "../../shared/styles";
 import styles from "./Navbar.module.scss";
 
 const Navbar: FC<{}> = () => {
-  const logo = "Tim { Eitel }";
-
   return (
     <header className={styles.header}>
       <a href="/" className={styles.logo}>
-        {logo}
+        Tim Eitel
       </a>
       <nav className="flex">
         <ul className={styles.nav__ul}>
@@ -25,11 +23,7 @@ const Navbar: FC<{}> = () => {
             <a href="#contact">Contact</a>
           </li>
           <li>
-            <S.Link
-              className="flex"
-              target="_blank"
-              href="Tim-Eitel-Resume.pdf"
-            >
+            <S.Link className="flex" target="_blank" href="resume.pdf">
               Resume
               <svg
                 className="w-6 h-6 ml-2"

@@ -8,10 +8,10 @@ import Landing from "../components/Home/Landing/landing";
 import Contact from "../components/Home/Contact/contact";
 import Footer from "../components/Home/Footer/footer";
 import Navbar from "../components/Home/Navbar/navbar";
-import Experience from "../components/Home/Experience/experience";
 import React, { FC } from "react";
 import { GetStaticProps } from "next";
 import { JobProp, ProjectProp } from "../util/types";
+import { Experience } from "../components/Home/Experience/experience";
 
 interface Props {
   jobs: JobProp[];

@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import styles from "./Experience.module.scss";
-import Jobs from "../Jobs/jobs";
 import { JobProp } from "../../../util/types";
+import { Jobs } from "../Jobs/jobs";
 
 interface Props {
   jobs: JobProp[];
 }
 
-const Experience: FC<Props> = ({ jobs }) => {
+export const Experience: FC<Props> = ({ jobs }) => {
   return (
     <section id="experience" className="bg-c-dark-1">
       <div className={styles.container}>
@@ -27,5 +27,3 @@ const Experience: FC<Props> = ({ jobs }) => {
     </section>
   );
 };
-
-export default Experience;
