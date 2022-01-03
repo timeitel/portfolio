@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import * as S from "../styles/styles";
 
-export const Contact: FC<{}> = () => {
+interface Props {}
+
+export const Contact: FC<Props> = () => {
   return (
     <section id="contact" className="bg-c-dark-1 text-center">
       <hgroup>

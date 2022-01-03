@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import styles from "./About.module.scss";
 
-export const About: FC<{}> = () => {
+interface Props {}
+
+export const About: FC<Props> = () => {
   return (
     <section id="about" className="bg-white">
       <div className={styles.container}>

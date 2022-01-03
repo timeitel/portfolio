@@ -1,11 +1,15 @@
 import React, { FC } from "react";
 import styles from "../../styles/Home.module.scss";
-import s from "./Portfolio.module.scss";
-import { Project } from "../Project/Project";
-import { ProjectsProps } from "../../util/types";
 import { Link } from "../../styles/styles";
+import { ProjectProp } from "../../util/types";
+import { Project } from "../Project/Project";
+import s from "./Portfolio.module.scss";
 
-export const Portfolio: FC<ProjectsProps> = ({ projects }) => {
+interface Props {
+  projects: ProjectProp[];
+}
+
+export const Portfolio: FC<Props> = ({ projects }) => {
   const projectList = projects.map((p) => {
     return (
       <Project
