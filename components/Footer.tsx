@@ -3,7 +3,7 @@ import styled from "styled-components";
 import styles from "../styles/Home.module.scss";
 import * as S from "../styles/styles";
 
-const Footer: FC<{}> = () => {
+export const Footer: FC<{}> = () => {
   return (
     <footer className={styles.footer}>
       <FooterLinks>
@@ -50,8 +50,6 @@ const Footer: FC<{}> = () => {
     </footer>
   );
 };
-
-export default Footer;
 
 const FooterLinks = styled.ul`
   display: flex;

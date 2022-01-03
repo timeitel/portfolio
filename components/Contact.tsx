@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import * as S from "../styles/styles";
 
-const Contact: FC<{}> = () => {
+export const Contact: FC<{}> = () => {
   return (
     <section id="contact" className="bg-c-dark-1 text-center">
       <hgroup>
@@ -37,5 +37,3 @@ const Contact: FC<{}> = () => {
     </section>
   );
 };
-
-export default Contact;

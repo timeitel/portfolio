@@ -1,6 +1,6 @@
 import styles from "./Jobs.module.scss";
 import React, { FC, useState } from "react";
-import { Job } from "./job";
+import { Job } from "./Job";
 import { JobProp } from "../../util/types";
 
 interface Props {

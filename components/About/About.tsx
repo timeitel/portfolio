@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styles from "./About.module.scss";
 
-const AboutMe: FC<{}> = () => {
+export const About: FC<{}> = () => {
   return (
     <section id="about" className="bg-white">
       <div className={styles.container}>
@@ -62,5 +62,3 @@ const AboutMe: FC<{}> = () => {
     </section>
   );
 };
-
-export default AboutMe;

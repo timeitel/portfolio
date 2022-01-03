@@ -2,16 +2,18 @@ import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import { Portfolio } from "../components/Portfolio/Portfolio";
-import AboutMe from "../components/AboutMe/aboutme";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import { Navbar } from "../components/Navbar/Navbar";
 import React, { FC } from "react";
 import { GetStaticProps } from "next";
 import { JobProp, ProjectProp } from "../util/types";
-import { Experience } from "../components/Experience";
-import { Landing } from "../components/Landing/Landing";
+import {
+  About,
+  Contact,
+  Experience,
+  Footer,
+  Landing,
+  Navbar,
+  Portfolio,
+} from "../components";
 
 interface Props {
   jobs: JobProp[];
@@ -30,7 +32,7 @@ const Home: FC<Props> = ({ jobs, projects }) => {
       <div className={styles.container}>
         <main className={styles.main}>
           <Landing />
-          <AboutMe />
+          <About />
           <Experience jobs={jobs} />
           <Portfolio projects={projects} />
           <Contact />
