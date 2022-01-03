@@ -10,19 +10,17 @@ interface Props {
 }
 
 export const Portfolio: FC<Props> = ({ projects }) => {
-  const projectList = projects.map((p) => {
-    return (
-      <Project
-        github={p.github}
-        content={p.content}
-        image={p.image}
-        tags={p.tags}
-        title={p.title}
-        url={p.url}
-        key={p.title}
-      />
-    );
-  });
+  const projectList = projects.map((p) => (
+    <Project
+      github={p.github}
+      content={p.content}
+      image={p.image}
+      tags={p.tags}
+      title={p.title}
+      url={p.url}
+      key={p.title}
+    />
+  ));
 
   return (
     <section id="portfolio" className={s.wrapper}>

@@ -1,9 +1,7 @@
 export interface JobProp {
-  data: {
-    company: string;
-    dates: string;
-    title: string;
-  };
+  company: string;
+  dates: string;
+  title: string;
   duties: string[];
 }
 

@@ -52,20 +52,25 @@ export const getStaticProps: GetStaticProps = async () => {
     .readdirSync(`${process.cwd()}/content/projects`)
     .reverse();
 
-  const jobs = jobFiles.map((filename) => {
+  const jobs: JobProp[] = jobFiles.map((filename) => {
     const markdownWithMetadata = fs
       .readFileSync(`content/jobs/${filename}`)
       .toString();
 
-    const { content, data } = matter(markdownWithMetadata);
+    const {
+      content,
+      data: { company, dates, title },
+    } = matter(markdownWithMetadata);
     const duties = content
       .replace(/(\r\n|\n|\r)/gm, "")
       .split("- ")
       .filter(Boolean);
 
     return {
-      data,
       duties,
+      company,
+      dates,
+      title,
     };
   });
 

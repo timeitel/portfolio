@@ -9,7 +9,7 @@ interface Props {
 
 export const Jobs: FC<Props> = ({ jobs }) => {
   const [active, setActive] = useState(0);
-  const companies = jobs.map((j) => j.data.company);
+  const companies = jobs.map((j) => j.company);
 
   const tabs = companies.map((company, i) => {
     return (
@@ -23,13 +23,13 @@ export const Jobs: FC<Props> = ({ jobs }) => {
     );
   });
 
-  const jobContent = jobs.map(({ data: job, duties }, i) => {
+  const jobContent = jobs.map(({ duties, company, dates, title }, i) => {
     return (
       <Job
-        title={job.title}
-        company={job.company}
+        title={title}
+        company={company}
         duties={duties}
-        time={job.dates}
+        time={dates}
         key={i}
         active={i === active}
       />
