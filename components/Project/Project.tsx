@@ -1,8 +1,8 @@
 import React, { FC } from "react";
+import { ProjectProp } from "../../util/types";
 import * as S from "./styles";
-import { ProjectProp } from "../../../util/types";
 
-const project: FC<ProjectProp> = ({
+export const Project: FC<ProjectProp> = ({
   github,
   tags,
   title,
@@ -67,5 +67,3 @@ const project: FC<ProjectProp> = ({
     </S.Project>
   );
 };
-
-export default project;

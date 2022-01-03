@@ -1,8 +1,10 @@
 import React, { FC } from "react";
-import * as S from "../../shared/styles";
+import * as S from "../../styles/styles";
 import styles from "./Navbar.module.scss";
 
-const Navbar: FC<{}> = () => {
+interface Props {}
+
+export const Navbar: FC<Props> = () => {
   return (
     <header className={styles.header}>
       <a href="/" className={styles.logo}>
@@ -41,5 +43,3 @@ const Navbar: FC<{}> = () => {
     </header>
   );
 };
-
-export default Navbar;

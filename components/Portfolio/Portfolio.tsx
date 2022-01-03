@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import styles from "../../../styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import s from "./Portfolio.module.scss";
-import Project from "../Project/project";
-import { Link } from "../../shared/styles";
-import { ProjectsProps } from "../../../util/types";
+import { Project } from "../Project/Project";
+import { ProjectsProps } from "../../util/types";
+import { Link } from "../../styles/styles";
 
-const Portfolio: FC<ProjectsProps> = ({ projects }) => {
+export const Portfolio: FC<ProjectsProps> = ({ projects }) => {
   const projectList = projects.map((p) => {
     return (
       <Project
@@ -62,5 +62,3 @@ const Portfolio: FC<ProjectsProps> = ({ projects }) => {
     </section>
   );
 };
-
-export default Portfolio;

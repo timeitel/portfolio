@@ -1,7 +1,7 @@
 import styles from "./Jobs.module.scss";
 import React, { FC, useState } from "react";
-import { Job } from "../Job/job";
-import { JobProp } from "../../../util/types";
+import { Job } from "./job";
+import { JobProp } from "../../util/types";
 
 interface Props {
   jobs: JobProp[];

@@ -2,16 +2,16 @@ import fs from "fs";
 import matter from "gray-matter";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Portfolio from "../components/Home/Portfolio/portfolio";
-import AboutMe from "../components/Home/AboutMe/aboutme";
-import Landing from "../components/Home/Landing/landing";
-import Contact from "../components/Home/Contact/contact";
-import Footer from "../components/Home/Footer/footer";
-import Navbar from "../components/Home/Navbar/navbar";
+import { Portfolio } from "../components/Portfolio/Portfolio";
+import AboutMe from "../components/AboutMe/aboutme";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import { Navbar } from "../components/Navbar/Navbar";
 import React, { FC } from "react";
 import { GetStaticProps } from "next";
 import { JobProp, ProjectProp } from "../util/types";
-import { Experience } from "../components/Home/Experience/experience";
+import { Experience } from "../components/Experience";
+import { Landing } from "../components/Landing/Landing";
 
 interface Props {
   jobs: JobProp[];
