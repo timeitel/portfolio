@@ -8,10 +8,13 @@ export const About: FC<Props> = () => {
     <section id="about" style={{ background: "#fff" }}>
       <StyledContainer>
         <hgroup>
-          <h2 className="font-black section__title text-c-grey-1">
+          <h2
+            className="font-black section__title"
+            style={{ color: "#e3e3e3" }}
+          >
             Tech Stack &
           </h2>
-          <h3 className="section__subtitle text-c-dark-1">
+          <h3 className="section__subtitle" style={{ color: "#212121" }}>
             <span>01.</span>About Me
           </h3>
         </hgroup>
@@ -32,20 +35,24 @@ export const About: FC<Props> = () => {
               I'm flexible with what tech I use, but here's what I've been
               working with lately:
             </p>
-            <h6 className="mt-2 text-c-dark-1 font-semibold">Web</h6>
+            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
+              Web
+            </h6>
             <ul className="list">
               <li>HTML & CSS</li>
               <li>.NET & C#</li>
               <li>JavaScript & React</li>
               <li>Flutter</li>
             </ul>
-            <h6 className="mt-2 text-c-dark-1 font-semibold">Data</h6>
+            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
+              Data
+            </h6>
             <StyledList className="list">
               <li>PostgreSQL & NoSQL</li>
               <li className="desktop">RESTful APIs</li>
               <li className="mobile">RESTful APIs</li>
             </StyledList>
-            <h6 className="mt-2 text-c-dark-1 font-semibold">
+            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
               Cloud & Automation
             </h6>
             <StyledList className="list">

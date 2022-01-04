@@ -9,20 +9,20 @@ export const StyledTabList = styled.ul`
     font-size: 1rem;
     padding: 0px 20px 2px;
     height: 44px;
-    border-bottom: 2px solid var(--c-grey-3);
+    border-bottom: 2px solid #656a70;
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 2px 2px 0 0;
 
     &:hover {
-      background: var(--c-blue-3);
+      background: #0069d919;
       color: #0069d9;
     }
   }
 
   .active {
-    background: var(--c-blue-3);
+    background: #0069d919;
     color: #0069d9;
     border-bottom: 2px solid #0069d9;
   }
@@ -30,7 +30,7 @@ export const StyledTabList = styled.ul`
 
 export const StyledContainer = styled.div`
   border-radius: 2px;
-  color: var(--c-grey-2);
+  color: #99a1a6;
   display: flex;
   flex-direction: column;
 
@@ -42,12 +42,12 @@ export const StyledContainer = styled.div`
 
       .tab {
         border: none;
-        border-left: 2px solid var(--c-grey-3);
+        border-left: 2px solid #656a70;
         border-radius: 0 2px 2px 0;
       }
 
       .active {
-        background: var(--c-blue-3);
+        background: #0069d919;
         color: #0069d9;
         border-left: 2px solid #0069d9;
       }
@@ -72,7 +72,7 @@ export const StyledDutiesList = styled.ul`
 export const StyledRole = styled.h4`
   font-weight: 500;
   font-size: 1.2rem;
-  color: var(--c-grey-1);
+  color: #e3e3e3;
   margin-bottom: 0.2rem;
   line-height: 1.2;
 `;

@@ -1,16 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-:root {
-  --c-blue-2: #2b6cb0;
-  --c-blue-3: #0069d919;
-  --c-grey-1: #e3e3e3;
-  --c-grey-2: #99a1a6;
-  --c-grey-3: #656a70;
-  --c-dark-1: #212121;
-  --c-dark-2: #0f1011;
-}
-
 $small: 640px;
 $medium: 768px;
 $large: 1024px;
@@ -23,7 +13,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
-  color: var(--c-grey-3);
+  color: #656a70;
 }
 
 a {
@@ -36,7 +26,7 @@ a {
 }
 
 body {
-  background: var(--c-dark-1);
+  background: #212121;
 }
 
 section {

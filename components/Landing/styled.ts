@@ -10,7 +10,7 @@ export const StyledIntro = styled.div`
   text-align: center;
   line-height: 1;
   font-size: 20vw;
-  color: var(--c-dark-2);
+  color: #0f1011;
   font-weight: 700;
 `;
 
@@ -56,7 +56,7 @@ export const StyledSection = styled.section`
 
   @media only screen and (min-width: 580px) {
     ${StyledIntro} {
-      @apply text-c-dark-2;
+      color: #0f1011;
       font-size: 7.5rem;
       left: 50%;
       top: 50%;

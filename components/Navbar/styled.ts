@@ -27,7 +27,7 @@ export const StyledListItem = styled.li`
   margin-right: 32px;
   position: relative;
   transition: all 0.15s ease-out;
-  color: var(--c-grey-2);
+  color: #99a1a6;
   display: none;
 
   &:hover {

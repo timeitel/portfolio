@@ -9,10 +9,13 @@ interface Props {
 
 export const Experience: FC<Props> = ({ jobs }) => {
   return (
-    <section id="experience" className="bg-c-dark-1">
+    <section id="experience" style={{ background: "#212121" }}>
       <StyledContainer>
         <hgroup className="mb-16">
-          <h2 className="font-black section__title text-c-dark-2">
+          <h2
+            className="font-black section__title"
+            style={{ color: "#0f1011" }}
+          >
             Experience
           </h2>
           <h3 className="section__subtitle text-white">

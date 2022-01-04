@@ -5,9 +5,13 @@ interface Props {}
 
 export const Contact: FC<Props> = () => {
   return (
-    <section id="contact" className="bg-c-dark-1 text-center">
+    <section
+      id="contact"
+      className="text-center"
+      style={{ background: "#212121" }}
+    >
       <hgroup>
-        <h2 className="font-black section__title text-c-dark-2">
+        <h2 className="font-black section__title" style={{ color: "#0f1011" }}>
           Get In Touch
         </h2>
         <h3 className="section__subtitle text-white">
@@ -20,11 +24,7 @@ export const Contact: FC<Props> = () => {
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
       </div>
-      <StyledLink
-        primary
-        className="mt-12 mb-24"
-        href="mailto:timeitel@outlook.com"
-      >
+      <StyledLink className="mt-12 mb-24" href="mailto:timeitel@outlook.com">
         <svg
           className="w-6 h-6 mr-2"
           fill="none"
