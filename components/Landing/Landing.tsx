@@ -1,23 +1,22 @@
 import React, { FC } from "react";
-import styles from "./Landing.module.scss";
-import * as S from "../../styles/styles";
+import { StyledCta, StyledIntro, StyledSection, StyledTitle } from "./styled";
 
 interface Props {}
 
 export const Landing: FC<Props> = () => {
   return (
-    <section className="h-screen relative">
-      <div className={styles.intro}>
-        <h2 className={styles.intro__hi}>Hi there,</h2>
+    <StyledSection className="h-screen relative">
+      <StyledIntro>
+        <h2 style={{ whiteSpace: "nowrap" }}>Hi there,</h2>
         <h2>I'm</h2>
-      </div>
-      <div className={styles.title}>
+      </StyledIntro>
+      <StyledTitle>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
-        <S.StyledLink primary className={styles.cta} href="#about">
+        <StyledCta primary href="#about">
           Find out more
-        </S.StyledLink>
-      </div>
-    </section>
+        </StyledCta>
+      </StyledTitle>
+    </StyledSection>
   );
 };
