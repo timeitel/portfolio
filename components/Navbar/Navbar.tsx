@@ -1,31 +1,31 @@
 import React, { FC } from "react";
-import * as S from "../../styles/styles";
-import styles from "./Navbar.module.scss";
+import { StyledLink } from "../../styles/styles";
+import { StyledHeader, StyledListItem } from "./styled";
 
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
   return (
-    <header className={styles.header}>
-      <a href="/" className={styles.logo}>
+    <StyledHeader>
+      <a href="/" style={{ whiteSpace: "nowrap", marginRight: "1rem" }}>
         Tim Eitel
       </a>
       <nav className="flex">
-        <ul className={styles.nav__ul}>
-          <li className={styles.nav__li}>
+        <ul style={{ display: "flex", alignItems: "center" }}>
+          <StyledListItem>
             <a href="#about">About</a>
-          </li>
-          <li className={styles.nav__li}>
+          </StyledListItem>
+          <StyledListItem>
             <a href="#experience">Experience</a>
-          </li>
-          <li className={styles.nav__li}>
+          </StyledListItem>
+          <StyledListItem>
             <a href="#portfolio">Portfolio</a>
-          </li>
-          <li className={styles.nav__li}>
+          </StyledListItem>
+          <StyledListItem>
             <a href="#contact">Contact</a>
-          </li>
+          </StyledListItem>
           <li>
-            <S.StyledLink className="flex" target="_blank" href="resume.pdf">
+            <StyledLink className="flex" target="_blank" href="resume.pdf">
               Resume
               <svg
                 className="w-6 h-6 ml-2"
@@ -36,10 +36,10 @@ export const Navbar: FC<Props> = () => {
               >
                 <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
-            </S.StyledLink>
+            </StyledLink>
           </li>
         </ul>
       </nav>
-    </header>
+    </StyledHeader>
   );
 };
