@@ -1,11 +1,6 @@
-.container {
-  border-radius: 2px;
-  color: var(--c-grey-2);
-  display: flex;
-  flex-direction: column;
-}
+import styled from "styled-components";
 
-.tablist {
+export const StyledTabList = styled.ul`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -31,13 +26,36 @@
     color: var(--c-blue-1);
     border-bottom: 2px solid var(--c-blue-1);
   }
-}
+`;
 
-.contentwrapper {
-  padding-top: 30px;
-}
+export const StyledContainer = styled.div`
+  border-radius: 2px;
+  color: var(--c-grey-2);
+  display: flex;
+  flex-direction: column;
 
-.duties {
+  @media only screen and (min-width: 640px) {
+    flex-direction: row;
+
+    ${StyledTabList} {
+      flex-direction: column;
+
+      .tab {
+        border: none;
+        border-left: 2px solid var(--c-grey-3);
+        border-radius: 0 2px 2px 0;
+      }
+
+      .active {
+        background: var(--c-blue-3);
+        color: var(--c-blue-1);
+        border-left: 2px solid var(--c-blue-1);
+      }
+    }
+  }
+`;
+
+export const StyledDutiesList = styled.ul`
   li {
     position: relative;
     padding-left: 30px;
@@ -49,50 +67,19 @@
     position: absolute;
     left: 0;
   }
-}
+`;
 
-.role {
+export const StyledRole = styled.h4`
   font-weight: 500;
   font-size: 1.2rem;
   color: var(--c-grey-1);
   margin-bottom: 0.2rem;
   line-height: 1.2;
-}
+`;
 
-.time {
+export const StyledJobTime = styled.h5`
   font-style: 1rem;
   font-weight: normal;
   letter-spacing: 0.05em;
   margin-bottom: 28px;
-}
-
-@media only screen and (min-width: 640px) {
-  .container {
-    flex-direction: row;
-  }
-
-  .tablist {
-    flex-direction: column;
-
-    .tab {
-      border: none;
-      border-left: 2px solid var(--c-grey-3);
-      border-radius: 0 2px 2px 0;
-    }
-
-    .active {
-      background: var(--c-blue-3);
-      color: var(--c-blue-1);
-      border-left: 2px solid var(--c-blue-1);
-    }
-  }
-
-  .contentwrapper {
-    padding: 0;
-    padding-left: 30px;
-  }
-
-  .role {
-    line-height: 1;
-  }
-}
+`;

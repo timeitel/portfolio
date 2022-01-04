@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import { StyledDutiesList, StyledJobTime, StyledRole } from "./styled";
 
 interface Props {
   title: string;
@@ -31,32 +31,3 @@ export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
     </div>
   );
 };
-
-const StyledRole = styled.h4`
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: var(--c-grey-1);
-  margin-bottom: 0.2rem;
-  line-height: 1.2;
-`;
-
-const StyledJobTime = styled.h5`
-  font-style: 1rem;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  margin-bottom: 28px;
-`;
-
-const StyledDutiesList = styled.ul`
-  li {
-    position: relative;
-    padding-left: 30px;
-    max-width: 450px;
-    margin-bottom: 10px;
-  }
-
-  li::before {
-    position: absolute;
-    left: 0;
-  }
-`;
