@@ -2,7 +2,7 @@ export * from "./About";
 export * from "./Contact";
 export * from "./Experience";
 export * from "./Footer";
-export * from "./Jobs";
+export * from "./test";
 export * from "./Landing";
 export * from "./Navbar";
 export * from "./Portfolio";
