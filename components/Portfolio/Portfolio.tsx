@@ -1,9 +1,8 @@
 import React, { FC } from "react";
-import styles from "../../styles/Home.module.scss";
+import styled from "styled-components";
 import { StyledLink } from "../../styles/styles";
 import { ProjectProp } from "../../util/types";
 import { Project } from "../Project/Project";
-import s from "./Portfolio.module.scss";
 
 interface Props {
   projects: ProjectProp[];
@@ -23,15 +22,14 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   ));
 
   return (
-    <section id="portfolio" className={s.wrapper}>
+    <section id="portfolio" style={{ background: "#151618" }}>
       <hgroup>
-        <h2
-          id={styles.title}
+        <StyledTitle
           className="font-black section__title"
           style={{ color: "#424242" }}
         >
           Some Things I've Built
-        </h2>
+        </StyledTitle>
         <h3 className="section__subtitle text-white">
           <span>03.</span>Portfolio
         </h3>
@@ -64,3 +62,10 @@ export const Portfolio: FC<Props> = ({ projects }) => {
     </section>
   );
 };
+
+const StyledTitle = styled.h2`
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+`;

@@ -1,10 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
-import Head from "next/head";
-import styles from "../styles/Home.module.scss";
-import React, { FC } from "react";
 import { GetStaticProps } from "next";
-import { JobProp, ProjectProp } from "../util/types";
+import Head from "next/head";
+import React, { FC } from "react";
+import styled from "styled-components";
 import {
   About,
   Contact,
@@ -14,6 +13,7 @@ import {
   Navbar,
   Portfolio,
 } from "../components";
+import { JobProp, ProjectProp } from "../util/types";
 
 interface Props {
   jobs: JobProp[];
@@ -29,17 +29,17 @@ const Home: FC<Props> = ({ jobs, projects }) => {
       </Head>
 
       <Navbar />
-      <div className={styles.container}>
-        <main className={styles.main}>
+      <StyledContainer>
+        <StyledMain>
           <Landing />
           <About />
           <Experience jobs={jobs} />
           <Portfolio projects={projects} />
           <Contact />
-        </main>
+        </StyledMain>
 
         <Footer />
-      </div>
+      </StyledContainer>
     </>
   );
 };
@@ -94,3 +94,20 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+const StyledMain = styled.main`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+const StyledContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

@@ -1,11 +1,10 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import styles from "../styles/Home.module.scss";
-import * as S from "../styles/styles";
+import { StyledLink } from "../styles/styles";
 
 export const Footer: FC<{}> = () => {
   return (
-    <footer className={styles.footer}>
+    <StyledFooter>
       <FooterLinks>
         <li>
           <a
@@ -33,7 +32,7 @@ export const Footer: FC<{}> = () => {
           <a href="#contact">Contact</a>
         </li>
         <li>
-          <S.StyledLink
+          <StyledLink
             className="flex"
             target="_blank"
             href="Tim-Eitel-Resume.pdf"
@@ -48,10 +47,10 @@ export const Footer: FC<{}> = () => {
             >
               <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
-          </S.StyledLink>
+          </StyledLink>
         </li>
       </FooterLinks>
-    </footer>
+    </StyledFooter>
   );
 };
 
@@ -65,5 +64,24 @@ const FooterLinks = styled.ul`
     .section-links {
       display: none;
     }
+  }
+`;
+
+const StyledFooter = styled.footer`
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid var(--c-dark-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-left: 0.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
