@@ -5,7 +5,7 @@ interface Props {}
 
 export const About: FC<Props> = () => {
   return (
-    <section id="about" className="bg-white">
+    <section id="about" style={{ background: "#fff" }}>
       <StyledContainer>
         <hgroup>
           <h2 className="font-black section__title text-c-grey-1">
@@ -24,7 +24,7 @@ export const About: FC<Props> = () => {
             </p>
             <p className="mt-2">
               I'm currently working for{" "}
-              <span className="text-c-blue-1">Komo Digital Engagement</span>{" "}
+              <span style={{ color: "#0069d9" }}>Komo Digital Engagement</span>{" "}
               where I get to work on a range of technologies from full stack
               .NET and React to Node microservices.
             </p>

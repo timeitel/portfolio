@@ -33,7 +33,7 @@ export const ProjectSubtitle = styled.div`
   margin: 0.5rem 0 1.25rem;
   font-weight: 500;
   margin-bottom: 0;
-  color: var(--c-blue-1);
+  color: #0069d9;
 `;
 
 export const ProjectTitle = styled.div`

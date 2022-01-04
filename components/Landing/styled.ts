@@ -27,7 +27,7 @@ export const StyledTitle = styled.div`
 export const StyledCta = styled(StyledLink)`
   cursor: pointer;
   color: #fff;
-  background: #000;
+  background: #0069d9;
   padding: 11px 18px;
   font-size: 1rem;
   transition: background 0.25s ease-in 0.15s;
@@ -36,10 +36,9 @@ export const StyledCta = styled(StyledLink)`
   top: 100%;
   left: 50%;
   transform: translate(-50%, 75%);
-  @apply bg-c-blue-1;
 
   &:hover {
-    @apply bg-c-blue-1;
+    background: #0069d9;
   }
 `;
 

@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --c-blue-1: #0069d9;
   --c-blue-2: #2b6cb0;
   --c-blue-3: #0069d919;
   --c-grey-1: #e3e3e3;
@@ -57,7 +56,7 @@ section {
     font-weight: 500;
 
     span {
-      color: var(--c-blue-1);
+      color: #0069d9;
       margin-right: 1rem;
     }
   }
@@ -68,7 +67,7 @@ section {
   position: relative;
 
   &:before {
-    background: var(--c-blue-1);
+    background: #0069d9;
     content: "";
     position: absolute;
     width: 100%;
@@ -92,7 +91,7 @@ section {
 
   li::before {
     content: "▹";
-    color: var(--c-blue-1);
+    color: #0069d9;
     font-size: 18px;
     padding-right: 5px;
   }
@@ -100,7 +99,7 @@ section {
 
 .list-item::before {
   content: "▹";
-  color: var(--c-blue-1);
+  color: #0069d9;
   font-size: 18px;
   padding-right: 5px;
 }

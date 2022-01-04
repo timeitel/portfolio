@@ -17,14 +17,14 @@ export const StyledTabList = styled.ul`
 
     &:hover {
       background: var(--c-blue-3);
-      color: var(--c-blue-1);
+      color: #0069d9;
     }
   }
 
   .active {
     background: var(--c-blue-3);
-    color: var(--c-blue-1);
-    border-bottom: 2px solid var(--c-blue-1);
+    color: #0069d9;
+    border-bottom: 2px solid #0069d9;
   }
 `;
 
@@ -48,8 +48,8 @@ export const StyledContainer = styled.div`
 
       .active {
         background: var(--c-blue-3);
-        color: var(--c-blue-1);
-        border-left: 2px solid var(--c-blue-1);
+        color: #0069d9;
+        border-left: 2px solid #0069d9;
       }
     }
   }

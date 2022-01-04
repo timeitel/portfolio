@@ -22,7 +22,7 @@ export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
     <div style={{ paddingTop: "30px" }}>
       <StyledRole>
         <span>{title}</span>
-        <span className="text-c-blue-1">
+        <span style={{ color: "#0069d9" }}>
           <span className="whitespace-no-wrap"> @ {company}</span>
         </span>
       </StyledRole>
