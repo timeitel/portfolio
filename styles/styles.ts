@@ -1,16 +1,16 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
-const blue = '#0069d9';
-const lightBlue = 'rgba(0, 105, 217, 0.2)';
+const blue = "#0069d9";
+const lightBlue = "rgba(0, 105, 217, 0.2)";
 const ButtonStyles = css`
   padding: 0.5rem 1rem;
   border-radius: 2px;
   display: flex;
   position: relative;
   transition: background 0.25s ease-in 0.15s;
-  background: ${(props) => (props.primary ? 'black' : 'transparent')};
-  border: ${(props) => (props.primary ? 'none' : `1px solid ${blue}`)};
-  color: ${(props) => (props.primary ? 'white' : `${blue}`)};
+  background: ${(props) => (props.primary ? "black" : "transparent")};
+  border: ${(props) => (props.primary ? "none" : `1px solid ${blue}`)};
+  color: ${(props) => (props.primary ? "white" : `${blue}`)};
 
   &:hover {
     background: ${(props) => (props.primary ? `${blue}` : `${lightBlue}`)};
@@ -18,7 +18,7 @@ const ButtonStyles = css`
 
   &:before {
     background: ${blue};
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 1px;
@@ -39,7 +39,7 @@ export const Button = styled.button`
   ${ButtonStyles}
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled.a`
   ${ButtonStyles}
   display: inline-flex;
 `;

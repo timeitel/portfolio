@@ -14,9 +14,9 @@ export const Landing: FC<Props> = () => {
       <div className={styles.title}>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
-        <S.Link primary className={styles.cta} href="#about">
+        <S.StyledLink primary className={styles.cta} href="#about">
           Find out more
-        </S.Link>
+        </S.StyledLink>
       </div>
     </section>
   );

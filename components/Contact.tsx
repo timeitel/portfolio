@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import * as S from "../styles/styles";
+import { StyledLink } from "../styles/styles";
 
 interface Props {}
 
@@ -20,7 +20,7 @@ export const Contact: FC<Props> = () => {
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
       </div>
-      <S.Link
+      <StyledLink
         primary
         className="mt-12 mb-24"
         href="mailto:timeitel@outlook.com"
@@ -35,7 +35,7 @@ export const Contact: FC<Props> = () => {
           <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>
         Say Hello
-      </S.Link>
+      </StyledLink>
     </section>
   );
 };

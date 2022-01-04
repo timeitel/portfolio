@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from "styled-components";
 
 export const HGroup = styled.hgroup`
   padding: 0 2rem;

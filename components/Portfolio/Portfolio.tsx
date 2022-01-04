@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styles from "../../styles/Home.module.scss";
-import { Link } from "../../styles/styles";
+import { StyledLink } from "../../styles/styles";
 import { ProjectProp } from "../../util/types";
 import { Project } from "../Project/Project";
 import s from "./Portfolio.module.scss";
@@ -39,7 +39,7 @@ export const Portfolio: FC<Props> = ({ projects }) => {
       {projectList}
       <div className="text-center">
         <p>Want to see more of my projects?</p>
-        <Link
+        <StyledLink
           href="https://github.com/timeitel/"
           target="_blank"
           className="mx-auto mt-4"
@@ -59,7 +59,7 @@ export const Portfolio: FC<Props> = ({ projects }) => {
               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
             ></path>
           </svg>
-        </Link>
+        </StyledLink>
       </div>
     </section>
   );

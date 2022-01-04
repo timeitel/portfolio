@@ -1,12 +1,12 @@
 import React, { FC } from "react";
-import styles from "./About.module.scss";
+import styled from "styled-components";
 
 interface Props {}
 
 export const About: FC<Props> = () => {
   return (
     <section id="about" className="bg-white">
-      <div className={styles.container}>
+      <StyledContainer>
         <hgroup>
           <h2 className="font-black section__title text-c-grey-1">
             Tech Stack &
@@ -15,8 +15,8 @@ export const About: FC<Props> = () => {
             <span>01.</span>About Me
           </h3>
         </hgroup>
-        <div className={styles.aboutcontainer}>
-          <div className={styles.abouttext}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ maxWidth: "550px" }}>
             <p>
               Hi, my name's Tim. I'm a software developer based in Perth, WA and
               I enjoy building fast and interesting software for all devices,
@@ -40,27 +40,72 @@ export const About: FC<Props> = () => {
               <li>Flutter</li>
             </ul>
             <h6 className="mt-2 text-c-dark-1 font-semibold">Data</h6>
-            <ul className="list">
+            <StyledList className="list">
               <li>PostgreSQL & NoSQL</li>
-              <li className={styles.desktop}>RESTful APIs</li>
-              <li className={styles.mobile}>RESTful APIs</li>
-            </ul>
+              <li className="desktop">RESTful APIs</li>
+              <li className="mobile">RESTful APIs</li>
+            </StyledList>
             <h6 className="mt-2 text-c-dark-1 font-semibold">
               Cloud & Automation
             </h6>
-            <ul className="list">
+            <StyledList className="list">
               <li>GCP & Azure</li>
               <li>DevOps (CI / CD)</li>
               <li>Microservices</li>
-              <li className={styles.desktop}>Unit & integration testing</li>
-              <li className={styles.mobile}>Testing</li>
-            </ul>
+              <li className="desktop">Unit & integration testing</li>
+              <li className="mobile">Testing</li>
+            </StyledList>
           </div>
-          <div className={styles.imagecontainer}>
+          <StyledImageContainer>
             <img src="./profile-pic.jpg" />
-          </div>
+          </StyledImageContainer>
         </div>
-      </div>
+      </StyledContainer>
     </section>
   );
 };
+
+const StyledContainer = styled.div`
+  background: white;
+  max-width: 1000px;
+  margin: 0 auto;
+`;
+
+const StyledImageContainer = styled.div`
+  display: none;
+  margin-left: 60px;
+  width: 40%;
+  max-width: 300px;
+
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    filter: grayscale(80%);
+    transition: filter 300ms ease-out;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+`;
+
+const StyledList = styled.ul`
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  @media only screen and (min-width: 640px) {
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+`;

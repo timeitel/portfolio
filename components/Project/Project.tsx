@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { ProjectProp } from "../../util/types";
-import * as S from "./styles";
+import * as S from "./styled";
 
 export const Project: FC<ProjectProp> = ({
   github,
