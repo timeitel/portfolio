@@ -1,6 +1,15 @@
 import React, { FC } from "react";
 import { ProjectProp } from "../../util/types";
-import * as S from "./styled";
+import {
+  FigureCaption,
+  HGroup,
+  ProjectContent,
+  ProjectLinks,
+  ProjectSubtitle,
+  ProjectTags,
+  ProjectTitle,
+  StyledProject,
+} from "./styled";
 
 export const Project: FC<ProjectProp> = ({
   github,
@@ -17,17 +26,17 @@ export const Project: FC<ProjectProp> = ({
   const projectDescription = content.replace(/(\r\n|\n|\r)/gm, "");
 
   return (
-    <S.Project>
+    <StyledProject>
       <img src={image} alt="Image for Project" />
 
-      <S.ProjectContent>
-        <S.HGroup>
-          <S.ProjectSubtitle>Featured Project</S.ProjectSubtitle>
-          <S.ProjectTitle>{title}</S.ProjectTitle>
-        </S.HGroup>
-        <S.FigureCaption>{projectDescription}</S.FigureCaption>
-        <S.ProjectTags>{tagItems}</S.ProjectTags>
-        <S.ProjectLinks>
+      <ProjectContent className="project-content">
+        <HGroup>
+          <ProjectSubtitle>Featured Project</ProjectSubtitle>
+          <ProjectTitle>{title}</ProjectTitle>
+        </HGroup>
+        <FigureCaption>{projectDescription}</FigureCaption>
+        <ProjectTags>{tagItems}</ProjectTags>
+        <ProjectLinks>
           <li>
             <a href={github} target="_blank">
               <svg
@@ -62,8 +71,8 @@ export const Project: FC<ProjectProp> = ({
               </svg>
             </a>
           </li>
-        </S.ProjectLinks>
-      </S.ProjectContent>
-    </S.Project>
+        </ProjectLinks>
+      </ProjectContent>
+    </StyledProject>
   );
 };

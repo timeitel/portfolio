@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { StyledLink } from "../../styles/styles";
 
 export const StyledIntro = styled.div`
@@ -44,18 +44,18 @@ export const StyledCta = styled(StyledLink)`
 
 export const StyledSection = styled.section`
   @media only screen and (min-width: 380px) {
-    ${StyledIntro} {
+    .styled-intro {
       font-size: 82px;
     }
 
-    ${StyledTitle} {
+    .styled-title {
       white-space: nowrap;
       font-size: 2rem;
     }
   }
 
   @media only screen and (min-width: 580px) {
-    ${StyledIntro} {
+    .styled-intro {
       color: #0f1011;
       font-size: 7.5rem;
       left: 50%;
@@ -66,7 +66,7 @@ export const StyledSection = styled.section`
       transform: translate(-50%, -50%);
     }
 
-    ${StyledTitle} {
+    .styled-title {
       font-size: 2.6rem;
       left: 50%;
       position: absolute;
@@ -75,7 +75,7 @@ export const StyledSection = styled.section`
       transform: translate(-50%, -50%);
     }
 
-    ${StyledCta} {
+    .styled-cta {
       position: absolute;
       top: 100%;
       left: 50%;
@@ -84,11 +84,11 @@ export const StyledSection = styled.section`
   }
 
   @media only screen and (min-width: 980px) {
-    ${StyledIntro} {
+    .styled-intro {
       font-size: 11.6rem;
     }
 
-    ${StyledTitle} {
+    .styled-title {
       font-size: 3.25rem;
     }
   }

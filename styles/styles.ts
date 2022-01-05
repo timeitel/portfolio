@@ -1,20 +1,14 @@
-import styled, { css } from "styled-components";
+import { css } from "@emotion/css";
+import styled from "@emotion/styled";
 
 const blue = "#0069d9";
 const lightBlue = "rgba(0, 105, 217, 0.2)";
-const ButtonStyles = css<{ primary?: boolean }>`
+const ButtonStyles = css`
   padding: 0.5rem 1rem;
   border-radius: 2px;
   display: flex;
   position: relative;
   transition: background 0.25s ease-in 0.15s;
-  background: ${(props) => (props.primary ? "black" : "transparent")};
-  border: ${(props) => (props.primary ? "none" : `1px solid ${blue}`)};
-  color: ${(props) => (props.primary ? "white" : `${blue}`)};
-
-  &:hover {
-    background: ${(props) => (props.primary ? `${blue}` : `${lightBlue}`)};
-  }
 
   &:before {
     background: ${blue};
@@ -57,3 +51,12 @@ export const Subtitle = styled.h3`
   margin: 0.5rem 0 1.25rem;
   font-weight: 500;
 `;
+
+// old button styles
+//   background: ${(props) => (props.primary ? "black" : "transparent")};
+//   border: ${(props) => (props.primary ? "none" : `1px solid ${blue}`)};
+//   color: ${(props) => (props.primary ? "white" : `${blue}`)};
+
+//   &:hover {
+//     background: ${(props) => (props.primary ? `${blue}` : `${lightBlue}`)};
+//   }

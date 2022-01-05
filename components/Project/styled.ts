@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const HGroup = styled.hgroup`
   padding: 0 2rem;
@@ -51,7 +51,7 @@ export const ProjectContent = styled.div`
   text-align: right;
 `;
 
-export const Project = styled.div`
+export const StyledProject = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, 1fr);
@@ -65,7 +65,7 @@ export const Project = styled.div`
     object-position: center;
   }
 
-  ${ProjectContent} {
+  .project-content {
     grid-area: 1 / 6 / -1 / -1;
     z-index: 2;
   }
@@ -76,7 +76,7 @@ export const Project = styled.div`
       opacity: 0.2;
     }
 
-    ${ProjectContent} {
+    .project-content {
       grid-area: 1 / 2 / -1 / -1;
     }
   }

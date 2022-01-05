@@ -13,7 +13,7 @@ export const Jobs: FC<Props> = ({ jobs }) => {
 
   return (
     <StyledContainer>
-      <StyledTabList>
+      <StyledTabList className="styled-tablist">
         {companies.map((company, i) => (
           <li
             onClick={() => setActive(i)}

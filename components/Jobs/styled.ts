@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const StyledTabList = styled.ul`
   display: flex;
@@ -37,7 +37,7 @@ export const StyledContainer = styled.div`
   @media only screen and (min-width: 640px) {
     flex-direction: row;
 
-    ${StyledTabList} {
+    .styled-tablist {
       flex-direction: column;
 
       .tab {

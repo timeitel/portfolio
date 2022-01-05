@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { StyledLink } from "../../styles/styles";
 import { ProjectProp } from "../../util/types";
 import { Project } from "../Project/Project";

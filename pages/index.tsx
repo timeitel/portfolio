@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import React, { FC } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import {
   About,
   Contact,
