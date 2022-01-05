@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const blue = "#0069d9";
 const lightBlue = "rgba(0, 105, 217, 0.2)";
-const ButtonStyles = css`
+const ButtonStyles = css<{ primary?: boolean }>`
   padding: 0.5rem 1rem;
   border-radius: 2px;
   display: flex;

@@ -13,9 +13,7 @@ export const Landing: FC<Props> = () => {
       <StyledTitle>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
-        <StyledCta primary href="#about">
-          Find out more
-        </StyledCta>
+        <StyledCta href="#about">Find out more</StyledCta>
       </StyledTitle>
     </StyledSection>
   );
