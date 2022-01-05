@@ -10,7 +10,7 @@ export const Navbar: FC<Props> = () => {
       <a href="/" style={{ whiteSpace: "nowrap", marginRight: "1rem" }}>
         Tim Eitel
       </a>
-      <nav className="flex">
+      <nav style={{ display: "flex" }}>
         <ul style={{ display: "flex", alignItems: "center" }}>
           <StyledListItem>
             <a href="#about">About</a>
@@ -25,10 +25,18 @@ export const Navbar: FC<Props> = () => {
             <a href="#contact">Contact</a>
           </StyledListItem>
           <li>
-            <StyledLink className="flex" target="_blank" href="resume.pdf">
+            <StyledLink
+              style={{ display: "flex" }}
+              target="_blank"
+              href="resume.pdf"
+            >
               Resume
               <svg
-                className="w-6 h-6 ml-2"
+                style={{
+                  marginLeft: "0.5rem",
+                  width: "1.5rem",
+                  height: "1.5rem",
+                }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

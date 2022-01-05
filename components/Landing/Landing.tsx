@@ -5,7 +5,7 @@ interface Props {}
 
 export const Landing: FC<Props> = () => {
   return (
-    <StyledSection className="h-screen relative">
+    <StyledSection style={{ height: "100vh", position: "relative" }}>
       <StyledIntro>
         <h2 style={{ whiteSpace: "nowrap" }}>Hi there,</h2>
         <h2>I'm</h2>

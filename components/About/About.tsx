@@ -8,10 +8,7 @@ export const About: FC<Props> = () => {
     <section id="about" style={{ background: "#fff" }}>
       <StyledContainer>
         <hgroup>
-          <h2
-            className="font-black section__title"
-            style={{ color: "#e3e3e3" }}
-          >
+          <h2 className="section__title" style={{ color: "#e3e3e3" }}>
             Tech Stack &
           </h2>
           <h3 className="section__subtitle" style={{ color: "#212121" }}>
@@ -25,17 +22,23 @@ export const About: FC<Props> = () => {
               I enjoy building fast and interesting software for all devices,
               platforms, and applications.
             </p>
-            <p className="mt-2">
+            <p style={{ marginTop: "0.5rem" }}>
               I'm currently working for{" "}
               <span style={{ color: "#0069d9" }}>Komo Digital Engagement</span>{" "}
               where I get to work on a range of technologies from full stack
               .NET and React to Node microservices.
             </p>
-            <p className="mt-2">
+            <p style={{ marginTop: "0.5rem" }}>
               I'm flexible with what tech I use, but here's what I've been
               working with lately:
             </p>
-            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
+            <h6
+              style={{
+                color: "#212121",
+                marginTop: "0.5rem",
+                fontWeight: 600,
+              }}
+            >
               Web
             </h6>
             <ul className="list">
@@ -44,7 +47,9 @@ export const About: FC<Props> = () => {
               <li>JavaScript & React</li>
               <li>Flutter</li>
             </ul>
-            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
+            <h6
+              style={{ color: "#212121", fontWeight: 600, marginTop: "0.5rem" }}
+            >
               Data
             </h6>
             <StyledList className="list">
@@ -52,7 +57,9 @@ export const About: FC<Props> = () => {
               <li className="desktop">RESTful APIs</li>
               <li className="mobile">RESTful APIs</li>
             </StyledList>
-            <h6 className="mt-2 font-semibold" style={{ color: "#212121" }}>
+            <h6
+              style={{ color: "#212121", fontWeight: 600, marginTop: "0.5rem" }}
+            >
               Cloud & Automation
             </h6>
             <StyledList className="list">

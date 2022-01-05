@@ -11,14 +11,11 @@ export const Experience: FC<Props> = ({ jobs }) => {
   return (
     <section id="experience" style={{ background: "#212121" }}>
       <StyledContainer>
-        <hgroup className="mb-16">
-          <h2
-            className="font-black section__title"
-            style={{ color: "#0f1011" }}
-          >
+        <hgroup style={{ marginBottom: "4rem" }}>
+          <h2 className="section__title" style={{ color: "#0f1011" }}>
             Experience
           </h2>
-          <h3 className="section__subtitle text-white">
+          <h3 className="section__subtitle" style={{ color: "#fff" }}>
             <span>02.</span>Where I've Worked
           </h3>
         </hgroup>

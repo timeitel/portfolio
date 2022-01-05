@@ -7,26 +7,28 @@ export const Contact: FC<Props> = () => {
   return (
     <section
       id="contact"
-      className="text-center"
-      style={{ background: "#212121" }}
+      style={{ background: "#212121", textAlign: "center" }}
     >
       <hgroup>
-        <h2 className="font-black section__title" style={{ color: "#0f1011" }}>
+        <h2 className="section__title" style={{ color: "#0f1011" }}>
           Get In Touch
         </h2>
-        <h3 className="section__subtitle text-white">
+        <h3 className="section__subtitle" style={{ color: "#fff" }}>
           <span>04.</span>Contact
         </h3>
       </hgroup>
-      <div className="w-1/2:md">
-        <p className="mt-4">
+      <div>
+        <p style={{ marginTop: "1rem" }}>
           If you'd like to reach out, my inbox is always open. <br />
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
       </div>
-      <StyledLink className="mt-12 mb-24" href="mailto:timeitel@outlook.com">
+      <StyledLink
+        style={{ margin: "3rem 0 6rem" }}
+        href="mailto:timeitel@outlook.com"
+      >
         <svg
-          className="w-6 h-6 mr-2"
+          style={{ width: "1.5rem", height: "1.5rem", marginRight: "0.5rem" }}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

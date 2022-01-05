@@ -24,25 +24,22 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   return (
     <section id="portfolio" style={{ background: "#151618" }}>
       <hgroup>
-        <StyledTitle
-          className="font-black section__title"
-          style={{ color: "#424242" }}
-        >
+        <StyledTitle className="section__title" style={{ color: "#424242" }}>
           Some Things I've Built
         </StyledTitle>
-        <h3 className="section__subtitle text-white">
+        <h3 className="section__subtitle" style={{ color: "#fff" }}>
           <span>03.</span>Portfolio
         </h3>
       </hgroup>
       {projectList}
-      <div className="text-center">
+      <div style={{ textAlign: "center" }}>
         <p>Want to see more of my projects?</p>
         <StyledLink
           href="https://github.com/timeitel/"
           target="_blank"
-          className="mx-auto mt-4"
+          style={{ margin: "1rem auto" }}
         >
-          <span className="mr-1">Browse</span>
+          <span style={{ marginRight: "0.25rem" }}>Browse</span>
           <svg
             fill="none"
             stroke="currentColor"
