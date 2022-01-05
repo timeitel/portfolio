@@ -13,7 +13,7 @@ import {
   Navbar,
   Portfolio,
 } from "../components";
-import { JobProp, ProjectProp } from "../util/types";
+import { JobProp, ProjectProp } from "../utils/types";
 
 interface Props {
   jobs: JobProp[];
