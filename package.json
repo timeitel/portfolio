@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"timeitel.com\" >> out/CNAME",
-    "start": "next start"
+    "start": "next start",
+    "tsc": "tsc --pretty --noEmit"
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
