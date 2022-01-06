@@ -1,4 +1,4 @@
-import { ProjectProp } from "@utils";
+import { IProject } from "@utils";
 import React, { FC } from "react";
 import {
   FigureCaption,
@@ -11,7 +11,7 @@ import {
   StyledProject,
 } from "./styled";
 
-export const Project: FC<ProjectProp> = ({
+export const Project: FC<IProject> = ({
   github,
   tags,
   title,

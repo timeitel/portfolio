@@ -13,12 +13,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowJs": true,
+    "baseUrl": ".",
     "paths": {
       "@*": ["/*"],
-      "@components": ["./components"],
-      "@components/*": ["./components/*"],
-      "@theme": ["./styles/theme.ts"],
-      "@utils": ["./utils"]
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@theme": ["styles/theme.ts"],
+      "@utils": ["utils"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

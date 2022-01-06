@@ -1,11 +1,11 @@
-export interface JobProp {
+export interface IJob {
   company: string;
   dates: string;
   title: string;
   duties: string[];
 }
 
-export interface ProjectProp {
+export interface IProject {
   title: string;
   tags: string;
   image: string;

@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { ProjectProp } from "@utils";
+import { IProject } from "@utils";
 import { Project, StyledLink } from "@components";
 
 interface Props {
-  projects: ProjectProp[];
+  projects: IProject[];
 }
 
 export const Portfolio: FC<Props> = ({ projects }) => {

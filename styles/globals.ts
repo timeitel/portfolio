@@ -89,7 +89,7 @@ export const globalStyle = css`
     padding-right: 5px;
   }
 
-  @media (min-width: $small) {
+  @media (min-width: 640px) {
     .section__title {
       font-size: 3.4rem;
     }
@@ -103,14 +103,9 @@ export const globalStyle = css`
     }
   }
 
-  @media (min-width: $large) {
+  @media (min-width: 1024px) {
     section {
       padding: 6rem 7.5rem;
     }
   }
 `;
-
-// $small: 640px;
-// $medium: 768px;
-// $large: 1024px;
-// $x-large: 1280px;

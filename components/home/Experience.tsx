@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { Jobs } from "./Jobs/Jobs";
-import { JobProp } from "@utils";
+import { IJob } from "@utils";
 
 interface Props {
-  jobs: JobProp[];
+  jobs: IJob[];
 }
 
 export const Experience: FC<Props> = ({ jobs }) => {

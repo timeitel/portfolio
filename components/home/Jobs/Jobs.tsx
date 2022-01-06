@@ -1,10 +1,10 @@
-import { JobProp } from "@utils";
+import { IJob } from "@utils";
 import React, { FC, useState } from "react";
 import { Job } from "./Job";
 import { StyledContainer, StyledTabList } from "./styled";
 
 interface Props {
-  jobs: JobProp[];
+  jobs: IJob[];
 }
 
 export const Jobs: FC<Props> = ({ jobs }) => {

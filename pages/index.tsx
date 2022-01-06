@@ -13,11 +13,11 @@ import {
   Navbar,
   Portfolio,
 } from "../components";
-import { JobProp, ProjectProp } from "../utils/types";
+import { IJob, IProject } from "../utils/types";
 
 interface Props {
-  jobs: JobProp[];
-  projects: ProjectProp[];
+  jobs: IJob[];
+  projects: IProject[];
 }
 
 const Home: FC<Props> = ({ jobs, projects }) => {
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
     .readdirSync(`${process.cwd()}/content/projects`)
     .reverse();
 
-  const jobs: JobProp[] = jobFiles.map((filename) => {
+  const jobs: IJob[] = jobFiles.map((filename) => {
     const markdownWithMetadata = fs
       .readFileSync(`content/jobs/${filename}`)
       .toString();
