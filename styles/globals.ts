@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
+import { ITheme } from "styles/types";
 
-export const globalStyle = css`
+export const getGlobalStyle = (theme: ITheme) => css`
   html,
   body {
     padding: 0;
@@ -8,7 +9,7 @@ export const globalStyle = css`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     scroll-behavior: smooth;
-    color: #656a70;
+    color: ${theme.color.grey300};
   }
 
   a {
@@ -21,7 +22,7 @@ export const globalStyle = css`
   }
 
   body {
-    background: #212121;
+    background: ${theme.color.grey300};
   }
 
   section {
@@ -41,7 +42,7 @@ export const globalStyle = css`
       font-weight: 500;
 
       span {
-        color: #0069d9;
+        color: ${theme.color.blue300};
         margin-right: 1rem;
       }
     }
@@ -52,7 +53,7 @@ export const globalStyle = css`
     position: relative;
 
     &:before {
-      background: #0069d9;
+      background: ${theme.color.blue300};
       content: "";
       position: absolute;
       width: 100%;
@@ -76,7 +77,7 @@ export const globalStyle = css`
 
     li::before {
       content: "▹";
-      color: #0069d9;
+      color: ${theme.color.blue300};
       font-size: 18px;
       padding-right: 5px;
     }
@@ -84,7 +85,7 @@ export const globalStyle = css`
 
   .list-item::before {
     content: "▹";
-    color: #0069d9;
+    color: ${theme.color.blue300};
     font-size: 18px;
     padding-right: 5px;
   }

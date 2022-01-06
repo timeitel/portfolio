@@ -12,4 +12,5 @@ interface IColors {
   black100: string;
   black200: string;
   white100: string;
+  white200: string;
 }
