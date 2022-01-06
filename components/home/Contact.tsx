@@ -1,5 +1,5 @@
 import { StyledLink } from "@components";
-import { MailIcon } from "@components/common/icons";
+import { MailIcon } from "@components/common/Icons";
 import React, { FC } from "react";
 
 interface Props {}

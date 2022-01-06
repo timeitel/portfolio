@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { IProject } from "@utils";
 import { Project, StyledLink } from "@components";
-import { ExternalLinkIcon } from "@components/common/icons";
+import { ExternalLinkIcon } from "@components/common/Icons";
 
 interface Props {
   projects: IProject[];

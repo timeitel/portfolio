@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { StyledLink } from "@components";
-import { ExternalLinkIcon, GithubIcon } from "@components/common/icons";
+import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
 
 export const Footer: FC<{}> = () => {
   return (

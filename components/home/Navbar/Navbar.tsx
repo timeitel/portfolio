@@ -1,5 +1,5 @@
 import { StyledLink } from "@components";
-import { ExternalLinkIcon } from "@components/common/icons";
+import { ExternalLinkIcon } from "@components/common/Icons";
 import React, { FC } from "react";
 import { StyledHeader, StyledListItem } from "./styled";
 
