@@ -42,7 +42,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
       font-weight: 500;
 
       span {
-        color: ${theme.color.blue300};
+        color: ${theme.color.blue600};
         margin-right: 1rem;
       }
     }
@@ -53,7 +53,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
     position: relative;
 
     &:before {
-      background: ${theme.color.blue300};
+      background: ${theme.color.blue600};
       content: "";
       position: absolute;
       width: 100%;
@@ -77,7 +77,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
 
     li::before {
       content: "▹";
-      color: ${theme.color.blue300};
+      color: ${theme.color.blue600};
       font-size: 18px;
       padding-right: 5px;
     }
@@ -85,7 +85,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
 
   .list-item::before {
     content: "▹";
-    color: ${theme.color.blue300};
+    color: ${theme.color.blue600};
     font-size: 18px;
     padding-right: 5px;
   }

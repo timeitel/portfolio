@@ -1,17 +1,21 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
+import { useTheme } from "@emotion/react";
 
 interface Props {}
 
 export const About: FC<Props> = () => {
+  const {
+    color: { whitePrimary, grey400: grey100, grey400, blue600: blue300 },
+  } = useTheme();
   return (
-    <section id="about" style={{ background: "#fff" }}>
+    <section id="about" style={{ background: whitePrimary }}>
       <StyledContainer>
         <hgroup>
-          <h2 className="section__title" style={{ color: "#e3e3e3" }}>
+          <h2 className="section__title" style={{ color: grey100 }}>
             Tech Stack &
           </h2>
-          <h3 className="section__subtitle" style={{ color: "#212121" }}>
+          <h3 className="section__subtitle" style={{ color: grey400 }}>
             <span>01.</span>About Me
           </h3>
         </hgroup>
@@ -24,7 +28,7 @@ export const About: FC<Props> = () => {
             </p>
             <p style={{ marginTop: "0.5rem" }}>
               I'm currently working for{" "}
-              <span style={{ color: "#0069d9" }}>Komo Digital Engagement</span>{" "}
+              <span style={{ color: blue300 }}>Komo Digital Engagement</span>{" "}
               where I get to work on a range of technologies from full stack
               .NET and React to Node microservices.
             </p>
@@ -34,7 +38,7 @@ export const About: FC<Props> = () => {
             </p>
             <h6
               style={{
-                color: "#212121",
+                color: grey400,
                 marginTop: "0.5rem",
                 fontWeight: 600,
               }}
@@ -48,7 +52,7 @@ export const About: FC<Props> = () => {
               <li>Flutter</li>
             </ul>
             <h6
-              style={{ color: "#212121", fontWeight: 600, marginTop: "0.5rem" }}
+              style={{ color: grey400, fontWeight: 600, marginTop: "0.5rem" }}
             >
               Data
             </h6>
@@ -58,7 +62,7 @@ export const About: FC<Props> = () => {
               <li className="mobile">RESTful APIs</li>
             </StyledList>
             <h6
-              style={{ color: "#212121", fontWeight: 600, marginTop: "0.5rem" }}
+              style={{ color: grey400, fontWeight: 600, marginTop: "0.5rem" }}
             >
               Cloud & Automation
             </h6>
