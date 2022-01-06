@@ -2,8 +2,12 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { StyledLink } from "@components";
 import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
+import { useTheme } from "@emotion/react";
 
 export const Footer: FC<{}> = () => {
+  const {
+    color: { grey400 },
+  } = useTheme();
   return (
     <StyledFooter>
       <FooterLinks>
@@ -13,7 +17,7 @@ export const Footer: FC<{}> = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span style={{ color: "#99a1a6" }}>Tim Eitel</span>
+            <span style={{ color: grey400 }}>Tim Eitel</span>
             <GithubIcon />
           </a>
         </li>
@@ -60,7 +64,7 @@ const FooterLinks = styled.ul`
 const StyledFooter = styled.footer`
   width: 100%;
   height: 100px;
-  border-top: 1px solid #0f1011;
+  border-top: ${(p) => `1px solid ${p.theme.color.blackPrimary}`};
   display: flex;
   justify-content: center;
   align-items: center;

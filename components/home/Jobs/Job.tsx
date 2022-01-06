@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import React, { FC } from "react";
 import { StyledDutiesList, StyledJobTime, StyledRole } from "./styled";
 
@@ -10,6 +11,9 @@ interface Props {
 }
 
 export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
+  const {
+    color: { blue600 },
+  } = useTheme();
   if (!active) return null;
 
   const dutyItems = duties.map((duty) => (
@@ -22,7 +26,7 @@ export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
     <div style={{ paddingTop: "30px" }}>
       <StyledRole>
         <span>{title}</span>
-        <span style={{ color: "#0069d9" }}>
+        <span style={{ color: blue600 }}>
           <span style={{ whiteSpace: "nowrap" }}> @ {company}</span>
         </span>
       </StyledRole>

@@ -3,12 +3,17 @@ import styled from "@emotion/styled";
 import { IProject } from "@utils";
 import { Project, StyledLink } from "@components";
 import { ExternalLinkIcon } from "@components/common/Icons";
+import { useTheme } from "@emotion/react";
 
 interface Props {
   projects: IProject[];
 }
 
 export const Portfolio: FC<Props> = ({ projects }) => {
+  const {
+    color,
+    color: { blackPrimary, grey800, whitePrimary },
+  } = useTheme();
   const projectList = projects.map((p) => (
     <Project
       github={p.github}
@@ -22,12 +27,12 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   ));
 
   return (
-    <section id="portfolio" style={{ background: "#151618" }}>
+    <section id="portfolio" style={{ background: blackPrimary }}>
       <hgroup>
-        <StyledTitle className="section__title" style={{ color: "#424242" }}>
+        <StyledTitle className="section__title" style={{ color: grey800 }}>
           Some Things I've Built
         </StyledTitle>
-        <h3 className="section__subtitle" style={{ color: "#fff" }}>
+        <h3 className="section__subtitle" style={{ color: whitePrimary }}>
           <span>03.</span>Portfolio
         </h3>
       </hgroup>

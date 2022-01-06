@@ -1,20 +1,21 @@
 import { StyledLink } from "@components";
 import { MailIcon } from "@components/common/Icons";
+import { useTheme } from "@emotion/react";
 import React, { FC } from "react";
 
 interface Props {}
 
 export const Contact: FC<Props> = () => {
+  const {
+    color: { grey800, whitePrimary, blackPrimary },
+  } = useTheme();
   return (
-    <section
-      id="contact"
-      style={{ background: "#212121", textAlign: "center" }}
-    >
+    <section id="contact" style={{ background: grey800, textAlign: "center" }}>
       <hgroup>
-        <h2 className="section__title" style={{ color: "#0f1011" }}>
+        <h2 className="section__title" style={{ color: blackPrimary }}>
           Get In Touch
         </h2>
-        <h3 className="section__subtitle" style={{ color: "#fff" }}>
+        <h3 className="section__subtitle" style={{ color: whitePrimary }}>
           <span>04.</span>Contact
         </h3>
       </hgroup>
