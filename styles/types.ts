@@ -9,6 +9,7 @@ interface IColors {
   grey100: string;
   grey200: string;
   grey300: string;
+  grey400: string;
   black100: string;
   black200: string;
   white100: string;

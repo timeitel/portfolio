@@ -22,7 +22,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
   }
 
   body {
-    background: ${theme.color.grey300};
+    background: ${theme.color.grey400};
   }
 
   section {
