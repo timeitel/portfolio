@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import styled from "@emotion/styled";
 import { StyledCta, StyledIntro, StyledSection, StyledTitle } from "./styled";
 
 interface Props {}

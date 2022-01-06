@@ -1,5 +1,5 @@
+import { JobProp } from "@utils";
 import React, { FC, useState } from "react";
-import { JobProp } from "../../util/types";
 import { Job } from "./Job";
 import { StyledContainer, StyledTabList } from "./styled";
 

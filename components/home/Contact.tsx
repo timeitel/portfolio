@@ -1,5 +1,5 @@
+import { StyledLink } from "@components";
 import React, { FC } from "react";
-import { StyledLink } from '../../styles/theme';
 
 interface Props {}
 

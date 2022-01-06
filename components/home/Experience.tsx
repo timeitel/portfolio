@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { JobProp } from "../util/types";
 import { Jobs } from "./Jobs/Jobs";
+import { JobProp } from "@utils";
 
 interface Props {
   jobs: JobProp[];

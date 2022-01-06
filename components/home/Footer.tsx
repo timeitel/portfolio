@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { StyledLink } from "../../styles/theme";
+import { StyledLink } from "@components";
 
 export const Footer: FC<{}> = () => {
   return (

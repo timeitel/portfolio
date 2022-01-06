@@ -1,5 +1,5 @@
+import { ProjectProp } from "@utils";
 import React, { FC } from "react";
-import { ProjectProp } from "../../util/types";
 import {
   FigureCaption,
   HGroup,
