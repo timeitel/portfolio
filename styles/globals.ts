@@ -9,7 +9,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     scroll-behavior: smooth;
-    color: ${theme.color.grey300};
+    color: ${theme.color.grey600};
   }
 
   a {
@@ -22,7 +22,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
   }
 
   body {
-    background: ${theme.color.grey400};
+    background: ${theme.color.grey800};
   }
 
   section {

@@ -2,16 +2,16 @@ import { ITheme } from "./types";
 
 export const themeDark: ITheme = {
   color: {
-    blue100: "#2b6cb0",
-    blue200: "#0069d919",
-    blue300: "#0069d9",
-    grey100: "#e3e3e3",
-    grey200: "#99a1a6",
-    grey300: "#656a70",
-    grey400: "#212121",
-    black100: "#1b1d1f",
-    black200: "#0f1011",
-    white100: "#e3e3e3",
-    white200: "#fff",
+    blue200: "#2b6cb0",
+    blue400: "#0069d919",
+    blue600: "#0069d9",
+    grey200: "#e3e3e3",
+    grey400: "#99a1a6",
+    grey600: "#656a70",
+    grey800: "#212121",
+    blackSecondary: "#1b1d1f",
+    blackPrimary: "#0f1011",
+    whiteSecondary: "#e3e3e3",
+    whitePrimary: "#fff",
   },
 };
