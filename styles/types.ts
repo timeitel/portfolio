@@ -3,10 +3,13 @@ export interface ITheme {
 }
 
 interface IColors {
-  primary100: string;
-  primary200: string;
-  primary300: string;
-  secondary100: string;
-  secondary200: string;
-  secondary300: string;
+  blue100: string;
+  blue200: string;
+  blue300: string;
+  grey100: string;
+  grey200: string;
+  grey300: string;
+  black100: string;
+  black200: string;
+  white100: string;
 }

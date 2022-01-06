@@ -1,23 +1,15 @@
 import { ITheme } from "./types";
 
-export const themeLight: ITheme = {
-  color: {
-    primary100: "",
-    primary200: "",
-    primary300: "",
-    secondary100: "",
-    secondary200: "",
-    secondary300: "",
-  },
-};
-
 export const themeDark: ITheme = {
   color: {
-    primary100: "",
-    primary200: "",
-    primary300: "",
-    secondary100: "",
-    secondary200: "",
-    secondary300: "",
+    blue100: "#0069d9",
+    blue200: "#2b6cb0",
+    blue300: "#0069d919",
+    grey100: "#e3e3e3",
+    grey200: "#99a1a6",
+    grey300: "#656a70",
+    black100: "#1b1d1f",
+    black200: "#0f1011",
+    white100: "#fff",
   },
 };
