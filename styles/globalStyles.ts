@@ -1,11 +1,6 @@
 import { css } from "@emotion/react";
 
 export const globalStyle = css`
-  $small: 640px;
-  $medium: 768px;
-  $large: 1024px;
-  $x-large: 1280px;
-
   html,
   body {
     padding: 0;
@@ -94,7 +89,7 @@ export const globalStyle = css`
     padding-right: 5px;
   }
 
-  @media only screen and (min-width: $small) {
+  @media (min-width: $small) {
     .section__title {
       font-size: 3.4rem;
     }
@@ -108,9 +103,14 @@ export const globalStyle = css`
     }
   }
 
-  @media only screen and (min-width: $large) {
+  @media (min-width: $large) {
     section {
       padding: 6rem 7.5rem;
     }
   }
 `;
+
+// $small: 640px;
+// $medium: 768px;
+// $large: 1024px;
+// $x-large: 1280px;

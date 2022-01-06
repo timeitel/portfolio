@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledLink } from "../../styles/styles";
+import { StyledLink } from "../../../styles/theme";
 import { StyledHeader, StyledListItem } from "./styled";
 
 interface Props {}

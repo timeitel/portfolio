@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { StyledLink } from "../../styles/styles";
+import { StyledLink } from "../../../styles/theme";
 
 export const StyledIntro = styled.div`
   display: flex;

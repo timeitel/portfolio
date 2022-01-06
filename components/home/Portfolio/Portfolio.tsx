@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { StyledLink } from "../../styles/styles";
-import { ProjectProp } from "../../util/types";
 import { Project } from "../Project/Project";
+import { StyledLink } from "../../../styles/theme";
+import { ProjectProp } from "../../../utils/types";
 
 interface Props {
   projects: ProjectProp[];
