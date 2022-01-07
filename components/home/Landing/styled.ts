@@ -12,7 +12,7 @@ export const StyledIntro = styled.div`
   font-weight: 700;
 
   h2 {
-    font-size: 17.5vw;
+    font-size: clamp(5rem, 12vw, 20rem);
     margin: 0;
   }
 `;
