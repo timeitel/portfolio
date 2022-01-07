@@ -12,7 +12,7 @@ export const StyledIntro = styled.div`
   font-weight: 700;
 
   h2 {
-    font-size: clamp(5rem, 12vw, 20rem);
+    font-size: clamp(5rem, 12vw, 10rem);
     margin: 0;
   }
 `;
@@ -26,7 +26,7 @@ export const StyledTitle = styled.div`
   h1,
   h4 {
     margin: 0;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 400;
   }
 `;
@@ -71,7 +71,7 @@ export const StyledSection = styled.section`
       font-size: 7.5rem;
       left: 50%;
       top: 50%;
-      line-height: 0.9;
+      line-height: 1.2;
       position: absolute;
       margin: 0;
       transform: translate(-50%, -50%);

@@ -57,7 +57,7 @@ export const StyledProject = styled.div`
   grid-template-columns: repeat(12, 1fr);
   margin: 100px 0 150px;
   max-width: 1200px;
-  margin: 3.25rem auto;
+  margin: 5rem auto;
 
   img {
     grid-area: 1 / 1 / -1 / 8;

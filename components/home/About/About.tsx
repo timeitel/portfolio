@@ -29,8 +29,8 @@ export const About: FC<Props> = () => {
           <div style={{ maxWidth: "550px" }}>
             <p style={{ marginTop: 0 }}>
               Hi, my name's Tim. I'm a software developer based in Perth, WA and
-              I enjoy building fast and interesting software for all devices,
-              platforms, and applications.
+              I enjoy building interesting software for all platforms and
+              applications.
             </p>
             <p style={{ marginTop: "0.5rem" }}>
               I'm currently working for{" "}

@@ -39,7 +39,7 @@ export const Portfolio: FC<Props> = ({ projects }) => {
       </hgroup>
       {projectList}
       <div style={{ textAlign: "center", color: whitePrimary }}>
-        <p style={{ marginTop: "4rem" }} className="section__subtitle">
+        <p style={{ marginTop: "7rem" }} className="section__subtitle">
           Want to see more of my projects?
         </p>
         <Link

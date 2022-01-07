@@ -8,7 +8,7 @@ interface Props {}
 
 export const Contact: FC<Props> = () => {
   const {
-    color: { whitePrimary, blackPrimary },
+    color: { whitePrimary, blackPrimary, grey400 },
   } = useTheme();
   return (
     <Section id="contact" backgroundColor="grey800" textAlign="center">
@@ -24,7 +24,7 @@ export const Contact: FC<Props> = () => {
         </h3>
       </hgroup>
       <div>
-        <p style={{ marginTop: "1rem" }}>
+        <p style={{ marginTop: "1rem", color: grey400 }}>
           If you'd like to reach out, my inbox is always open. <br />
           So feel free to get in touch and I'll try my best to get back to you.
         </p>
