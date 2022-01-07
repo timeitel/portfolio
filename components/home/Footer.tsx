@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
 import { useTheme } from "@emotion/react";
-import { Link } from "@components/common/Link";
+import { Link, List, ListItem } from "@components";
 
 export const Footer: FC<{}> = () => {
   const {
@@ -10,9 +10,9 @@ export const Footer: FC<{}> = () => {
   } = useTheme();
   return (
     <StyledFooter>
-      <FooterLinks>
-        <li>
-          <a
+      <StyledList>
+        <ListItem>
+          <Link
             href="https://github.com/timeitel/"
             target="_blank"
             rel="noopener noreferrer"
@@ -21,32 +21,32 @@ export const Footer: FC<{}> = () => {
             <span style={{ color: grey400, marginLeft: "0.5rem" }}>
               Tim Eitel
             </span>
-          </a>
-        </li>
-        <li className="section-links">
-          <a href="#about">About</a>
-        </li>
-        <li className="section-links">
-          <a href="#experience">Experience</a>
-        </li>
-        <li className="section-links">
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li className="section-links">
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
+          </Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="#about">About</Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="#experience">Experience</Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="#portfolio">Portfolio</Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="#contact">Contact</Link>
+        </ListItem>
+        <ListItem>
           <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
             Resume
             <ExternalLinkIcon />
           </Link>
-        </li>
-      </FooterLinks>
+        </ListItem>
+      </StyledList>
     </StyledFooter>
   );
 };
 
-const FooterLinks = styled.ul`
+const StyledList = styled(List)`
   display: flex;
   width: 100%;
   justify-content: space-around;

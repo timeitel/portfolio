@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 
-interface Props {}
+interface Props extends HTMLAttributes<HTMLLIElement> {}
 
-export const ListItem: FC<Props> = ({ children }) => {
-  return <StyledListItem>{children}</StyledListItem>;
+export const ListItem: FC<Props> = ({ children, ...rest }) => {
+  return <StyledListItem {...rest}>{children}</StyledListItem>;
 };
 
 const StyledListItem = styled.li``;
