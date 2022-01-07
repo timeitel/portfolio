@@ -27,11 +27,11 @@ export const StyledListItem = styled.li`
   margin-right: 32px;
   position: relative;
   transition: all 0.15s ease-out;
-  color: #99a1a6;
+  color: ${(p) => p.theme.color.grey400};
   display: none;
 
   &:hover {
-    color: #fff;
+    color: ${(p) => p.theme.color.whitePrimary};
   }
 
   &:before {

@@ -21,8 +21,8 @@ export const Figure = styled.figure`
 
 export const FigureCaption = styled.figcaption`
   padding: 2rem;
-  color: #99a1a6;
-  background: #1b1d1f;
+  color: ${(p) => p.theme.color.grey400};
+  background: ${(p) => p.theme.color.blackSecondary};
   margin-right: 2rem;
   border-radius: 5px;
 `;
@@ -33,7 +33,7 @@ export const ProjectSubtitle = styled.div`
   margin: 0.5rem 0 1.25rem;
   font-weight: 500;
   margin-bottom: 0;
-  color: #0069d9;
+  color: ${(p) => p.theme.color.blue600};
 `;
 
 export const ProjectTitle = styled.div`
@@ -93,10 +93,6 @@ export const ProjectTags = styled.ul`
     border-radius: 5px;
     font-weight: 600;
   }
-
-  @media (max-width: 768px) {
-    color: #a0aec0;
-  }
 `;
 
 export const ProjectLinks = styled(ProjectTags)`
@@ -106,7 +102,7 @@ export const ProjectLinks = styled(ProjectTags)`
   }
 
   li:hover {
-    background: #1b1d1f;
+    background: ${(p) => p.theme.color.blackSecondary};
     border-radius: 50%;
   }
 
