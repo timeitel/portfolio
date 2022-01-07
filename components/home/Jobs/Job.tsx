@@ -23,7 +23,7 @@ export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
   ));
 
   return (
-    <div style={{ paddingTop: "30px" }}>
+    <div className="job-description-container">
       <StyledRole>
         <span>{title}</span>
         <span style={{ color: blue600 }}>

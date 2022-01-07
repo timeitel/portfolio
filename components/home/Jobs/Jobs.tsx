@@ -18,7 +18,7 @@ export const Jobs: FC<Props> = ({ jobs }) => {
           <li
             onClick={() => setActive(i)}
             key={company}
-            className={`tab ${i === active && "active"}`}
+            className={`tab${i === active ? " active" : ""}`}
           >
             {company}
           </li>

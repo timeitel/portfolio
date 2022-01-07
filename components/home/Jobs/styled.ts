@@ -1,30 +1,31 @@
+import { List } from "@components";
 import styled from "@emotion/styled";
 
-export const StyledTabList = styled.ul`
+export const StyledTabList = styled(List)`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  min-width: 230px;
 
   .tab {
     font-size: 1rem;
-    padding: 0px 20px 2px;
+    padding: 0 20px 0;
     height: 44px;
     border-bottom: ${(p) => `2px solid ${p.theme.color.grey600}`};
     display: flex;
     align-items: center;
     cursor: pointer;
     border-radius: 2px 2px 0 0;
+    line-height: 1;
 
     &:hover {
-      background: ${(p) => p.theme.color.blue400};
       color: ${(p) => p.theme.color.blue600};
     }
   }
 
   .active {
-    background: ${(p) => p.theme.color.blue400};
     color: ${(p) => p.theme.color.blue600};
-    border-bottom: ${(p) => `2px solid ${p.theme.color.blue600}`};
+    border-bottom-color: ${(p) => p.theme.color.blue600};
   }
 `;
 
@@ -34,11 +35,25 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  .styled-tablist {
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .job-description-container {
+    margin: 0;
+  }
+
   @media only screen and (min-width: 640px) {
     flex-direction: row;
 
+    .job-description-container {
+      margin: 0 auto;
+    }
+
     .styled-tablist {
       flex-direction: column;
+      margin: 0 1rem 0 0;
 
       .tab {
         border: none;
@@ -47,15 +62,13 @@ export const StyledContainer = styled.div`
       }
 
       .active {
-        background: ${(p) => p.theme.color.blue400};
-        color: ${(p) => p.theme.color.blue600};
         border-left: ${(p) => `2px solid ${p.theme.color.blue600}`};
       }
     }
   }
 `;
 
-export const StyledDutiesList = styled.ul`
+export const StyledDutiesList = styled(List)`
   li {
     position: relative;
     padding-left: 30px;
@@ -73,13 +86,12 @@ export const StyledRole = styled.h4`
   font-weight: 500;
   font-size: 1.2rem;
   color: ${(p) => p.theme.color.grey200};
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.5rem;
   line-height: 1.2;
 `;
 
 export const StyledJobTime = styled.h5`
-  font-style: 1rem;
-  font-weight: normal;
   letter-spacing: 0.05em;
-  margin-bottom: 28px;
+  margin: 0 0 1rem;
+  font-weight: 400;
 `;
