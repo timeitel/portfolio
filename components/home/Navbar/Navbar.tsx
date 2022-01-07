@@ -1,7 +1,7 @@
 import { Link } from "@components/common/Link";
 import { ExternalLinkIcon } from "@components/common/Icons";
 import React, { FC } from "react";
-import { StyledHeader, StyledListItem } from "./styled";
+import { StyledHeader, StyledNavItem } from "./styled";
 
 interface Props {}
 
@@ -11,27 +11,29 @@ export const Navbar: FC<Props> = () => {
       <a href="/" style={{ whiteSpace: "nowrap", marginRight: "1rem" }}>
         Tim Eitel
       </a>
-      <nav style={{ display: "flex" }}>
+      <nav style={{ display: "flex", alignItems: "center" }}>
         <ul style={{ display: "flex", alignItems: "center" }}>
-          <StyledListItem>
+          <StyledNavItem>
             <a href="#about">About</a>
-          </StyledListItem>
-          <StyledListItem>
+          </StyledNavItem>
+          <StyledNavItem>
             <a href="#experience">Experience</a>
-          </StyledListItem>
-          <StyledListItem>
+          </StyledNavItem>
+          <StyledNavItem>
             <a href="#portfolio">Portfolio</a>
-          </StyledListItem>
-          <StyledListItem>
+          </StyledNavItem>
+          <StyledNavItem>
             <a href="#contact">Contact</a>
-          </StyledListItem>
-          <li>
-            <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
-              Resume
-              <ExternalLinkIcon />
-            </Link>
-          </li>
+          </StyledNavItem>
         </ul>
+        <Link
+          style={{ display: "flex", alignItems: "center" }}
+          target="_blank"
+          href="resume.pdf"
+        >
+          Resume
+          <ExternalLinkIcon />
+        </Link>
       </nav>
     </StyledHeader>
   );

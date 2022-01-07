@@ -10,6 +10,10 @@ export const getGlobalStyle = (theme: ITheme) => css`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     scroll-behavior: smooth;
     color: ${theme.color.grey600};
+    max-width: 100%;
+    overflow-x: clip;
+    background: ${theme.color.grey800};
+    line-height: 1.5;
   }
 
   a {
@@ -21,8 +25,8 @@ export const getGlobalStyle = (theme: ITheme) => css`
     box-sizing: border-box;
   }
 
-  body {
-    background: ${theme.color.grey800};
+  li {
+    list-style: none;
   }
 
   section {
@@ -38,7 +42,7 @@ export const getGlobalStyle = (theme: ITheme) => css`
     .section__subtitle {
       font-size: 2rem;
       line-height: 1.2;
-      margin: 0.5rem 0 1.25rem;
+      margin: 0.5rem 0 1.5rem;
       font-weight: 500;
 
       span {

@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: ${(p) => p.theme.color.whitePrimary};
   z-index: 1;
 
   @media only screen and (min-width: 550px) {
@@ -21,9 +21,8 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const StyledListItem = styled.li`
+export const StyledNavItem = styled.li`
   cursor: pointer;
-  text-decoration: none;
   margin-right: 32px;
   position: relative;
   transition: all 0.15s ease-out;
@@ -35,7 +34,7 @@ export const StyledListItem = styled.li`
   }
 
   &:before {
-    background: white;
+    background: ${(p) => p.theme.color.whitePrimary};
     content: "";
     position: absolute;
     width: 100%;

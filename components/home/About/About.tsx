@@ -1,7 +1,12 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { useTheme } from "@emotion/react";
-import { Section } from "@components";
+import { List, Section } from "@components";
+import {
+  StyledContainer,
+  StyledImageContainer,
+  StyledList,
+} from "@components/home/About/styled";
 
 interface Props {}
 
@@ -13,7 +18,7 @@ export const About: FC<Props> = () => {
     <Section id="about" backgroundColor="whitePrimary">
       <StyledContainer>
         <hgroup>
-          <h2 className="section__title" style={{ color: grey200 }}>
+          <h2 className="section__title" style={{ color: grey200, margin: 0 }}>
             Tech Stack &
           </h2>
           <h3 className="section__subtitle" style={{ color: grey800 }}>
@@ -22,7 +27,7 @@ export const About: FC<Props> = () => {
         </hgroup>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ maxWidth: "550px" }}>
-            <p>
+            <p style={{ marginTop: 0 }}>
               Hi, my name's Tim. I'm a software developer based in Perth, WA and
               I enjoy building fast and interesting software for all devices,
               platforms, and applications.
@@ -40,20 +45,26 @@ export const About: FC<Props> = () => {
             <h6
               style={{
                 color: grey800,
-                marginTop: "0.5rem",
+                margin: "0.5rem 0 0",
+                fontSize: "1rem",
                 fontWeight: 600,
               }}
             >
               Web
             </h6>
-            <ul className="list">
+            <List className="list">
               <li>HTML & CSS</li>
               <li>.NET & C#</li>
               <li>JavaScript & React</li>
               <li>Flutter</li>
-            </ul>
+            </List>
             <h6
-              style={{ color: grey800, fontWeight: 600, marginTop: "0.5rem" }}
+              style={{
+                color: grey800,
+                fontWeight: 600,
+                margin: "0.5rem 0 0",
+                fontSize: "1rem",
+              }}
             >
               Data
             </h6>
@@ -63,7 +74,12 @@ export const About: FC<Props> = () => {
               <li className="mobile">RESTful APIs</li>
             </StyledList>
             <h6
-              style={{ color: grey800, fontWeight: 600, marginTop: "0.5rem" }}
+              style={{
+                color: grey800,
+                fontWeight: 600,
+                margin: "0.5rem 0 0",
+                fontSize: "1rem",
+              }}
             >
               Cloud & Automation
             </h6>
@@ -83,48 +99,3 @@ export const About: FC<Props> = () => {
     </Section>
   );
 };
-
-const StyledContainer = styled.div`
-  background: white;
-  max-width: 1000px;
-  margin: 0 auto;
-`;
-
-const StyledImageContainer = styled.div`
-  display: none;
-  margin-left: 60px;
-  width: 40%;
-  max-width: 300px;
-
-  img {
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    filter: grayscale(80%);
-    transition: filter 300ms ease-out;
-
-    &:hover {
-      filter: grayscale(0);
-    }
-  }
-`;
-
-const StyledList = styled.ul`
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  @media only screen and (min-width: 640px) {
-    .desktop {
-      display: block;
-    }
-
-    .mobile {
-      display: none;
-    }
-  }
-`;

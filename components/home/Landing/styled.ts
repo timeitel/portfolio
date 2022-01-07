@@ -6,36 +6,43 @@ export const StyledIntro = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 12vh;
   text-align: center;
   line-height: 1;
-  font-size: 20vw;
   color: ${(p) => p.theme.color.blackPrimary};
   font-weight: 700;
+
+  h2 {
+    font-size: 17.5vw;
+    margin: 0;
+  }
 `;
 
 export const StyledTitle = styled.div`
   position: relative;
-  margin-top: 2.5vh;
-  padding: 0 1.25rem;
   text-align: center;
-  font-size: 26px;
   color: ${(p) => p.theme.color.whitePrimary};
   line-height: 1.2;
+
+  h1,
+  h4 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 400;
+  }
 `;
 
 export const StyledCta = styled(Link)`
   cursor: pointer;
   color: ${(p) => p.theme.color.whitePrimary};
-  background: ${(p) => p.theme.color.blue600};
+  background: ${(p) => p.theme.color.blackPrimary};
   padding: 11px 18px;
   font-size: 1rem;
   transition: background 0.25s ease-in 0.15s;
-  margin-top: 2.5vh;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, 75%);
+  margin-top: 2.5vh;
 
   &:hover {
     background: ${(p) => p.theme.color.blue600};
@@ -43,6 +50,10 @@ export const StyledCta = styled(Link)`
 `;
 
 export const StyledSection = styled.section`
+  .styled-intro {
+    margin: 12vh auto 2rem;
+  }
+
   @media only screen and (min-width: 380px) {
     .styled-intro {
       font-size: 82px;

@@ -1,4 +1,3 @@
-import { CSSProperties } from "@emotion/serialize";
 import styled from "@emotion/styled";
 import { FC, HTMLAttributes } from "react";
 import { IColors } from "styles/types";
