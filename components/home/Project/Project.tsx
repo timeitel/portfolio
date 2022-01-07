@@ -28,7 +28,11 @@ export const Project: FC<IProject> = ({
 
   return (
     <StyledProject>
-      <img src={image} alt="Image for Project" />
+      <img
+        style={{ width: "100%", borderRadius: "4px" }}
+        src={image}
+        alt="Image for Project"
+      />
 
       <ProjectContent className="project-content">
         <HGroup>

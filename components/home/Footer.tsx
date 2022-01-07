@@ -17,8 +17,10 @@ export const Footer: FC<{}> = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span style={{ color: grey400 }}>Tim Eitel</span>
             <GithubIcon />
+            <span style={{ color: grey400, marginLeft: "0.5rem" }}>
+              Tim Eitel
+            </span>
           </a>
         </li>
         <li className="section-links">
@@ -34,11 +36,7 @@ export const Footer: FC<{}> = () => {
           <a href="#contact">Contact</a>
         </li>
         <li>
-          <Link
-            style={{ display: "flex" }}
-            target="_blank"
-            href="Tim-Eitel-Resume.pdf"
-          >
+          <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
             Resume
             <ExternalLinkIcon />
           </Link>

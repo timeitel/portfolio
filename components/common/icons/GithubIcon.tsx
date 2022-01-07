@@ -8,7 +8,6 @@ export const GithubIcon: FC<Props> = ({}) => {
       style={{
         width: "1.5rem",
         height: "1.5rem",
-        marginLeft: "0.5rem",
       }}
       viewBox="0 0 128 128"
     >

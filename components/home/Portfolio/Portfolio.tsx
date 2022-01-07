@@ -10,7 +10,7 @@ interface Props {
 
 export const Portfolio: FC<Props> = ({ projects }) => {
   const {
-    color: { blackPrimary, grey800, whitePrimary },
+    color: { grey800, whitePrimary },
   } = useTheme();
   const projectList = projects.map((p) => (
     <Project
@@ -26,8 +26,11 @@ export const Portfolio: FC<Props> = ({ projects }) => {
 
   return (
     <Section id="portfolio" backgroundColor="blackPrimary">
-      <hgroup>
-        <StyledTitle className="section__title" style={{ color: grey800 }}>
+      <hgroup style={{ margin: "0 auto" }}>
+        <StyledTitle
+          className="section__title"
+          style={{ color: grey800, textAlign: "left" }}
+        >
           Some Things I've Built
         </StyledTitle>
         <h3 className="section__subtitle" style={{ color: whitePrimary }}>
@@ -35,14 +38,21 @@ export const Portfolio: FC<Props> = ({ projects }) => {
         </h3>
       </hgroup>
       {projectList}
-      <div style={{ textAlign: "center" }}>
-        <p>Want to see more of my projects?</p>
+      <div style={{ textAlign: "center", color: whitePrimary }}>
+        <p style={{ marginTop: "4rem" }} className="section__subtitle">
+          Want to see more of my projects?
+        </p>
         <Link
           href="https://github.com/timeitel/"
           target="_blank"
-          style={{ margin: "1rem auto" }}
+          style={{
+            margin: "1rem auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <span style={{ marginRight: "0.25rem" }}>Browse</span>
+          <span>Browse</span>
           <ExternalLinkIcon />
         </Link>
       </div>

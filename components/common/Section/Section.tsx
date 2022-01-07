@@ -15,9 +15,14 @@ export const Section: FC<Props> = ({
   backgroundColor = "blackPrimary",
   textAlign,
   children,
+  ...rest
 }) => {
   return (
-    <StyledSection backgroundColor={backgroundColor} textAlign={textAlign}>
+    <StyledSection
+      backgroundColor={backgroundColor}
+      textAlign={textAlign}
+      {...rest}
+    >
       {children}
     </StyledSection>
   );

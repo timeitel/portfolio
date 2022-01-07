@@ -13,7 +13,10 @@ export const Contact: FC<Props> = () => {
   return (
     <Section id="contact" backgroundColor="grey800" textAlign="center">
       <hgroup>
-        <h2 className="section__title" style={{ color: blackPrimary }}>
+        <h2
+          className="section__title"
+          style={{ color: blackPrimary, margin: 0 }}
+        >
           Get In Touch
         </h2>
         <h3 className="section__subtitle" style={{ color: whitePrimary }}>
@@ -27,7 +30,15 @@ export const Contact: FC<Props> = () => {
         </p>
       </div>
       <Link
-        style={{ margin: "3rem 0 6rem" }}
+        style={{
+          margin: "3rem auto",
+          display: "flex",
+          alignItems: "center",
+          color: whitePrimary,
+          background: blackPrimary,
+          padding: "11px 18px",
+          width: "fit-content",
+        }}
         href="mailto:timeitel@outlook.com"
       >
         <MailIcon />

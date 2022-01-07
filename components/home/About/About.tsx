@@ -91,7 +91,7 @@ export const About: FC<Props> = () => {
               <li className="mobile">Testing</li>
             </StyledList>
           </div>
-          <StyledImageContainer>
+          <StyledImageContainer className="desktop">
             <img src="./profile-pic.jpg" />
           </StyledImageContainer>
         </div>
