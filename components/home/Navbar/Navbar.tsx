@@ -1,4 +1,4 @@
-import { StyledLink } from "@components";
+import { Link } from "@components/common/Link";
 import { ExternalLinkIcon } from "@components/common/Icons";
 import React, { FC } from "react";
 import { StyledHeader, StyledListItem } from "./styled";
@@ -26,14 +26,10 @@ export const Navbar: FC<Props> = () => {
             <a href="#contact">Contact</a>
           </StyledListItem>
           <li>
-            <StyledLink
-              style={{ display: "flex" }}
-              target="_blank"
-              href="resume.pdf"
-            >
+            <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
               Resume
               <ExternalLinkIcon />
-            </StyledLink>
+            </Link>
           </li>
         </ul>
       </nav>

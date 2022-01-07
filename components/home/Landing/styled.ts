@@ -1,4 +1,4 @@
-import { StyledLink } from '@components';
+import { Link } from "@components";
 import styled from "@emotion/styled";
 
 export const StyledIntro = styled.div`
@@ -24,7 +24,7 @@ export const StyledTitle = styled.div`
   line-height: 1.2;
 `;
 
-export const StyledCta = styled(StyledLink)`
+export const StyledCta = styled(Link)`
   cursor: pointer;
   color: #fff;
   background: #0069d9;

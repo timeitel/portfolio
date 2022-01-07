@@ -2,7 +2,7 @@ export interface ITheme {
   color: IColors;
 }
 
-interface IColors {
+export interface IColors {
   blue200: string;
   blue400: string;
   blue600: string;

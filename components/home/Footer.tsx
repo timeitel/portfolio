@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { StyledLink } from "@components";
 import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
 import { useTheme } from "@emotion/react";
+import { Link } from "@components/common/Link";
 
 export const Footer: FC<{}> = () => {
   const {
@@ -34,14 +34,14 @@ export const Footer: FC<{}> = () => {
           <a href="#contact">Contact</a>
         </li>
         <li>
-          <StyledLink
+          <Link
             style={{ display: "flex" }}
             target="_blank"
             href="Tim-Eitel-Resume.pdf"
           >
             Resume
             <ExternalLinkIcon />
-          </StyledLink>
+          </Link>
         </li>
       </FooterLinks>
     </StyledFooter>

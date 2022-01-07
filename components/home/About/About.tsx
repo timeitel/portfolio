@@ -1,15 +1,16 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { useTheme } from "@emotion/react";
+import { Section } from "@components";
 
 interface Props {}
 
 export const About: FC<Props> = () => {
   const {
-    color: { whitePrimary, grey200, grey800, blue600 },
+    color: { grey200, grey800, blue600 },
   } = useTheme();
   return (
-    <section id="about" style={{ background: whitePrimary }}>
+    <Section id="about" backgroundColor="whitePrimary">
       <StyledContainer>
         <hgroup>
           <h2 className="section__title" style={{ color: grey200 }}>
@@ -79,7 +80,7 @@ export const About: FC<Props> = () => {
           </StyledImageContainer>
         </div>
       </StyledContainer>
-    </section>
+    </Section>
   );
 };
 

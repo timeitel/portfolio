@@ -1,12 +1,15 @@
-import { css } from "@emotion/css";
 import styled from "@emotion/styled";
+import { FC } from "react";
 
-interface Props {}
+interface Props {
+  primary?: boolean;
+}
 
-const blue = "#0069d9";
-const lightBlue = "rgba(0, 105, 217, 0.2)";
+export const Button: FC<Props> = ({ children }) => {
+  return <ButtonElement>{children}</ButtonElement>;
+};
 
-const ButtonStyles = css`
+const ButtonElement = styled.button<Props>`
   padding: 0.5rem 1rem;
   border-radius: 2px;
   display: flex;
@@ -14,7 +17,7 @@ const ButtonStyles = css`
   transition: background 0.25s ease-in 0.15s;
 
   &:before {
-    background: ${blue};
+    background: ${(p) => p.theme.color.blue600};
     content: "";
     position: absolute;
     width: 100%;
@@ -30,22 +33,14 @@ const ButtonStyles = css`
     visibility: visible;
     transform: scaleX(1);
   }
+
+  background: ${(p) =>
+    p.primary ? p.theme.color.blackPrimary : "transparent"};
+  border: ${(p) => p.primary && `1px solid ${p.theme.color.blue600}`};
+  color: ${(p) => (p.primary ? "white" : `${p.theme.color.blue600}`)};
+
+  &:hover {
+    background: ${(p) =>
+      p.primary ? `${p.theme.color.blue600}` : `${p.theme.color.blue400}`};
+  }
 `;
-
-export const Button = styled.button`
-  ${ButtonStyles}
-`;
-
-export const StyledLink = styled.a`
-  ${ButtonStyles}
-  display: inline-flex;
-`;
-
-// old button styles
-//   background: ${(props) => (props.primary ? "black" : "transparent")};
-//   border: ${(props) => (props.primary ? "none" : `1px solid ${blue}`)};
-//   color: ${(props) => (props.primary ? "white" : `${blue}`)};
-
-//   &:hover {
-//     background: ${(props) => (props.primary ? `${blue}` : `${lightBlue}`)};
-//   }

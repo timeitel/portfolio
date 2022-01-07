@@ -1,9 +1,8 @@
-import React, { FC } from "react";
+import { ExternalLinkIcon, Link, Project, Section } from "@components";
+import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { IProject } from "@utils";
-import { Project, StyledLink } from "@components";
-import { ExternalLinkIcon } from "@components/common/Icons";
-import { useTheme } from "@emotion/react";
+import React, { FC } from "react";
 
 interface Props {
   projects: IProject[];
@@ -11,7 +10,6 @@ interface Props {
 
 export const Portfolio: FC<Props> = ({ projects }) => {
   const {
-    color,
     color: { blackPrimary, grey800, whitePrimary },
   } = useTheme();
   const projectList = projects.map((p) => (
@@ -27,7 +25,7 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   ));
 
   return (
-    <section id="portfolio" style={{ background: blackPrimary }}>
+    <Section id="portfolio" backgroundColor="blackPrimary">
       <hgroup>
         <StyledTitle className="section__title" style={{ color: grey800 }}>
           Some Things I've Built
@@ -39,16 +37,16 @@ export const Portfolio: FC<Props> = ({ projects }) => {
       {projectList}
       <div style={{ textAlign: "center" }}>
         <p>Want to see more of my projects?</p>
-        <StyledLink
+        <Link
           href="https://github.com/timeitel/"
           target="_blank"
           style={{ margin: "1rem auto" }}
         >
           <span style={{ marginRight: "0.25rem" }}>Browse</span>
           <ExternalLinkIcon />
-        </StyledLink>
+        </Link>
       </div>
-    </section>
+    </Section>
   );
 };
 

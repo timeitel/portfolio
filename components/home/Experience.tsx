@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { Jobs } from "./Jobs/Jobs";
 import { IJob } from "@utils";
 import { useTheme } from "@emotion/react";
+import { Section } from "@components";
 
 interface Props {
   jobs: IJob[];
@@ -10,10 +11,10 @@ interface Props {
 
 export const Experience: FC<Props> = ({ jobs }) => {
   const {
-    color: { grey800, blackPrimary, whitePrimary },
+    color: { blackPrimary, whitePrimary },
   } = useTheme();
   return (
-    <section id="experience" style={{ background: grey800 }}>
+    <Section id="experience" backgroundColor="grey800">
       <StyledContainer>
         <hgroup style={{ marginBottom: "4rem" }}>
           <h2 className="section__title" style={{ color: blackPrimary }}>
@@ -25,7 +26,7 @@ export const Experience: FC<Props> = ({ jobs }) => {
         </hgroup>
         <Jobs jobs={jobs} />
       </StyledContainer>
-    </section>
+    </Section>
   );
 };
 
