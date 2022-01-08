@@ -20,7 +20,13 @@ export const About: FC<Props> = () => {
             <span>01.</span>About Me
           </h3>
         </hgroup>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <div style={{ maxWidth: "550px" }}>
             <p style={{ marginTop: 0 }}>
               Hi, my name's Tim. I'm a software developer based in Perth, WA and

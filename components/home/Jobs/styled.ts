@@ -26,6 +26,7 @@ export const StyledTabList = styled(List)`
   .active {
     color: ${(p) => p.theme.color.blue600};
     border-bottom-color: ${(p) => p.theme.color.blue600};
+    background-color: ${(p) => `${p.theme.color.blue200}33`};
   }
 `;
 

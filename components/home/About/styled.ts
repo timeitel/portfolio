@@ -5,13 +5,20 @@ export const StyledContainer = styled.div`
   background: white;
   max-width: 1000px;
   margin: 0 auto;
+
+  .desktop {
+    display: none;
+  }
+
+  @media only screen and (min-width: 980px) {
+    .desktop {
+      display: block;
+    }
+  }
 `;
 
 export const StyledImageContainer = styled.div`
-  display: none;
-  margin-left: 60px;
-  width: 40%;
-  max-width: 300px;
+  margin-left: 80px;
 
   img {
     object-fit: cover;
@@ -19,15 +26,10 @@ export const StyledImageContainer = styled.div`
     width: 100%;
     filter: grayscale(80%);
     transition: filter 300ms ease-out;
+    border-radius: 4px;
 
     &:hover {
       filter: grayscale(0);
-    }
-  }
-
-  @media only screen and (min-width: 640px) {
-    .desktop {
-      display: block;
     }
   }
 `;

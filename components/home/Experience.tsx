@@ -14,7 +14,11 @@ export const Experience: FC<Props> = ({ jobs }) => {
     color: { blackPrimary, whitePrimary },
   } = useTheme();
   return (
-    <Section id="experience" backgroundColor="grey800">
+    <Section
+      id="experience"
+      backgroundColor="grey800"
+      style={{ minHeight: "590px" }}
+    >
       <StyledContainer>
         <hgroup style={{ marginBottom: "2rem" }}>
           <h2
