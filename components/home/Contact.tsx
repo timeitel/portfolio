@@ -34,13 +34,11 @@ export const Contact: FC<Props> = () => {
         style={{
           margin: "3rem auto",
           display: "flex",
-          color: whitePrimary,
-          background: blackPrimary,
           width: "fit-content",
         }}
         href="mailto:timeitel@outlook.com"
       >
-        <PrimaryButton size="lg">
+        <PrimaryButton>
           <MailIcon />
           Say Hello
         </PrimaryButton>

@@ -22,7 +22,6 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledNavItem = styled.li`
-  cursor: pointer;
   margin-right: 32px;
   position: relative;
   transition: all 0.15s ease-out;

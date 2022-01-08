@@ -8,7 +8,9 @@ export const Button: FC<ButtonProps> = ({ children, ...rest }) => {
 
 const StyledDefaultButton = styled.button<ButtonProps>`
   align-items: center;
-  border-radius: 2px;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
   display: inline-flex;

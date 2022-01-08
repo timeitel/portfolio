@@ -1,8 +1,8 @@
-import { Link } from "@components/common/Link";
+import { SecondaryButton } from "@common/Button";
 import { ExternalLinkIcon } from "@components/common/Icons";
+import { Link } from "@components/common/Link";
 import React, { FC } from "react";
 import { StyledHeader, StyledNavItem } from "./styled";
-import { SecondaryButton } from "@common/Button";
 
 interface Props {}
 
@@ -32,7 +32,7 @@ export const Navbar: FC<Props> = () => {
           target="_blank"
           href="resume.pdf"
         >
-          <SecondaryButton>
+          <SecondaryButton style={{ marginTop: "4px" }}>
             Resume
             <ExternalLinkIcon />
           </SecondaryButton>

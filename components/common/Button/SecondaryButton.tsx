@@ -7,7 +7,6 @@ export const SecondaryButton: FC<ButtonProps> = ({ children, ...rest }) => {
 };
 
 const StyledSecondaryButton = styled(Button)`
-  background-color: inherit;
   color: ${(p) => p.theme.color.blue600};
   border: ${(p) => `1px solid ${p.theme.color.blue600}`};
 
@@ -19,10 +18,10 @@ const StyledSecondaryButton = styled(Button)`
     content: "";
     background: ${(p) => p.theme.color.blue600};
     position: absolute;
-    width: 100%;
+    width: 97.5%;
     height: 1px;
     bottom: 0;
-    left: 0;
+    left: 1.25%;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;

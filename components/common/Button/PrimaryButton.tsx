@@ -18,10 +18,10 @@ const StyledPrimaryButton = styled(Button)`
     content: "";
     background: ${(p) => p.theme.color.blue600};
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 1px;
     bottom: 0;
-    left: 0;
+    left: 5%;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
