@@ -30,11 +30,6 @@ export const StyledTitle = styled.div`
   }
 `;
 
-export const StyledCta = styled(Link)`
-  font-size: 1rem;
-  margin-top: 2.5vh;
-`;
-
 export const StyledSection = styled.section`
   .styled-intro {
     margin: 12vh auto 2rem;
