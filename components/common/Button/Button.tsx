@@ -1,15 +1,13 @@
 import styled from "@emotion/styled";
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 
-interface Props {
-  primary?: boolean;
-}
+interface Props extends HTMLAttributes<HTMLButtonElement> {}
 
 export const Button: FC<Props> = ({ children }) => {
-  return <ButtonElement>{children}</ButtonElement>;
+  return <StyledDefaultButton>{children}</StyledDefaultButton>;
 };
 
-const ButtonElement = styled.button<Props>`
+const StyledDefaultButton = styled.button<Props>`
   padding: 0.5rem 1rem;
   border-radius: 2px;
   display: flex;
@@ -32,15 +30,5 @@ const ButtonElement = styled.button<Props>`
   &:hover:before {
     visibility: visible;
     transform: scaleX(1);
-  }
-
-  background: ${(p) =>
-    p.primary ? p.theme.color.blackPrimary : "transparent"};
-  border: ${(p) => p.primary && `1px solid ${p.theme.color.blue600}`};
-  color: ${(p) => (p.primary ? "white" : `${p.theme.color.blue600}`)};
-
-  &:hover {
-    background: ${(p) =>
-      p.primary ? `${p.theme.color.blue600}` : `${p.theme.color.blue400}`};
   }
 `;

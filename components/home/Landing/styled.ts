@@ -18,7 +18,6 @@ export const StyledIntro = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-  position: relative;
   text-align: center;
   color: ${(p) => p.theme.color.whitePrimary};
   line-height: 1.2;
@@ -32,21 +31,8 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledCta = styled(Link)`
-  cursor: pointer;
-  color: ${(p) => p.theme.color.whitePrimary};
-  background: ${(p) => p.theme.color.blackPrimary};
-  padding: 11px 18px;
   font-size: 1rem;
-  transition: background 0.25s ease-in 0.15s;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 75%);
   margin-top: 2.5vh;
-
-  &:hover {
-    background: ${(p) => p.theme.color.blue600};
-  }
 `;
 
 export const StyledSection = styled.section`
