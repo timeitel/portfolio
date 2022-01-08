@@ -3,16 +3,21 @@ import styled from "@emotion/styled";
 import { FC } from "react";
 
 export const SecondaryButton: FC<ButtonProps> = ({ children, ...rest }) => {
-  return <StyledPrimaryButton {...rest}>{children}</StyledPrimaryButton>;
+  return <StyledSecondaryButton {...rest}>{children}</StyledSecondaryButton>;
 };
 
-const StyledPrimaryButton = styled(Button)`
-  background-color: ${(p) => p.theme.color.blackPrimary};
+const StyledSecondaryButton = styled(Button)`
+  background-color: inherit;
   color: ${(p) => p.theme.color.blue600};
-  border: ${(p) => `2px solid ${p.theme.color.blue600}`};
+  border: ${(p) => `1px solid ${p.theme.color.blue600}`};
+
+  &:hover {
+    background-color: ${(p) => `${p.theme.color.blue200}33`};
+  }
 
   &:before {
     content: "";
+    background: ${(p) => p.theme.color.blue600};
     position: absolute;
     width: 100%;
     height: 1px;

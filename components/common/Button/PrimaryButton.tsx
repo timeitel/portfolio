@@ -15,8 +15,8 @@ const StyledPrimaryButton = styled(Button)`
   }
 
   &:before {
-    background: ${(p) => p.theme.color.blue600};
     content: "";
+    background: ${(p) => p.theme.color.blue600};
     position: absolute;
     width: 100%;
     height: 1px;

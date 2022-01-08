@@ -16,5 +16,5 @@ export const ButtonSizes: IButtonSizes = {
     fontSize: "0.8125rem",
   },
   md: { padding: "6px 16px", fontSize: "0.875rem" },
-  lg: { padding: "8px 22px", fontSize: "0.9375" },
+  lg: { padding: "8px 22px", fontSize: "0.9375rem" },
 };

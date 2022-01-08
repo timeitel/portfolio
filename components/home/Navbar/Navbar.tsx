@@ -2,6 +2,7 @@ import { Link } from "@components/common/Link";
 import { ExternalLinkIcon } from "@components/common/Icons";
 import React, { FC } from "react";
 import { StyledHeader, StyledNavItem } from "./styled";
+import { SecondaryButton } from "@common/Button";
 
 interface Props {}
 
@@ -31,8 +32,10 @@ export const Navbar: FC<Props> = () => {
           target="_blank"
           href="resume.pdf"
         >
-          Resume
-          <ExternalLinkIcon />
+          <SecondaryButton>
+            Resume
+            <ExternalLinkIcon />
+          </SecondaryButton>
         </Link>
       </nav>
     </StyledHeader>
