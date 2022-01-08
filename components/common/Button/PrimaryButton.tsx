@@ -10,6 +10,10 @@ const StyledPrimaryButton = styled(Button)`
   background-color: ${(p) => p.theme.color.blackPrimary};
   color: ${(p) => p.theme.color.whitePrimary};
 
+  &:hover {
+    background: ${(p) => p.theme.color.blue600};
+  }
+
   &:before {
     background: ${(p) => p.theme.color.blue600};
     content: "";

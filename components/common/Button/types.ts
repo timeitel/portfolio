@@ -1,11 +1,20 @@
-import { HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes } from "react";
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   size?: keyof typeof ButtonSizes;
 }
 
-export const ButtonSizes = {
-  sm: "0.1875rem 0.5625rem",
-  md: "",
-  lg: "",
+interface IButtonSizes {
+  sm: CSSProperties;
+  md: CSSProperties;
+  lg: CSSProperties;
+}
+
+export const ButtonSizes: IButtonSizes = {
+  sm: {
+    padding: "4px 10px",
+    fontSize: "0.8125rem",
+  },
+  md: { padding: "6px 16px", fontSize: "0.875rem" },
+  lg: { padding: "8px 22px", fontSize: "0.9375" },
 };

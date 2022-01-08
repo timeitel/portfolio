@@ -15,7 +15,7 @@ export const Landing: FC<Props> = () => {
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
         <StyledCta className="styled-cta" href="#about">
-          <PrimaryButton>Find out more</PrimaryButton>
+          <PrimaryButton size="lg">Find out more</PrimaryButton>
         </StyledCta>
       </StyledTitle>
     </StyledSection>
