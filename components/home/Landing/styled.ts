@@ -1,4 +1,4 @@
-import { Link } from "@components";
+import { Link } from "@common";
 import styled from "@emotion/styled";
 
 export const StyledIntro = styled.div`

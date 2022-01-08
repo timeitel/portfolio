@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Jobs } from "./Jobs/Jobs";
 import { IJob } from "@utils";
 import { useTheme } from "@emotion/react";
-import { Section } from "@components";
+import { Section } from "@common";
 
 interface Props {
   jobs: IJob[];

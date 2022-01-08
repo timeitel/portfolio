@@ -1,12 +1,7 @@
-import React, { FC } from "react";
-import styled from "@emotion/styled";
+import { List, Section } from "@common";
+import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 import { useTheme } from "@emotion/react";
-import { List, Section } from "@components";
-import {
-  StyledContainer,
-  StyledImageContainer,
-  StyledList,
-} from "@components/home/About/styled";
+import React, { FC } from "react";
 
 interface Props {}
 

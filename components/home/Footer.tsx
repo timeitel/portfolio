@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
 import { useTheme } from "@emotion/react";
-import { Link, List, ListItem } from "@components";
+import { Link, List, ListItem } from "@common";
 
 export const Footer: FC<{}> = () => {
   const {

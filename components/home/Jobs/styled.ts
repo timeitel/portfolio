@@ -1,4 +1,4 @@
-import { List } from "@components";
+import { List } from "@common";
 import styled from "@emotion/styled";
 
 export const StyledTabList = styled(List)`

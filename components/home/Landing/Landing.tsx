@@ -1,3 +1,4 @@
+import { PrimaryButton } from "@common/Button";
 import React, { FC } from "react";
 import { StyledCta, StyledIntro, StyledSection, StyledTitle } from "./styled";
 
@@ -14,7 +15,7 @@ export const Landing: FC<Props> = () => {
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
         <StyledCta className="styled-cta" href="#about">
-          Find out more
+          <PrimaryButton>Find out more</PrimaryButton>
         </StyledCta>
       </StyledTitle>
     </StyledSection>

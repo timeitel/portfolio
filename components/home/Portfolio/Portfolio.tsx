@@ -1,4 +1,5 @@
-import { ExternalLinkIcon, Link, Project, Section } from "@components";
+import { ExternalLinkIcon, Link, Section } from "@common";
+import { Project } from "@components";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { IProject } from "@utils";

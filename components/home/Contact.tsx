@@ -1,4 +1,4 @@
-import { Section } from "@components";
+import { Section } from "@common";
 import { MailIcon } from "@components/common/Icons";
 import { Link } from "@components/common/Link";
 import { useTheme } from "@emotion/react";

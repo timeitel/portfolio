@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@*": ["/*"],
+      "@common": ["components/common"],
+      "@common/*": ["components/common/*"],
       "@components": ["components"],
       "@components/*": ["components/*"],
       "@theme": ["styles/theme.ts"],
