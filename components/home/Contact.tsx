@@ -1,4 +1,5 @@
 import { Section } from "@common";
+import { PrimaryButton } from "@common/Button";
 import { MailIcon } from "@components/common/Icons";
 import { Link } from "@components/common/Link";
 import { useTheme } from "@emotion/react";
@@ -33,16 +34,16 @@ export const Contact: FC<Props> = () => {
         style={{
           margin: "3rem auto",
           display: "flex",
-          alignItems: "center",
           color: whitePrimary,
           background: blackPrimary,
-          padding: "11px 18px",
           width: "fit-content",
         }}
         href="mailto:timeitel@outlook.com"
       >
-        <MailIcon />
-        Say Hello
+        <PrimaryButton size="lg">
+          <MailIcon />
+          Say Hello
+        </PrimaryButton>
       </Link>
     </Section>
   );
