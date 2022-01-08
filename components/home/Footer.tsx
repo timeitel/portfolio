@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
 import { useTheme } from "@emotion/react";
 import { Link, List, ListItem } from "@common";
+import { SecondaryButton } from "@common/Button";
 
 export const Footer: FC<{}> = () => {
   const {
@@ -37,8 +38,10 @@ export const Footer: FC<{}> = () => {
         </ListItem>
         <ListItem>
           <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
-            Resume
-            <ExternalLinkIcon />
+            <SecondaryButton>
+              Resume
+              <ExternalLinkIcon />
+            </SecondaryButton>
           </Link>
         </ListItem>
       </StyledList>
