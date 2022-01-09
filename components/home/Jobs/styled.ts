@@ -38,7 +38,7 @@ export const StyledContainer = styled.div`
 
   .styled-tablist {
     padding: 0;
-    margin: 1rem 0;
+    margin: 0 0 1rem;
   }
 
   .job-description-container {
