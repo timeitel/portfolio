@@ -46,7 +46,7 @@ export const StyledContainer = styled.div`
 
   .job-description-container {
     margin: 0.5rem 0 0 0;
-    min-height: 255px;
+    min-height: 355px;
   }
 
   @media only screen and (min-width: 640px) {
@@ -54,6 +54,7 @@ export const StyledContainer = styled.div`
 
     .job-description-container {
       margin: 0 auto;
+      min-height: 255px;
     }
 
     .styled-tablist {
