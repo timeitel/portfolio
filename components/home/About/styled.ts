@@ -6,6 +6,29 @@ export const StyledContainer = styled.div`
   max-width: 1000px;
   margin: 0 auto;
 
+  .about-open-tag,
+  .about-closing-tag {
+    position: relative;
+  }
+
+  .about-open-tag:before {
+    content: "<TechStack>";
+    font-family: "La Belle Aurore", cursive;
+    color: ${(p) => p.theme.color.grey600};
+    position: absolute;
+    margin-top: -2rem;
+    left: -0.85rem;
+  }
+
+  .about-closing-tag:after {
+    content: "</TechStack>";
+    font-family: "La Belle Aurore", cursive;
+    color: ${(p) => p.theme.color.grey600};
+    position: absolute;
+    margin-top: 3rem;
+    left: -0.85rem;
+  }
+
   .desktop {
     display: none;
   }

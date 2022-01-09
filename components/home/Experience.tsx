@@ -21,12 +21,6 @@ export const Experience: FC<Props> = ({ jobs }) => {
     >
       <StyledContainer>
         <hgroup style={{ marginBottom: "2rem" }}>
-          <h2
-            className="section__title"
-            style={{ color: blackPrimary, margin: 0 }}
-          >
-            Experience
-          </h2>
           <h3 className="section__subtitle" style={{ color: whitePrimary }}>
             <span>02.</span>Where I've Worked
           </h3>
@@ -40,4 +34,23 @@ export const Experience: FC<Props> = ({ jobs }) => {
 const StyledContainer = styled.div`
   margin: auto;
   max-width: 900px;
+  position: relative;
+
+  &:before {
+    content: "<Experience>";
+    font-family: "La Belle Aurore", cursive;
+    color: ${(p) => p.theme.color.grey400};
+    position: absolute;
+    margin-top: -2rem;
+    left: -0.85rem;
+  }
+
+  &:after {
+    content: "</Experience>";
+    font-family: "La Belle Aurore", cursive;
+    color: ${(p) => p.theme.color.grey400};
+    position: absolute;
+    margin-top: 2rem;
+    left: -0.85rem;
+  }
 `;

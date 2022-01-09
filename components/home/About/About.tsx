@@ -7,20 +7,18 @@ interface Props {}
 
 export const About: FC<Props> = () => {
   const {
-    color: { grey200, grey800, blue600 },
+    color: { grey800, blue600 },
   } = useTheme();
   return (
     <Section id="about" backgroundColor="whitePrimary">
       <StyledContainer>
-        <hgroup>
-          <h2 className="section__title" style={{ color: grey200, margin: 0 }}>
-            Tech Stack &
-          </h2>
+        <hgroup className="about-open-tag">
           <h3 className="section__subtitle" style={{ color: grey800 }}>
             <span>01.</span>About Me
           </h3>
         </hgroup>
         <div
+          className="about-closing-tag"
           style={{
             display: "flex",
             justifyContent: "space-between",
