@@ -1,13 +1,16 @@
 import { FC } from "react";
 
-interface Props {}
+interface Props {
+  color?: string;
+}
 
-export const GithubIcon: FC<Props> = ({}) => {
+export const GithubIcon: FC<Props> = ({ color }) => {
   return (
     <svg
       style={{
         width: "1.5rem",
         height: "1.5rem",
+        ...(color && { fill: color }),
       }}
       viewBox="0 0 128 128"
     >

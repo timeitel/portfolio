@@ -18,10 +18,8 @@ export const Footer: FC<{}> = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon />
-            <span style={{ color: grey400, marginLeft: "0.5rem" }}>
-              Tim Eitel
-            </span>
+            <GithubIcon color={grey400} />
+            <span style={{ marginLeft: "0.5rem" }}>Tim Eitel</span>
           </Link>
         </ListItem>
         <ListItem className="section-links">
@@ -32,9 +30,6 @@ export const Footer: FC<{}> = () => {
         </ListItem>
         <ListItem className="section-links">
           <Link href="#portfolio">Portfolio</Link>
-        </ListItem>
-        <ListItem className="section-links">
-          <Link href="#contact">Contact</Link>
         </ListItem>
         <ListItem>
           <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">
