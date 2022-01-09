@@ -35,10 +35,14 @@ export const Portfolio: FC<Props> = ({ projects }) => {
       </hgroup>
       {projectList}
       <div
-        style={{ textAlign: "center", color: whitePrimary }}
+        style={{
+          textAlign: "center",
+          color: whitePrimary,
+          marginBottom: "4rem",
+        }}
         className="portfolio-closing-tag"
       >
-        <p style={{ marginTop: "7rem" }} className="section__subtitle">
+        <p style={{ marginTop: "5rem" }} className="section__subtitle">
           Want to see more of my projects?
         </p>
         <Link
@@ -75,7 +79,7 @@ const StyledSection = styled(Section)`
   .portfolio-closing-tag:after {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "</Portfolio>";
-    bottom: -2rem;
+    bottom: -6rem;
     left: -0.85rem;
   }
 `;
