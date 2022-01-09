@@ -9,11 +9,14 @@ export const StyledTabList = styled(List)`
 
   .tab {
     font-size: 1rem;
-    padding: 0 20px 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    padding: 0 15px 0;
     height: 44px;
     border-bottom: ${(p) => `2px solid ${p.theme.color.grey600}`};
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-radius: 2px 2px 0 0;
     line-height: 1;
@@ -60,6 +63,7 @@ export const StyledContainer = styled.div`
         border: none;
         border-left: ${(p) => `2px solid ${p.theme.color.grey600}`};
         border-radius: 0 2px 2px 0;
+        justify-content: flex-start;
       }
 
       .active {
