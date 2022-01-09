@@ -87,25 +87,24 @@ export const StyledProject = styled.div`
 export const ProjectTags = styled.ul`
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin: 1rem 0;
+  font-size: 0.75rem;
 
   li {
     margin-left: 10px;
-    padding: 1rem;
-    border-radius: 5px;
-    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 16px;
+    background-color: ${(p) => p.theme.color.blackPrimary};
   }
 `;
 
 export const ProjectLinks = styled(ProjectTags)`
-  li {
-    margin-left: 25px;
-    padding: 8px;
-  }
+  margin: 0;
 
-  li:hover {
-    background: ${(p) => p.theme.color.blackSecondary};
-    border-radius: 50%;
+  li {
+    margin: 0 1rem;
+    background-color: transparent;
+    padding: 0;
   }
 
   svg {

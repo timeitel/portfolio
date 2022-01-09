@@ -39,20 +39,27 @@ export const Project: FC<IProject> = ({
           <ProjectSubtitle>Featured Project</ProjectSubtitle>
           <ProjectTitle>{title}</ProjectTitle>
         </HGroup>
-        <FigureCaption>{projectDescription}</FigureCaption>
-        <ProjectTags>{tagItems}</ProjectTags>
-        <ProjectLinks>
-          <li>
-            <a href={github} target="_blank">
-              <CodeIcon />
-            </a>
-          </li>
-          <li>
-            <a href={url} target="_blank">
-              <ExternalLinkIcon />
-            </a>
-          </li>
-        </ProjectLinks>
+
+        <FigureCaption>
+          {projectDescription}
+          <ProjectTags>{tagItems}</ProjectTags>
+          <ProjectLinks>
+            {!!github && (
+              <li>
+                <a href={github} target="_blank">
+                  <CodeIcon />
+                </a>
+              </li>
+            )}
+            {!!url && (
+              <li>
+                <a href={url} target="_blank">
+                  <ExternalLinkIcon />
+                </a>
+              </li>
+            )}
+          </ProjectLinks>
+        </FigureCaption>
       </ProjectContent>
     </StyledProject>
   );
