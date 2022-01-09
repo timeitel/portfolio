@@ -2,7 +2,7 @@ import { List } from "@common";
 import styled from "@emotion/styled";
 
 export const StyledContainer = styled.div`
-  background: white;
+  background: ${(p) => p.theme.color.whitePrimary};
   max-width: 1000px;
   margin: 0 auto;
 
@@ -16,7 +16,7 @@ export const StyledContainer = styled.div`
     font-family: "La Belle Aurore", cursive;
     color: ${(p) => p.theme.color.grey600};
     position: absolute;
-    margin-top: -2rem;
+    top: -2rem;
     left: -0.85rem;
   }
 
@@ -25,7 +25,7 @@ export const StyledContainer = styled.div`
     font-family: "La Belle Aurore", cursive;
     color: ${(p) => p.theme.color.grey600};
     position: absolute;
-    margin-top: 3rem;
+    bottom: -3rem;
     left: -0.85rem;
   }
 

@@ -11,15 +11,15 @@ interface Props {
 
 export const Experience: FC<Props> = ({ jobs }) => {
   const {
-    color: { blackPrimary, whitePrimary },
+    color: { whitePrimary },
   } = useTheme();
   return (
-    <Section
+    <StyledSection
       id="experience"
       backgroundColor="grey800"
       style={{ minHeight: "590px" }}
     >
-      <StyledContainer>
+      <StyledContainer className="experience-tag">
         <hgroup style={{ marginBottom: "2rem" }}>
           <h3 className="section__subtitle" style={{ color: whitePrimary }}>
             <span>02.</span>Where I've Worked
@@ -27,30 +27,35 @@ export const Experience: FC<Props> = ({ jobs }) => {
         </hgroup>
         <Jobs jobs={jobs} />
       </StyledContainer>
-    </Section>
+    </StyledSection>
   );
 };
 
 const StyledContainer = styled.div`
   margin: auto;
   max-width: 900px;
-  position: relative;
+`;
 
-  &:before {
+const StyledSection = styled(Section)`
+  .experience-tag {
+    position: relative;
+  }
+
+  .experience-tag:before {
     content: "<Experience>";
     font-family: "La Belle Aurore", cursive;
     color: ${(p) => p.theme.color.grey400};
     position: absolute;
-    margin-top: -2rem;
+    top: -2rem;
     left: -0.85rem;
   }
 
-  &:after {
+  .experience-tag:after {
     content: "</Experience>";
     font-family: "La Belle Aurore", cursive;
     color: ${(p) => p.theme.color.grey400};
     position: absolute;
-    margin-top: 2rem;
+    bottom: -4rem;
     left: -0.85rem;
   }
 `;
