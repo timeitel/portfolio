@@ -46,6 +46,7 @@ export const StyledContainer = styled.div`
 
   .job-description-container {
     margin: 0.5rem 0 0 0;
+    min-height: 255px;
   }
 
   @media only screen and (min-width: 640px) {
@@ -64,6 +65,7 @@ export const StyledContainer = styled.div`
         border-left: ${(p) => `2px solid ${p.theme.color.grey600}`};
         border-radius: 0 2px 2px 0;
         justify-content: flex-start;
+        flex-grow: 0;
       }
 
       .active {
