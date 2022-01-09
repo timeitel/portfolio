@@ -1,5 +1,6 @@
 import { List } from "@common";
 import styled from "@emotion/styled";
+import { getHtmlTagStyles } from "@styles/htmlTags";
 
 export const StyledContainer = styled.div`
   background: ${(p) => p.theme.color.whitePrimary};
@@ -12,19 +13,15 @@ export const StyledContainer = styled.div`
   }
 
   .about-open-tag:before {
+    ${(p) => getHtmlTagStyles(p.theme)};
     content: "<TechStack>";
-    font-family: "La Belle Aurore", cursive;
-    color: ${(p) => p.theme.color.grey600};
-    position: absolute;
     top: -2rem;
     left: -0.85rem;
   }
 
   .about-closing-tag:after {
+    ${(p) => getHtmlTagStyles(p.theme)};
     content: "</TechStack>";
-    font-family: "La Belle Aurore", cursive;
-    color: ${(p) => p.theme.color.grey600};
-    position: absolute;
     bottom: -3rem;
     left: -0.85rem;
   }

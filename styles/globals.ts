@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { ITheme } from "styles/types";
 
-export const getGlobalStyle = (theme: ITheme) => css`
+export const getGlobalStyles = (theme: ITheme) => css`
   html,
   body {
     padding: 0;

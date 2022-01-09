@@ -20,6 +20,7 @@
       "@common/*": ["components/common/*"],
       "@components": ["components"],
       "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
       "@theme": ["styles/theme.ts"],
       "@utils": ["utils"]
     }

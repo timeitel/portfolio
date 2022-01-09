@@ -4,6 +4,7 @@ import { Jobs } from "./Jobs/Jobs";
 import { IJob } from "@utils";
 import { useTheme } from "@emotion/react";
 import { Section } from "@common";
+import { getHtmlTagStyles } from "@styles/htmlTags";
 
 interface Props {
   jobs: IJob[];
@@ -42,19 +43,15 @@ const StyledSection = styled(Section)`
   }
 
   .experience-tag:before {
+    ${(p) => getHtmlTagStyles(p.theme)};
     content: "<Experience>";
-    font-family: "La Belle Aurore", cursive;
-    color: ${(p) => p.theme.color.grey400};
-    position: absolute;
     top: -2rem;
     left: -0.85rem;
   }
 
   .experience-tag:after {
+    ${(p) => getHtmlTagStyles(p.theme)};
     content: "</Experience>";
-    font-family: "La Belle Aurore", cursive;
-    color: ${(p) => p.theme.color.grey400};
-    position: absolute;
     bottom: -4rem;
     left: -0.85rem;
   }
