@@ -2,6 +2,7 @@ import { ExternalLinkIcon, Link, Section } from "@common";
 import { Project } from "@components";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
+import { getHtmlTagStyles } from "@styles/htmlTags";
 import { IProject } from "@utils";
 import React, { FC } from "react";
 
@@ -11,7 +12,7 @@ interface Props {
 
 export const Portfolio: FC<Props> = ({ projects }) => {
   const {
-    color: { grey800, whitePrimary },
+    color: { whitePrimary },
   } = useTheme();
   const projectList = projects.map((p) => (
     <Project
@@ -26,20 +27,17 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   ));
 
   return (
-    <Section id="portfolio" backgroundColor="blackPrimary">
-      <hgroup style={{ margin: "0 auto" }}>
-        <StyledTitle
-          className="section__title"
-          style={{ color: grey800, textAlign: "left" }}
-        >
-          Some Things I've Built
-        </StyledTitle>
+    <StyledSection id="portfolio" backgroundColor="blackPrimary">
+      <hgroup className="portfolio-open-tag" style={{ margin: "0 auto" }}>
         <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-          <span>03.</span>Portfolio
+          <span>03.</span>Some Things I've Built
         </h3>
       </hgroup>
       {projectList}
-      <div style={{ textAlign: "center", color: whitePrimary }}>
+      <div
+        style={{ textAlign: "center", color: whitePrimary }}
+        className="portfolio-closing-tag"
+      >
         <p style={{ marginTop: "7rem" }} className="section__subtitle">
           Want to see more of my projects?
         </p>
@@ -57,13 +55,27 @@ export const Portfolio: FC<Props> = ({ projects }) => {
           <ExternalLinkIcon />
         </Link>
       </div>
-    </Section>
+    </StyledSection>
   );
 };
 
-const StyledTitle = styled.h2`
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
+const StyledSection = styled(Section)`
+  .portfolio-closing-tag,
+  .portfolio-open-tag {
+    position: relative;
+  }
+
+  .portfolio-open-tag:before {
+    ${(p) => getHtmlTagStyles(p.theme)};
+    content: "<Portfolio>";
+    top: -2rem;
+    left: -0.85rem;
+  }
+
+  .portfolio-closing-tag:after {
+    ${(p) => getHtmlTagStyles(p.theme)};
+    content: "</Portfolio>";
+    bottom: -2rem;
+    left: -0.85rem;
+  }
 `;
