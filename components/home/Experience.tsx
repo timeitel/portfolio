@@ -52,7 +52,7 @@ const StyledSection = styled(Section)`
   .experience-tag:after {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "</Experience>";
-    bottom: -4rem;
+    bottom: -2rem;
     left: -0.85rem;
   }
 `;
