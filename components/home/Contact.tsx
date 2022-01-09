@@ -15,12 +15,12 @@ export const Contact: FC<Props> = () => {
   } = useTheme();
   return (
     <StyledSection id="contact" backgroundColor="grey800" textAlign="center">
-      <hgroup className="contact-open-tag">
+      <hgroup>
         <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-          <span>04.</span>Get In Touch
+          <span className="contact-tag">04.</span>Get In Touch
         </h3>
       </hgroup>
-      <div className="contact-closing-tag">
+      <div>
         <p style={{ marginTop: "1rem", color: grey400 }}>
           If you'd like to reach out, my inbox is always open. <br />
           So feel free to get in touch and I'll try my best to get back to you.
@@ -44,22 +44,24 @@ export const Contact: FC<Props> = () => {
 };
 
 const StyledSection = styled(Section)`
-  .contact-closing-tag,
-  .contact-open-tag {
+  .contact-tag,
+  .contact-tag {
     position: relative;
   }
 
-  .contact-open-tag:before {
+  .contact-tag:before {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "<Contact>";
     top: -2rem;
-    left: -0.85rem;
+    left: -0.8rem;
+    font-size: 1rem;
   }
 
-  .contact-closing-tag:after {
+  .contact-tag:after {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "</Contact>";
-    bottom: -10rem;
-    left: -0.85rem;
+    bottom: -16rem;
+    left: -0.8rem;
+    font-size: 1rem;
   }
 `;
