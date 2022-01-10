@@ -93,8 +93,8 @@ export const ProjectTags = styled.ul`
 
   li {
     margin-left: 10px;
-    padding: 6px 16px;
-    border-radius: 16px;
+    padding: 4px 10px;
+    border-radius: 6px;
     background-color: ${(p) => p.theme.color.blackPrimary};
   }
 `;
