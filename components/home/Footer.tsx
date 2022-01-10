@@ -1,26 +1,22 @@
-import React, { FC } from "react";
-import styled from "@emotion/styled";
-import { ExternalLinkIcon, GithubIcon } from "@components/common/Icons";
-import { useTheme } from "@emotion/react";
 import { Link, List, ListItem } from "@common";
 import { SecondaryButton } from "@common/Button";
+import { HtmlName } from "@common/HtmlName/HtmlName";
+import { GithubContainedIcon } from "@common/Icons/GithubContainedIcon";
+import {
+  ExternalLinkIcon,
+  LinkedInContainedIcon,
+} from "@components/common/Icons";
+import styled from "@emotion/styled";
+import React, { FC } from "react";
 
-export const Footer: FC<{}> = () => {
-  const {
-    color: { grey400 },
-  } = useTheme();
+interface Props {}
+
+export const Footer: FC<Props> = () => {
   return (
     <StyledFooter>
       <StyledList>
         <ListItem>
-          <Link
-            href="https://github.com/timeitel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubIcon color={grey400} />
-            <span style={{ marginLeft: "0.5rem" }}>Tim Eitel</span>
-          </Link>
+          <HtmlName>{"</Tim Eitel>"}</HtmlName>
         </ListItem>
         <ListItem className="section-links">
           <Link href="#about">About</Link>
@@ -30,6 +26,16 @@ export const Footer: FC<{}> = () => {
         </ListItem>
         <ListItem className="section-links">
           <Link href="#portfolio">Portfolio</Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="https://github.com/timeitel/" target="_blank">
+            <GithubContainedIcon />
+          </Link>
+        </ListItem>
+        <ListItem className="section-links">
+          <Link href="https://www.linkedin.com/in/tim-eitel/" target="_blank">
+            <LinkedInContainedIcon />
+          </Link>
         </ListItem>
         <ListItem>
           <Link style={{ display: "flex" }} target="_blank" href="resume.pdf">

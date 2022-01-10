@@ -1,4 +1,5 @@
 import { SecondaryButton } from "@common/Button";
+import { HtmlName } from "@common/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "@components/common/Icons";
 import { Link } from "@components/common/Link";
 import React, { FC } from "react";
@@ -9,9 +10,7 @@ interface Props {}
 export const Navbar: FC<Props> = () => {
   return (
     <StyledHeader>
-      <a href="/" style={{ whiteSpace: "nowrap", marginRight: "1rem" }}>
-        Tim Eitel
-      </a>
+      <HtmlName>{"<Tim Eitel>"}</HtmlName>
       <nav style={{ display: "flex", alignItems: "center" }}>
         <ul style={{ display: "flex", alignItems: "center" }}>
           <StyledNavItem>

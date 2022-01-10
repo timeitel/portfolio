@@ -1,4 +1,4 @@
-import { List, Section } from "@common";
+import { Link, List, Section } from "@common";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 import { useTheme } from "@emotion/react";
 import React, { FC } from "react";
@@ -33,7 +33,9 @@ export const About: FC<Props> = () => {
             </p>
             <p style={{ marginTop: "0.5rem" }}>
               I'm currently working for{" "}
-              <span style={{ color: blue600 }}>Komo Digital Engagement</span>{" "}
+              <span style={{ color: blue600 }}>
+                <Link href="#experience">Komo Digital Engagement</Link>
+              </span>{" "}
               where I get to work on a range of technologies from full stack
               .NET and React to Node microservices.
             </p>

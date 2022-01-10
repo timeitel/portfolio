@@ -48,6 +48,7 @@ export const ProjectTitle = styled.div`
 `;
 
 export const ProjectContent = styled.div`
+  width: 100%;
   text-align: right;
 `;
 
