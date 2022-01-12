@@ -1,7 +1,7 @@
-import { Section } from "@common";
-import { PrimaryButton } from "@common/Button";
-import { MailIcon } from "@components/common/Icons";
-import { Link } from "@components/common/Link";
+import { Section } from "common/components";
+import { PrimaryButton } from "common/components/Button";
+import { MailIcon } from "common/components/Icons";
+import { Link } from "common/components/Link";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";

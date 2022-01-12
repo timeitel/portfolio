@@ -1,5 +1,5 @@
-import { Link } from "@common";
-import { PrimaryButton } from "@common/Button";
+import { Link } from "common/components";
+import { PrimaryButton } from "common/components/Button";
 import { useFadeUp } from "common/hooks";
 import React, { FC } from "react";
 import { animated } from "react-spring";

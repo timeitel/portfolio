@@ -12,8 +12,8 @@ import {
   Landing,
   Navbar,
   Portfolio,
-} from "../components";
-import { IJob, IProject } from "@utils";
+} from "../modules";
+import { IJob, IProject } from "common/types";
 
 interface Props {
   jobs: IJob[];
@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const projects = projectFiles.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(`content/projects/${filename}`)
+      .readFileSync(`common/content/projects/${filename}`)
       .toString();
 
     const { content, data } = matter(markdownWithMetadata);

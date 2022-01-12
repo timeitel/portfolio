@@ -1,11 +1,11 @@
-import { Link, List, ListItem } from "@common";
-import { SecondaryButton } from "@common/Button";
-import { HtmlName } from "@common/HtmlName/HtmlName";
-import { GithubContainedIcon } from "@common/Icons/GithubContainedIcon";
+import { Link, List, ListItem } from "common/components";
+import { SecondaryButton } from "common/components/Button";
+import { HtmlName } from "common/components/HtmlName/HtmlName";
+import { GithubContainedIcon } from "common/components/Icons/GithubContainedIcon";
 import {
   ExternalLinkIcon,
   LinkedInContainedIcon,
-} from "@components/common/Icons";
+} from "common/components/Icons";
 import styled from "@emotion/styled";
 import React, { FC } from "react";
 

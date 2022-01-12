@@ -1,5 +1,5 @@
-import { CodeIcon, ExternalLinkIcon } from "@components/common/Icons";
-import { IProject } from "@utils";
+import { CodeIcon, ExternalLinkIcon } from "common/components/Icons";
+import { IProject } from "common/types";
 import React, { FC } from "react";
 import {
   FigureCaption,

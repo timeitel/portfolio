@@ -1,4 +1,4 @@
-import { IJob } from "@utils";
+import { IJob } from "common/types";
 import React, { FC, useState } from "react";
 import { Job } from "./Job";
 import { StyledContainer, StyledTabList } from "./styled";

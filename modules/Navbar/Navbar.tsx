@@ -1,7 +1,7 @@
-import { SecondaryButton } from "@common/Button";
-import { HtmlName } from "@common/HtmlName/HtmlName";
-import { ExternalLinkIcon } from "@components/common/Icons";
-import { Link } from "@components/common/Link";
+import { SecondaryButton } from "common/components/Button";
+import { HtmlName } from "common/components/HtmlName/HtmlName";
+import { ExternalLinkIcon } from "common/components/Icons";
+import { Link } from "common/components/Link";
 import React, { FC } from "react";
 import { StyledHeader, StyledNavItem } from "./styled";
 

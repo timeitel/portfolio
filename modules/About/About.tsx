@@ -1,4 +1,4 @@
-import { Link, List, Section } from "@common";
+import { Link, List, Section } from "common/components";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 import { useTheme } from "@emotion/react";
 import React, { FC } from "react";

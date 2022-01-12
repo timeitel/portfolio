@@ -1,4 +1,4 @@
-import { ButtonProps, ButtonSizes } from "@common/Button";
+import { ButtonProps, ButtonSizes } from "common/components/Button";
 import styled from "@emotion/styled";
 import { FC } from "react";
 

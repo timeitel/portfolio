@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@common/Button";
+import { Button, ButtonProps } from "common/components/Button";
 import styled from "@emotion/styled";
 import { FC } from "react";
 

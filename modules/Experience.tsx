@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import { Jobs } from "./Jobs/Jobs";
-import { IJob } from "@utils";
+import { IJob } from "common/types";
 import { useTheme } from "@emotion/react";
-import { Section } from "@common";
+import { Section } from "common/components";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 
 interface Props {

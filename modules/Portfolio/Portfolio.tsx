@@ -1,9 +1,9 @@
-import { ExternalLinkIcon, Link, Section } from "@common";
-import { Project } from "@components";
+import { ExternalLinkIcon, Link, Section } from "common/components";
+import { Project } from "modules";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
-import { IProject } from "@utils";
+import { IProject } from "common/types";
 import React, { FC } from "react";
 
 interface Props {
