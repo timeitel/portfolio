@@ -4,7 +4,7 @@ import { Jobs } from "./Jobs/Jobs";
 import { IJob } from "@utils";
 import { useTheme } from "@emotion/react";
 import { Section } from "@common";
-import { getHtmlTagStyles } from "@styles/htmlTags";
+import { getHtmlTagStyles } from "common/styles/htmlTags";
 
 interface Props {
   jobs: IJob[];

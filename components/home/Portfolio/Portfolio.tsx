@@ -2,7 +2,7 @@ import { ExternalLinkIcon, Link, Section } from "@common";
 import { Project } from "@components";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
-import { getHtmlTagStyles } from "@styles/htmlTags";
+import { getHtmlTagStyles } from "common/styles/htmlTags";
 import { IProject } from "@utils";
 import React, { FC } from "react";
 

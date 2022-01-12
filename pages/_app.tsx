@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import { Global, ThemeProvider } from "@emotion/react";
-import { getGlobalStyles } from "../styles/globals";
-import { themeDark } from "@theme";
+import { getGlobalStyles } from "../common/styles/globals";
+import { themeDark } from "common/styles/theme";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

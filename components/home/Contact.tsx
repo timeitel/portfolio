@@ -4,7 +4,7 @@ import { MailIcon } from "@components/common/Icons";
 import { Link } from "@components/common/Link";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
-import { getHtmlTagStyles } from "@styles/htmlTags";
+import { getHtmlTagStyles } from "common/styles/htmlTags";
 import React, { FC } from "react";
 
 interface Props {}

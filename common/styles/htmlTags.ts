@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { ITheme } from "@styles/types";
+import { ITheme } from "common/styles/types";
 
 export const getHtmlTagStyles = (theme: ITheme) => css`
   font-family: "La Belle Aurore", cursive;

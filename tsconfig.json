@@ -20,9 +20,9 @@
       "@common/*": ["components/common/*"],
       "@components": ["components"],
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@theme": ["styles/theme.ts"],
-      "@utils": ["utils"]
+      "@styles/*": ["common/styles/*"],
+      "@theme": ["common/styles/theme.ts"],
+      "@utils": ["common/utils"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

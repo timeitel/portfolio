@@ -1,6 +1,6 @@
 import { List } from "@common";
 import styled from "@emotion/styled";
-import { getHtmlTagStyles } from "@styles/htmlTags";
+import { getHtmlTagStyles } from "common/styles/htmlTags";
 
 export const StyledContainer = styled.div`
   background: ${(p) => p.theme.color.whitePrimary};
