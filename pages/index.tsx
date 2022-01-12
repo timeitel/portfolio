@@ -51,14 +51,16 @@ const Home: FC<Props> = ({ jobs, projects }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const jobFiles = fs.readdirSync(`${process.cwd()}/content/jobs`).reverse();
+  const jobFiles = fs
+    .readdirSync(`${process.cwd()}/common/content/jobs`)
+    .reverse();
   const projectFiles = fs
-    .readdirSync(`${process.cwd()}/content/projects`)
+    .readdirSync(`${process.cwd()}/common/content/projects`)
     .reverse();
 
   const jobs: IJob[] = jobFiles.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(`content/jobs/${filename}`)
+      .readFileSync(`common/content/jobs/${filename}`)
       .toString();
 
     const {
