@@ -1,16 +1,14 @@
-import { Lookup } from "@react-spring/types";
-import { SpringRef, useSpring } from "react-spring";
+import { useSpring, useSpringRef } from "react-spring";
 
-interface Props {
-  ref?: SpringRef<Lookup<any>>;
-}
+interface Props {}
 
-export const useFadeUp = ({ ref }: Props = {}) => {
-  const fadeUp = useSpring({
+export const useFadeUp = () => {
+  const ref = useSpringRef();
+  const fadeUpStyle = useSpring({
     from: { opacity: 0, transform: "translate3d(0, 50px, 0)" },
     to: { opacity: 1, transform: "translate3d(0, 0px, 0)" },
-    ref: ref,
+    ref,
   });
 
-  return fadeUp;
+  return { fadeUpStyle, fadeUpRef: ref };
 };

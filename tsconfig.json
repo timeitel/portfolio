@@ -18,6 +18,8 @@
       "@*": ["/*"],
       "@components": ["common/components"],
       "@components/*": ["common/components/*"],
+      "@hooks": ["common/hooks"],
+      "@hooks/*": ["common/hooks/*"],
       "@modules": ["modules"],
       "@modules/*": ["modules/*"],
       "@styles/*": ["common/styles/*"],

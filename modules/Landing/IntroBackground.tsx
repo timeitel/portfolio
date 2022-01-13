@@ -3,16 +3,18 @@ import { FC } from "react";
 import { animated, SpringValue } from "react-spring";
 
 interface Props {
-  opacity: SpringValue<number>;
-  transform: SpringValue<string>;
+  revealStyle: {
+    opacity: SpringValue<number>;
+    transform: SpringValue<string>;
+  };
 }
 
-export const IntroBackground: FC<Props> = ({ ...reveal }) => {
+export const IntroBackground: FC<Props> = ({ revealStyle }) => {
   return (
     <StyledIntro className="styled-intro">
       <animated.h2
         style={{
-          ...reveal,
+          ...revealStyle,
           whiteSpace: "nowrap",
           cursor: "default",
         }}
@@ -21,7 +23,7 @@ export const IntroBackground: FC<Props> = ({ ...reveal }) => {
       </animated.h2>
       <animated.h2
         style={{
-          ...reveal,
+          ...revealStyle,
           cursor: "default",
         }}
       >

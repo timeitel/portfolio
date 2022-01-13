@@ -1,25 +1,21 @@
-import { useFadeUp, useReveal } from "common/hooks";
-import { IntroBackground } from "modules/Landing/IntroBackground";
-import { IntroForeground } from "modules/Landing/IntroForeground";
+import { useFadeUp, useReveal } from "@hooks";
 import React, { FC } from "react";
-import { useChain, useSpringRef } from "react-spring";
+import { useChain } from "react-spring";
+import { IntroBackground } from "./IntroBackground";
+import { IntroForeground } from "./IntroForeground";
 import { StyledSection } from "./styled";
 
 interface Props {}
 
 export const Landing: FC<Props> = () => {
-  const fadeUpRef = useSpringRef();
-  const fadeUp = useFadeUp({ ref: fadeUpRef });
-
-  const revealRef = useSpringRef();
-  const reveal = useReveal({ ref: revealRef });
-
+  const { fadeUpRef, fadeUpStyle } = useFadeUp();
+  const { revealStyle, revealRef } = useReveal();
   useChain([revealRef, fadeUpRef]);
 
   return (
     <StyledSection style={{ height: "100vh", position: "relative" }}>
-      <IntroBackground {...reveal} />
-      <IntroForeground {...fadeUp} />
+      <IntroBackground revealStyle={revealStyle} />
+      <IntroForeground fadeUpStyle={fadeUpStyle} />
     </StyledSection>
   );
 };
