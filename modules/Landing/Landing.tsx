@@ -1,6 +1,5 @@
-import { PrimaryButton } from "@components/Button";
 import { useFadeUp, useReveal } from "@hooks";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { useChain } from "react-spring";
 import { IntroBackground } from "./IntroBackground";
 import { IntroForeground } from "./IntroForeground";
