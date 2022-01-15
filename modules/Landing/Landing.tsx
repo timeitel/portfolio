@@ -1,5 +1,6 @@
+import { PrimaryButton } from "@components/Button";
 import { useFadeUp, useReveal } from "@hooks";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { useChain } from "react-spring";
 import { IntroBackground } from "./IntroBackground";
 import { IntroForeground } from "./IntroForeground";
@@ -8,9 +9,9 @@ import { StyledSection } from "./styled";
 interface Props {}
 
 export const Landing: FC<Props> = () => {
-  const { fadeUpRef, fadeUpStyle } = useFadeUp();
-  const { revealStyle, revealRef } = useReveal();
-  useChain([revealRef, fadeUpRef]);
+  const { fadeUpStyle, ref: foregroundRef } = useFadeUp();
+  const { revealStyle, ref: backgroundRef } = useReveal();
+  useChain([backgroundRef, foregroundRef]);
 
   return (
     <StyledSection style={{ height: "100vh", position: "relative" }}>

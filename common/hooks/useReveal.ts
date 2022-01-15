@@ -10,5 +10,5 @@ export const useReveal = () => {
     ref,
   });
 
-  return { revealStyle, revealRef: ref };
+  return { revealStyle, ref };
 };
