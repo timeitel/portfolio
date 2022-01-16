@@ -1,8 +1,8 @@
 import { useTheme } from "@emotion/react";
-import { useIntersectionObserver } from "@hooks";
+import { useObserveFadeIn } from "@hooks/useObserveFadeIn";
 import { Link, List, Section } from "common/components";
-import React, { FC, useRef } from "react";
-import { animated, useSpring } from "react-spring";
+import React, { FC } from "react";
+import { animated } from "react-spring";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 
 interface Props {}
@@ -11,18 +11,11 @@ export const About: FC<Props> = () => {
   const {
     color: { grey800, blue600 },
   } = useTheme();
+  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
 
-  const aboutRef: any = useRef();
-  const dataRef = useIntersectionObserver(aboutRef);
-  const fadeUpStyle = useSpring({
-    opacity: dataRef?.isIntersecting ? 1 : 0,
-    transform: dataRef?.isIntersecting
-      ? `translate3d(0, ${0}px, 0)`
-      : `translate3d(0, ${50}px, 0)`,
-  });
   return (
     <Section id="about" backgroundColor="whitePrimary">
-      <animated.div style={fadeUpStyle}>
+      <animated.div style={fadeInStyle}>
         <StyledContainer>
           <hgroup className="about-open-tag">
             <h3 className="section__subtitle" style={{ color: grey800 }}>
@@ -30,7 +23,7 @@ export const About: FC<Props> = () => {
             </h3>
           </hgroup>
           <div
-            ref={aboutRef}
+            ref={intersectionRef}
             className="about-closing-tag"
             style={{
               display: "flex",
