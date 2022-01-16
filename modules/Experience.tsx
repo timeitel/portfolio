@@ -5,6 +5,8 @@ import { IJob } from "common/types";
 import { useTheme } from "@emotion/react";
 import { Section } from "common/components";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
+import { useObserveFadeIn } from "@hooks";
+import { animated } from "react-spring";
 
 interface Props {
   jobs: IJob[];
@@ -14,20 +16,23 @@ export const Experience: FC<Props> = ({ jobs }) => {
   const {
     color: { whitePrimary },
   } = useTheme();
+  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
   return (
     <StyledSection
       id="experience"
       backgroundColor="grey800"
       style={{ minHeight: "590px" }}
     >
-      <StyledContainer className="experience-tag">
-        <hgroup style={{ marginBottom: "2rem" }}>
-          <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-            <span>02.</span>Where I've Worked
-          </h3>
-        </hgroup>
-        <Jobs jobs={jobs} />
-      </StyledContainer>
+      <animated.div style={fadeInStyle} ref={intersectionRef}>
+        <StyledContainer className="experience-tag">
+          <hgroup style={{ marginBottom: "2rem" }}>
+            <h3 className="section__subtitle" style={{ color: whitePrimary }}>
+              <span>02.</span>Where I've Worked
+            </h3>
+          </hgroup>
+          <Jobs jobs={jobs} />
+        </StyledContainer>
+      </animated.div>
     </StyledSection>
   );
 };

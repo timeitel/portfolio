@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { useObserveFadeIn } from "@hooks/useObserveFadeIn";
+import { useObserveFadeIn } from "@hooks";
 import { Link, List, Section } from "common/components";
 import React, { FC } from "react";
 import { animated } from "react-spring";

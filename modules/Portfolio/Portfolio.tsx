@@ -5,6 +5,8 @@ import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 import { IProject } from "common/types";
 import React, { FC } from "react";
+import { useObserveFadeIn } from "@hooks";
+import { animated } from "react-spring";
 
 interface Props {
   projects: IProject[];
@@ -14,6 +16,8 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   const {
     color: { whitePrimary },
   } = useTheme();
+  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+
   const projectList = projects.map((p) => (
     <Project
       github={p.github}
@@ -28,37 +32,39 @@ export const Portfolio: FC<Props> = ({ projects }) => {
 
   return (
     <StyledSection id="portfolio" backgroundColor="blackPrimary">
-      <hgroup className="portfolio-open-tag" style={{ margin: "0 auto" }}>
-        <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-          <span>03.</span>Some Things I've Built
-        </h3>
-      </hgroup>
-      {projectList}
-      <div
-        style={{
-          textAlign: "center",
-          color: whitePrimary,
-          marginBottom: "4rem",
-        }}
-        className="portfolio-closing-tag"
-      >
-        <p style={{ marginTop: "5rem" }} className="section__subtitle">
-          Want to see more of my projects?
-        </p>
-        <Link
-          href="https://github.com/timeitel/"
-          target="_blank"
+      <animated.div style={fadeInStyle} ref={intersectionRef}>
+        <hgroup className="portfolio-open-tag" style={{ margin: "0 auto" }}>
+          <h3 className="section__subtitle" style={{ color: whitePrimary }}>
+            <span>03.</span>Some Things I've Built
+          </h3>
+        </hgroup>
+        {projectList}
+        <div
           style={{
-            margin: "1rem auto",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            textAlign: "center",
+            color: whitePrimary,
+            marginBottom: "4rem",
           }}
+          className="portfolio-closing-tag"
         >
-          <span>Browse</span>
-          <ExternalLinkIcon />
-        </Link>
-      </div>
+          <p style={{ marginTop: "5rem" }} className="section__subtitle">
+            Want to see more of my projects?
+          </p>
+          <Link
+            href="https://github.com/timeitel/"
+            target="_blank"
+            style={{
+              margin: "1rem auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span>Browse</span>
+            <ExternalLinkIcon />
+          </Link>
+        </div>
+      </animated.div>
     </StyledSection>
   );
 };
