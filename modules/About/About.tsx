@@ -15,7 +15,7 @@ export const About: FC<Props> = () => {
 
   return (
     <Section id="about" backgroundColor="whitePrimary">
-      <animated.div style={fadeInStyle}>
+      <animated.div style={fadeInStyle} ref={intersectionRef}>
         <StyledContainer>
           <hgroup className="about-open-tag">
             <h3 className="section__subtitle" style={{ color: grey800 }}>
@@ -23,7 +23,6 @@ export const About: FC<Props> = () => {
             </h3>
           </hgroup>
           <div
-            ref={intersectionRef}
             className="about-closing-tag"
             style={{
               display: "flex",
