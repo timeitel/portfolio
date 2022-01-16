@@ -8,8 +8,8 @@ interface Args {
 }
 
 export const useObserveFadeIn = ({ fromY = 50, toY = 0 }: Args = {}) => {
-  const intersectionRef: any = useRef();
-  const fadeInRef = useIntersectionObserver(intersectionRef);
+  const intersectionRef = useRef();
+  const fadeInRef = useIntersectionObserver({ ref: intersectionRef });
   const fadeInStyle = useSpring({
     opacity: fadeInRef?.isIntersecting ? 1 : 0,
     transform: fadeInRef?.isIntersecting
