@@ -6,7 +6,7 @@ import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 import React, { FC } from "react";
-import { useObserveFadeIn } from "@hooks";
+import { useIntersectionFadeIn } from "@hooks";
 import { animated } from "react-spring";
 
 interface Props {}
@@ -15,7 +15,7 @@ export const Contact: FC<Props> = () => {
   const {
     color: { whitePrimary, grey400 },
   } = useTheme();
-  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   return (
     <StyledSection id="contact" backgroundColor="grey800" textAlign="center">
       <animated.div style={fadeInStyle} ref={intersectionRef}>

@@ -5,7 +5,7 @@ import { IJob } from "common/types";
 import { useTheme } from "@emotion/react";
 import { Section } from "common/components";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
-import { useObserveFadeIn } from "@hooks";
+import { useIntersectionFadeIn } from "@hooks";
 import { animated } from "react-spring";
 
 interface Props {
@@ -16,7 +16,7 @@ export const Experience: FC<Props> = ({ jobs }) => {
   const {
     color: { whitePrimary },
   } = useTheme();
-  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   return (
     <StyledSection
       id="experience"

@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 import { IProject } from "common/types";
 import React, { FC } from "react";
-import { useObserveFadeIn } from "@hooks";
+import { useIntersectionFadeIn } from "@hooks";
 import { animated } from "react-spring";
 
 interface Props {
@@ -16,11 +16,11 @@ export const Portfolio: FC<Props> = ({ projects }) => {
   const {
     color: { whitePrimary },
   } = useTheme();
-  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   const {
     fadeInStyle: seeMoreFadeInStyle,
     intersectionRef: seeMoreIntersectionRef,
-  } = useObserveFadeIn();
+  } = useIntersectionFadeIn();
 
   const projectList = projects.map((p) => (
     <Project

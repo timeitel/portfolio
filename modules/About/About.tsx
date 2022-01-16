@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { useObserveFadeIn } from "@hooks";
+import { useIntersectionFadeIn } from "@hooks";
 import { Link, List, Section } from "common/components";
 import React, { FC } from "react";
 import { animated } from "react-spring";
@@ -11,7 +11,7 @@ export const About: FC<Props> = () => {
   const {
     color: { grey800, blue600 },
   } = useTheme();
-  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
 
   return (
     <Section id="about" backgroundColor="whitePrimary">

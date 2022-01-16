@@ -1,4 +1,4 @@
-import { useObserveFadeIn } from "@hooks";
+import { useIntersectionFadeIn } from "@hooks";
 import { CodeIcon, ExternalLinkIcon } from "common/components/Icons";
 import { IProject } from "common/types";
 import React, { FC } from "react";
@@ -22,7 +22,7 @@ export const Project: FC<IProject> = ({
   image,
   content,
 }) => {
-  const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   const tagsArray = tags.split(", ");
   const tagItems = tagsArray.map((tag) => {
     return <li key={tag}>{tag}</li>;

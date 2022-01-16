@@ -8,7 +8,7 @@ interface Args {
   intersectionOptions?: Omit<UseIntersectionObserverArgs, "ref">;
 }
 
-export const useObserveFadeIn = ({
+export const useIntersectionFadeIn = ({
   fromY = 50,
   toY = 0,
   intersectionOptions = {},
