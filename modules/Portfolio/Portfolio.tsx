@@ -17,6 +17,10 @@ export const Portfolio: FC<Props> = ({ projects }) => {
     color: { whitePrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useObserveFadeIn();
+  const {
+    fadeInStyle: seeMoreFadeInStyle,
+    intersectionRef: seeMoreIntersectionRef,
+  } = useObserveFadeIn();
 
   const projectList = projects.map((p) => (
     <Project
@@ -38,7 +42,9 @@ export const Portfolio: FC<Props> = ({ projects }) => {
             <span>03.</span>Some Things I've Built
           </h3>
         </hgroup>
-        {projectList}
+      </animated.div>
+      {projectList}
+      <animated.div style={seeMoreFadeInStyle} ref={seeMoreIntersectionRef}>
         <div
           style={{
             textAlign: "center",

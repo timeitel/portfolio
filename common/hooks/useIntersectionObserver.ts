@@ -12,7 +12,7 @@ export function useIntersectionObserver({
   ref,
   freezeOnceVisible = true,
   root = null,
-  rootMargin = "0%",
+  rootMargin = "0px 0px -10%",
   threshold = 0,
 }: UseIntersectionObserverArgs) {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
