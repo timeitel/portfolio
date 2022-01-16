@@ -1,6 +1,6 @@
 import { useIntersectionObserver, UseIntersectionObserverArgs } from "@hooks";
 import { useRef } from "react";
-import { config, useSpring } from "react-spring";
+import { useSpring } from "react-spring";
 
 interface Args {
   fromY?: number;
@@ -23,7 +23,6 @@ export const useObserveFadeIn = ({
     transform: fadeInRef?.isIntersecting
       ? `translate3d(0, ${toY}px, 0)`
       : `translate3d(0, ${fromY}px, 0)`,
-    config: config.slow,
   });
 
   return { intersectionRef, fadeInStyle };
