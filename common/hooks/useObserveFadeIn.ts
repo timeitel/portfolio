@@ -1,15 +1,23 @@
-import { useIntersectionObserver } from "@hooks";
+import { useIntersectionObserver, UseIntersectionObserverArgs } from "@hooks";
 import { useRef } from "react";
 import { config, useSpring } from "react-spring";
 
 interface Args {
   fromY?: number;
   toY?: number;
+  intersectionOptions?: Omit<UseIntersectionObserverArgs, "ref">;
 }
 
-export const useObserveFadeIn = ({ fromY = 50, toY = 0 }: Args = {}) => {
-  const intersectionRef = useRef();
-  const fadeInRef = useIntersectionObserver({ ref: intersectionRef });
+export const useObserveFadeIn = ({
+  fromY = 50,
+  toY = 0,
+  intersectionOptions = {},
+}: Args = {}) => {
+  const intersectionRef = useRef(null);
+  const fadeInRef = useIntersectionObserver({
+    ref: intersectionRef,
+    ...intersectionOptions,
+  });
   const fadeInStyle = useSpring({
     opacity: fadeInRef?.isIntersecting ? 1 : 0,
     transform: fadeInRef?.isIntersecting

@@ -1,7 +1,7 @@
 import { MutableRefObject, useEffect, useState } from "react";
 
-interface Args {
-  ref: MutableRefObject<undefined>;
+export interface UseIntersectionObserverArgs {
+  ref: MutableRefObject<null>;
   threshold?: number;
   root?: null;
   rootMargin?: string;
@@ -14,7 +14,7 @@ export function useIntersectionObserver({
   root = null,
   rootMargin = "0%",
   threshold = 0,
-}: Args) {
+}: UseIntersectionObserverArgs) {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
   const frozen = entry?.isIntersecting && freezeOnceVisible;
   const updateEntry: IntersectionObserverCallback = ([entry]) => {
