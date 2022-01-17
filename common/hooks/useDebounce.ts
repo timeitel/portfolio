@@ -1,13 +1,15 @@
-import { debounce } from "@utils";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const useDebounce = <A = unknown, R = void>(
-  fn: (args: A) => R,
-  ms: number
-): ((args: A) => Promise<R>) => {
-  const [debouncedFun, teardown] = debounce<A, R>(fn, ms);
+export function useDebounce<T>(fn: T, delay: number = 300): T {
+  const [debouncedFn, setDebouncedFn] = useState<T>(fn);
 
-  useEffect(() => () => teardown(), []);
+  useEffect(() => {
+    const id = setTimeout(() => setDebouncedFn(fn), delay);
 
-  return debouncedFun;
-};
+    return () => {
+      clearTimeout(id);
+    };
+  }, [fn, delay]);
+
+  return debouncedFn;
+}

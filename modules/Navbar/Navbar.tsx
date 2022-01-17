@@ -1,9 +1,10 @@
-import { useDebounce } from "@hooks/useDebounce";
+import { useDebounce } from "@hooks";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "common/components/Icons";
 import { Link } from "common/components/Link";
 import React, { FC, useEffect, useState } from "react";
+import { useSpring } from "react-spring";
 import { StyledNav, StyledNavItem } from "./styled";
 
 interface Props {}
@@ -11,6 +12,9 @@ interface Props {}
 export const Navbar: FC<Props> = () => {
   const [prevY, setPrevY] = useState(0);
   const [visible, setVisible] = useState(true);
+  const navStyle = useSpring({
+    transform: visible ? `translate3d(0, 0rem, 0)` : `translate3d(0, -4rem, 0)`,
+  });
 
   const debouncedHandleScroll = useDebounce(() => {
     const currentY = window.pageYOffset;
@@ -24,7 +28,7 @@ export const Navbar: FC<Props> = () => {
   }, [prevY, visible, debouncedHandleScroll]);
 
   return (
-    <StyledNav>
+    <StyledNav style={navStyle}>
       <HtmlName>{"<Tim Eitel>"}</HtmlName>
       <ul style={{ display: "flex", alignItems: "center" }}>
         <StyledNavItem>

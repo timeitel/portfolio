@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { animated } from "react-spring";
 
-export const StyledNav = styled.nav`
+export const StyledNav = styled(animated.nav)`
   padding: 1.25rem;
   position: fixed;
   height: 4rem;
