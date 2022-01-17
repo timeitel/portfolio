@@ -1,4 +1,4 @@
-export * from "./useFadeUp";
+export * from "./useFadeIn";
 export * from "./useReveal";
 export * from "./useIntersectionObserver";
 export * from "./useIntersectionFadeIn";

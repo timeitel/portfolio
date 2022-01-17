@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
-export const StyledHeader = styled.header`
+export const StyledNav = styled.nav`
   padding: 1.25rem;
-  position: absolute;
+  position: fixed;
   height: 4rem;
   width: 100%;
   top: 0;

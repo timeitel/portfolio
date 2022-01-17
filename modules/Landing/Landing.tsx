@@ -1,4 +1,4 @@
-import { useFadeUp, useReveal } from "@hooks";
+import { useFadeIn, useReveal } from "@hooks";
 import React, { FC } from "react";
 import { useChain } from "react-spring";
 import { IntroBackground } from "./IntroBackground";
@@ -8,7 +8,7 @@ import { StyledSection } from "./styled";
 interface Props {}
 
 export const Landing: FC<Props> = () => {
-  const { fadeUpStyle, ref: foregroundRef } = useFadeUp();
+  const { fadeInStyle: fadeUpStyle, ref: foregroundRef } = useFadeIn();
   const { revealStyle, ref: backgroundRef } = useReveal();
   useChain([backgroundRef, foregroundRef]);
 
