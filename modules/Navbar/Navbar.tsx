@@ -17,9 +17,11 @@ export const Navbar: FC<Props> = () => {
   });
 
   const debouncedHandleScroll = useDebounce(() => {
-    const currentY = window.pageYOffset;
-    setVisible(prevY - currentY > 70 || currentY < 10);
-    setPrevY(currentY);
+    if (typeof window !== "undefined") {
+      const currentY = window.scrollY;
+      setVisible(prevY - currentY > 70 || currentY < 10);
+      setPrevY(currentY);
+    }
   }, 100);
 
   useEffect(() => {
