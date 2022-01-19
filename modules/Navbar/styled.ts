@@ -11,6 +11,7 @@ export const StyledNav = styled(animated.nav)`
   justify-content: space-between;
   align-items: center;
   color: ${(p) => p.theme.color.whitePrimary};
+  background-color: ${(p) => p.theme.color.grey800};
   z-index: 1;
 
   @media only screen and (min-width: 550px) {
