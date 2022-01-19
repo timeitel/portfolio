@@ -6,22 +6,39 @@ import { useRef, useCallback } from "react";
  * @param wait Wait period in ms before function is called
  * @returns A memoized function that is debounced
  */
-export const useDebounce = (fn: (...args: any[]) => void, wait: number) => {
-  const timeout = useRef<NodeJS.Timeout>();
+export const useDebounce = (
+  fn: (...args: any[]) => void,
+  wait: number,
+  immediate = false
+) => {
+  const timeoutRef = useRef<NodeJS.Timeout>();
+  const immediateRef = useRef(immediate);
 
   return useCallback(
     (...args) => {
-      const later = () => {
-        if (timeout.current) {
-          clearTimeout(timeout.current);
+      // fire once immediately
+      if (immediateRef.current) {
+        fn(...args);
+        immediateRef.current = false;
+      }
+
+      const debouncedFn = () => {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
         }
+
+        // reset to fire immediately on next call
+        if (immediate) {
+          immediateRef.current = true;
+        }
+
         fn(...args);
       };
 
-      if (timeout.current) {
-        clearTimeout(timeout.current);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
-      timeout.current = setTimeout(later, wait);
+      timeoutRef.current = setTimeout(debouncedFn, wait);
     },
     [fn, wait]
   );

@@ -16,13 +16,17 @@ export const Navbar: FC<Props> = () => {
     transform: visible ? `translate3d(0, 0rem, 0)` : `translate3d(0, -4rem, 0)`,
   });
 
-  const debouncedHandleScroll = useDebounce(() => {
-    if (typeof window !== "undefined") {
-      const currentY = window.scrollY;
-      setVisible(currentY < prevY || currentY < 20);
-      setPrevY(currentY);
-    }
-  }, 50);
+  const debouncedHandleScroll = useDebounce(
+    () => {
+      if (typeof window !== "undefined") {
+        const currentY = window.scrollY;
+        setVisible(currentY < prevY || currentY < 20);
+        setPrevY(currentY);
+      }
+    },
+    100,
+    true
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", debouncedHandleScroll);
