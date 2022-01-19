@@ -19,10 +19,10 @@ export const Navbar: FC<Props> = () => {
   const debouncedHandleScroll = useDebounce(() => {
     if (typeof window !== "undefined") {
       const currentY = window.scrollY;
-      setVisible(prevY - currentY > 70 || currentY < 10);
+      setVisible(currentY < prevY || currentY < 20);
       setPrevY(currentY);
     }
-  }, 100);
+  }, 50);
 
   useEffect(() => {
     window.addEventListener("scroll", debouncedHandleScroll);
