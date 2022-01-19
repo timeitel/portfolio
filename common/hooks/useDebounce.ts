@@ -1,15 +1,28 @@
-import { useEffect, useState } from "react";
+import { useRef, useCallback } from "react";
 
-export function useDebounce<T>(fn: T, delay: number = 300): T {
-  const [debouncedFn, setDebouncedFn] = useState<T>(fn);
+/**
+ * Returns a memoized function that will only call the passed function when it hasn't been called for the wait period
+ * @param fn The function to be called
+ * @param wait Wait period in ms before function is called
+ * @returns A memoized function that is debounced
+ */
+export const useDebounce = (fn: (...args: any[]) => void, wait: number) => {
+  const timeout = useRef<NodeJS.Timeout>();
 
-  useEffect(() => {
-    const id = setTimeout(() => setDebouncedFn(fn), delay);
+  return useCallback(
+    (...args) => {
+      const later = () => {
+        if (timeout.current) {
+          clearTimeout(timeout.current);
+        }
+        fn(...args);
+      };
 
-    return () => {
-      clearTimeout(id);
-    };
-  }, [fn, delay]);
-
-  return debouncedFn;
-}
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
+      timeout.current = setTimeout(later, wait);
+    },
+    [fn, wait]
+  );
+};
