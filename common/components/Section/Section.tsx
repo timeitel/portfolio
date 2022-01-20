@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { FC, HTMLAttributes } from "react";
-import { IColors } from "common/styles/types";
+import { IColors } from "@theme";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   backgroundColor?: keyof IColors;

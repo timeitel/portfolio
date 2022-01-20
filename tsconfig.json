@@ -25,7 +25,7 @@
       "@utils": ["common/utils"],
       "@utils/*": ["common/utils/*"],
       "@styles/*": ["common/styles/*"],
-      "@theme": ["common/styles/theme.ts"],
+      "@theme": ["common/styles/theme"],
       "@types": ["common/types"]
     }
   },
