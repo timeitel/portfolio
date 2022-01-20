@@ -13,7 +13,7 @@ export const Navbar: FC<Props> = () => {
   const [prevY, setPrevY] = useState(0);
   const [visible, setVisible] = useState(true);
   const navStyle = useSpring({
-    transform: visible ? `translate3d(0, 0rem, 0)` : `translate3d(0, -4rem, 0)`,
+    transform: visible ? `translate3d(0, 0rem, 0)` : `translate3d(0, -5rem, 0)`,
   });
 
   const debouncedHandleScroll = useDebounce(
