@@ -2,9 +2,8 @@ import styled from "@emotion/styled";
 import { animated } from "react-spring";
 
 export const StyledNav = styled(animated.nav)`
-  padding: 1.25rem;
+  padding: 17px;
   position: fixed;
-  height: 4rem;
   width: 100%;
   top: 0;
   display: flex;
@@ -13,13 +12,19 @@ export const StyledNav = styled(animated.nav)`
   color: ${(p) => p.theme.color.whitePrimary};
   background-color: ${(p) => p.theme.color.grey800};
   z-index: 1;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+`;
 
-  @media only screen and (min-width: 550px) {
-    padding: 1.25rem 2.5rem;
-  }
+export const StyledNavInner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
 
-  @media only screen and (min-width: 1024px) {
-    padding: 2.25rem 4.5rem;
+  ${(p) => p.theme.breakpoints.up("desktop")} {
+    padding: 0 40px;
   }
 `;
 
@@ -55,11 +60,11 @@ export const StyledNavItem = styled.li`
     transform: scaleX(1);
   }
 
-  @media only screen and (min-width: 680px) {
+  ${(p) => p.theme.breakpoints.up("laptop")} {
     display: block;
   }
 
-  @media only screen and (min-width: 1024px) {
+  ${(p) => p.theme.breakpoints.up("desktop")} {
     margin-right: 58px;
   }
 `;
