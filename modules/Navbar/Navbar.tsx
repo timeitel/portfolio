@@ -1,4 +1,5 @@
 import { useDebounce } from "@hooks";
+import { useMediaQuery } from "@hooks/useMediaQuery";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "common/components/Icons";
@@ -10,6 +11,7 @@ import { StyledNav, StyledNavItem } from "./styled";
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
+  const {} = useMediaQuery();
   const [prevY, setPrevY] = useState(0);
   const [visible, setVisible] = useState(true);
   const navStyle = useSpring({

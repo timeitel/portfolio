@@ -1,6 +1,10 @@
+import { IBreakpointOperators } from "@styles/theme";
+import { AtLeastOne } from "@types";
 import { useEffect, useState } from "react";
 
-export const useMediaQuery = (query: string): boolean => {
+export const useMediaQuery = (
+  query: AtLeastOne<IBreakpointOperators>
+): boolean => {
   const getMatches = (query: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== "undefined") {

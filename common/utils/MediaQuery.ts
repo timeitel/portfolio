@@ -1,0 +1,35 @@
+import { BreakpointSize, breakpointSizes } from "@styles/theme";
+import { AtLeastOne } from "@types";
+
+type IBuildMediaQuery = AtLeastOne<{
+  min: BreakpointSize;
+  max: BreakpointSize;
+}>;
+export const buildMediaQuery = ({ min, max }: IBuildMediaQuery) => {
+  if (min && max) {
+    return `@media (min-width:${breakpointSizes[min]}) and (max-width:${breakpointSizes[max]})`;
+  } else if (min) {
+    return `@media (min-width:${breakpointSizes[min]})`;
+  } else if (max) {
+    return `@media (max-width:${breakpointSizes[max]})`;
+  } else {
+    throw Error("At least min or max required.");
+  }
+};
+
+export const getDeviceMediaQuery = (size: BreakpointSize) => {
+  switch (size) {
+    case "phone":
+      return buildMediaQuery({ min: size, max: "tablet" });
+    case "tablet":
+      return buildMediaQuery({ min: size, max: "laptop" });
+    case "laptop":
+      return buildMediaQuery({ min: size, max: "desktop" });
+    case "desktop":
+      return buildMediaQuery({ min: size, max: "ultraWide" });
+    case "ultraWide":
+      return buildMediaQuery({ min: size });
+    default:
+      throw Error("Device size not supported.");
+  }
+};
