@@ -1,7 +1,7 @@
 import { BreakpointSize, breakpointSizes } from "@styles/theme";
 import { AtLeastOne } from "@types";
 
-type IBuildMediaQuery = AtLeastOne<{
+export type IBuildMediaQuery = AtLeastOne<{
   min: BreakpointSize;
   max: BreakpointSize;
 }>;
@@ -17,7 +17,7 @@ export const buildMediaQuery = ({ min, max }: IBuildMediaQuery) => {
   }
 };
 
-export const getDeviceMediaQuery = (size: BreakpointSize) => {
+export const buildDeviceMediaQuery = (size: BreakpointSize) => {
   switch (size) {
     case "phone":
       return buildMediaQuery({ min: size, max: "tablet" });

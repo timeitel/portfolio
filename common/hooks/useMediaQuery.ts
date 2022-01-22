@@ -1,10 +1,9 @@
-import { IBreakpointOperators } from "@styles/theme";
-import { AtLeastOne } from "@types";
+import { buildMediaQuery, IBuildMediaQuery } from "@utils";
 import { useEffect, useState } from "react";
 
-export const useMediaQuery = (
-  query: AtLeastOne<IBreakpointOperators>
-): boolean => {
+export const useMediaQuery = (mediaQuery: IBuildMediaQuery): boolean => {
+  const query = buildMediaQuery(mediaQuery).replace("@media ", "");
+
   const getMatches = (query: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== "undefined") {
@@ -14,10 +13,7 @@ export const useMediaQuery = (
   };
 
   const [matches, setMatches] = useState<boolean>(getMatches(query));
-
-  function handleChange() {
-    setMatches(getMatches(query));
-  }
+  const handleChange = () => setMatches(getMatches(query));
 
   useEffect(() => {
     const matchMedia = window.matchMedia(query);

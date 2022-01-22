@@ -11,7 +11,7 @@ import { StyledNav, StyledNavItem } from "./styled";
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
-  const {} = useMediaQuery();
+  const matches = useMediaQuery({ min: "tablet", max: "laptop" });
   const [prevY, setPrevY] = useState(0);
   const [visible, setVisible] = useState(true);
   const navStyle = useSpring({

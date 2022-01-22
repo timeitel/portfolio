@@ -1,4 +1,4 @@
-import { buildMediaQuery, getDeviceMediaQuery } from "@utils";
+import { buildMediaQuery, buildDeviceMediaQuery } from "@utils";
 
 export interface IBreakpointOperators {
   up: (min: BreakpointSize) => string;
@@ -11,7 +11,7 @@ export const breakpointOperators: IBreakpointOperators = {
   up: (min) => buildMediaQuery({ min }),
   down: (max) => buildMediaQuery({ max }),
   between: (min, max) => buildMediaQuery({ min, max }),
-  only: (deviceSize) => getDeviceMediaQuery(deviceSize),
+  only: (deviceSize) => buildDeviceMediaQuery(deviceSize),
 };
 
 export type BreakpointSize = keyof IBreakpoints;
