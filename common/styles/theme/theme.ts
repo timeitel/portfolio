@@ -1,6 +1,6 @@
-import { IBreakpointOperators, themeBreakpointOperators } from "@styles/theme";
+import { breakpointOperators, IBreakpointOperators } from "@styles/theme";
 import { IColors, themeDarkColors } from "./colors";
-import { ISpacing, themeSpacing } from "./spacing";
+import { ISpacing, spacing } from "./spacing";
 
 export interface ITheme {
   color: IColors;
@@ -10,6 +10,6 @@ export interface ITheme {
 
 export const themeDark: ITheme = {
   color: themeDarkColors,
-  breakpoints: themeBreakpointOperators,
-  spacing: themeSpacing,
+  breakpoints: breakpointOperators,
+  spacing: spacing,
 };

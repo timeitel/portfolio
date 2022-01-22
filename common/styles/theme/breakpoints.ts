@@ -1,15 +1,28 @@
+import { AtLeastOne } from "@types";
+
 export interface IBreakpointOperators {
-  up: IBreakpointHelper;
-  down: IBreakpointHelper;
-  only: IBreakpointHelper;
-  between: IBreakpointHelper;
+  up: (min: BreakpointSize) => string;
+  down: (max: BreakpointSize) => string;
+  between: (min: BreakpointSize, max: BreakpointSize) => string;
+  only: (deviceSize: BreakpointSize) => string;
 }
 
-type IBreakpointHelper = (breakpoint: keyof keys) => IMediaQuery;
-type IMediaQuery = string;
-type keys = ["xs", "sm", "md", "lg", "xl"];
+export const breakpointOperators: IBreakpointOperators = {
+  up: (min) => getMediaQuery({ min }),
+  down: (max) => getMediaQuery({ max }),
+  between: (min, max) => getMediaQuery({ min, max }),
+  only: (deviceSize) => getDeviceMediaQuery(deviceSize),
+};
 
-export const values = {
+type BreakpointSize = keyof IBreakpoints;
+export interface IBreakpoints {
+  xs: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+}
+export const breakpointSizes = {
   xs: "0px", // phone
   sm: "600px", // tablet
   md: "900px", // small laptop
@@ -17,13 +30,35 @@ export const values = {
   xl: "1536px", // large screen
 };
 
-const upHelper: IBreakpointHelper = (key) => {
-  return `@media (min-width:${values[key]}px)`;
+const getDeviceMediaQuery = (size: BreakpointSize) => {
+  switch (size) {
+    case "xs":
+      return getMediaQuery({ min: size, max: "sm" });
+    case "sm":
+      return getMediaQuery({ min: size, max: "md" });
+    case "md":
+      return getMediaQuery({ min: size, max: "lg" });
+    case "lg":
+      return getMediaQuery({ min: size, max: "xl" });
+    case "xl":
+      return getMediaQuery({ min: size });
+    default:
+      throw Error("Device size not supported.");
+  }
 };
 
-export const themeBreakpointOperators: IBreakpointOperators = {
-  up: upHelper,
-  down: () => "",
-  only: () => "",
-  between: () => "",
+type IGetMediaQuery = AtLeastOne<{
+  min: BreakpointSize;
+  max: BreakpointSize;
+}>;
+const getMediaQuery = ({ min, max }: IGetMediaQuery) => {
+  if (min && max) {
+    return `@media (min-width:${breakpointSizes[min]}px) and (max-width:${breakpointSizes[max]}px)`;
+  } else if (min) {
+    return `@media (min-width:${breakpointSizes[min]}px)`;
+  } else if (max) {
+    return `@media (max-width:${breakpointSizes[max]}px)`;
+  } else {
+    throw Error("At least min or max required.");
+  }
 };
