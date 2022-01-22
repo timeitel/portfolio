@@ -31,9 +31,15 @@ export const StyledSection = styled(Section)`
   .contact-tag:after {
     ${(p) => getHtmlTagStyles(p.theme, p.theme.color.blackPrimary)};
     content: "</Contact>";
-    bottom: -15rem;
+    bottom: -17rem;
     left: -0.8rem;
     font-size: 1rem;
+    ${(p) => p.theme.breakpoints.between("tablet", "laptop")} {
+      bottom: -15rem;
+    }
+    ${(p) => p.theme.breakpoints.up("laptop")} {
+      bottom: -14rem;
+    }
   }
 `;
 

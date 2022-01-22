@@ -79,8 +79,4 @@ const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
   }
-
-  @media (min-width: 1024px) {
-    padding: 0 7.5rem;
-  }
 `;

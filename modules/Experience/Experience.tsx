@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { Jobs } from "./Jobs/Jobs";
+import { Jobs } from "../Jobs/Jobs";
 import { IJob } from "common/types";
 import { useTheme } from "@emotion/react";
 import { Section } from "common/components";
