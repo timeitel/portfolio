@@ -1,5 +1,6 @@
 import { useDebounce } from "@hooks";
 import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useNavbarVisible } from "@modules/Navbar/useNavbarVisible";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "common/components/Icons";
@@ -11,29 +12,11 @@ import { StyledNav, StyledNavItem } from "./styled";
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
-  const matches = useMediaQuery({ min: "tablet", max: "laptop" });
-  const [prevY, setPrevY] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const phone = useMediaQuery({ max: "tablet" });
+  const visible = useNavbarVisible();
   const navStyle = useSpring({
     transform: visible ? `translate3d(0, 0rem, 0)` : `translate3d(0, -5rem, 0)`,
   });
-
-  const debouncedHandleScroll = useDebounce(
-    () => {
-      if (typeof window !== "undefined") {
-        const currentY = window.scrollY;
-        setVisible(currentY < prevY || currentY < 20);
-        setPrevY(currentY);
-      }
-    },
-    100,
-    true
-  );
-
-  useEffect(() => {
-    window.addEventListener("scroll", debouncedHandleScroll);
-    return () => window.removeEventListener("scroll", debouncedHandleScroll);
-  }, [prevY, visible, debouncedHandleScroll]);
 
   return (
     <StyledNav style={navStyle}>
