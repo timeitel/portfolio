@@ -1,15 +1,29 @@
-export interface IBreakpoints {
-  xs: string;
-  sm: string;
-  md: string;
-  lg: string;
-  xl: string;
+export interface IBreakpointOperators {
+  up: IBreakpointHelper;
+  down: IBreakpointHelper;
+  only: IBreakpointHelper;
+  between: IBreakpointHelper;
 }
 
-export const themeBreakpoints = {
-  xs: "0px",
-  sm: "600px",
-  md: "900px",
-  lg: "1200px",
-  xl: "1536px",
+type IBreakpointHelper = (breakpoint: keyof keys) => IMediaQuery;
+type IMediaQuery = string;
+type keys = ["xs", "sm", "md", "lg", "xl"];
+
+export const values = {
+  xs: "0px", // phone
+  sm: "600px", // tablet
+  md: "900px", // small laptop
+  lg: "1200px", // desktop
+  xl: "1536px", // large screen
+};
+
+const upHelper: IBreakpointHelper = (key) => {
+  return `@media (min-width:${values[key]}px)`;
+};
+
+export const themeBreakpointOperators: IBreakpointOperators = {
+  up: upHelper,
+  down: () => "",
+  only: () => "",
+  between: () => "",
 };

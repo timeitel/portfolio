@@ -12,7 +12,7 @@ export interface IColors {
   whiteSecondary: string;
 }
 
-export const themeDarkColors = {
+export const themeDarkColors: IColors = {
   blue200: "#2b6cb0",
   blue400: "#cfd9e5",
   blue600: "#0069d9",
