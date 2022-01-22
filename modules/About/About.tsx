@@ -19,7 +19,7 @@ export const About: FC<Props> = () => {
         <StyledContainer>
           <hgroup className="about-open-tag">
             <h3 className="section__subtitle" style={{ color: grey800 }}>
-              <span>01.</span>About Me
+              About Me
             </h3>
           </hgroup>
           <div

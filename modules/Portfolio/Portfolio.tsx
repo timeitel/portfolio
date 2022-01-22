@@ -39,7 +39,7 @@ export const Portfolio: FC<Props> = ({ projects }) => {
       <animated.div style={fadeInStyle} ref={intersectionRef}>
         <hgroup className="portfolio-open-tag" style={{ margin: "0 auto" }}>
           <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-            <span>03.</span>Some Things I've Built
+            Some Things I've Built
           </h3>
         </hgroup>
       </animated.div>

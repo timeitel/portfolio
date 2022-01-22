@@ -22,12 +22,9 @@ export const Contact: FC<Props> = () => {
         >
           <hgroup>
             <h3
-              className="section__subtitle"
+              className="section__subtitle contact-tag"
               style={{ color: whitePrimary, textAlign: "left" }}
             >
-              <span className="contact-tag" style={{ color: blackPrimary }}>
-                04.
-              </span>
               Get In Touch
             </h3>
           </hgroup>

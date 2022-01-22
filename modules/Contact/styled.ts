@@ -31,7 +31,7 @@ export const StyledSection = styled(Section)`
   .contact-tag:after {
     ${(p) => getHtmlTagStyles(p.theme, p.theme.color.blackPrimary)};
     content: "</Contact>";
-    bottom: -14rem;
+    bottom: -15rem;
     left: -0.8rem;
     font-size: 1rem;
   }

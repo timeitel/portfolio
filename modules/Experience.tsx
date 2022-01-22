@@ -27,7 +27,7 @@ export const Experience: FC<Props> = ({ jobs }) => {
         <StyledContainer className="experience-tag">
           <hgroup style={{ marginBottom: "2rem" }}>
             <h3 className="section__subtitle" style={{ color: whitePrimary }}>
-              <span>02.</span>Where I've Worked
+              Where I've Worked
             </h3>
           </hgroup>
           <Jobs jobs={jobs} />
