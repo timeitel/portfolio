@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "@styles/htmlTags";
 
 export const StyledSection = styled(Section)`
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
   position: relative;
   &:before {
     content: "";
