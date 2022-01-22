@@ -5,7 +5,12 @@ import { ExternalLinkIcon } from "common/components/Icons";
 import { Link } from "common/components/Link";
 import React, { FC } from "react";
 import { useSpring } from "react-spring";
-import { StyledNav, StyledNavInner, StyledNavItem } from "./styled";
+import {
+  StyledNav,
+  StyledNavInner,
+  StyledNavItem,
+  StyledNavList,
+} from "./styled";
 
 interface Props {}
 
@@ -19,7 +24,7 @@ export const Navbar: FC<Props> = () => {
     <StyledNav style={navStyle}>
       <StyledNavInner>
         <HtmlName>{"<Tim Eitel>"}</HtmlName>
-        <ul style={{ display: "flex", alignItems: "center", margin: 0 }}>
+        <StyledNavList>
           <StyledNavItem>
             <a href="#about">About</a>
           </StyledNavItem>
@@ -47,7 +52,7 @@ export const Navbar: FC<Props> = () => {
               </SecondaryButton>
             </Link>
           </li>
-        </ul>
+        </StyledNavList>
       </StyledNavInner>
     </StyledNav>
   );

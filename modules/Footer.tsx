@@ -14,10 +14,8 @@ interface Props {}
 export const Footer: FC<Props> = () => {
   return (
     <StyledFooter>
+      <HtmlName>{"</Tim Eitel>"}</HtmlName>
       <StyledList>
-        <ListItem>
-          <HtmlName>{"</Tim Eitel>"}</HtmlName>
-        </ListItem>
         <ListItem className="section-links">
           <Link href="#about">About</Link>
         </ListItem>
@@ -53,8 +51,9 @@ export const Footer: FC<Props> = () => {
 const StyledList = styled(List)`
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 3rem;
 
   @media (max-width: 768px) {
     .section-links {
@@ -66,7 +65,7 @@ const StyledList = styled(List)`
 const StyledFooter = styled.footer`
   width: 100%;
   height: 100px;
-  border-top: ${(p) => `1px solid ${p.theme.color.blackPrimary}`};
+  padding: 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,5 +78,9 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 7.5rem;
   }
 `;

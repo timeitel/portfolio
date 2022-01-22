@@ -76,6 +76,8 @@ export const Portfolio: FC<Props> = ({ projects }) => {
 };
 
 const StyledSection = styled(Section)`
+  padding-bottom: 2rem;
+
   .portfolio-closing-tag,
   .portfolio-open-tag {
     position: relative;

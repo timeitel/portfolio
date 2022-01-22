@@ -28,6 +28,12 @@ export const StyledNavInner = styled.div`
   }
 `;
 
+export const StyledNavList = styled.ul`
+  display: flex;
+  align-items: center;
+  margin: 0;
+`;
+
 export const StyledNavItem = styled.li`
   margin-right: 32px;
   position: relative;
