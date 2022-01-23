@@ -16,14 +16,12 @@ export const StyledContainer = styled.div`
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "<TechStack>";
     top: -2rem;
-    left: -0.85rem;
   }
 
   .about-closing-tag:after {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "</TechStack>";
     bottom: -3rem;
-    left: -0.85rem;
   }
 
   .desktop {

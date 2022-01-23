@@ -9,4 +9,8 @@ export const getHtmlTagStyles = (
   letter-spacing: 0.03em;
   position: absolute;
   color: ${color};
+  left: -0.85rem;
+  ${theme.breakpoints.only("mobile")} {
+    left: -0.4rem;
+  }
 `;

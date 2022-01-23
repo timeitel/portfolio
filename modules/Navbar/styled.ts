@@ -19,7 +19,7 @@ export const StyledNavInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
   max-width: 1440px;
   padding: 0 20px;
 

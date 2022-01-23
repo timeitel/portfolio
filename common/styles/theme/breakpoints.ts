@@ -16,14 +16,14 @@ export const breakpointFns: IBreakpointFns = {
 
 export type BreakpointType = keyof IBreakpoints;
 export interface IBreakpoints {
-  phone: string;
+  mobile: string;
   tablet: string;
   laptop: string;
   desktop: string;
   ultraWide: string;
 }
 export const breakpointSizes: IBreakpoints = {
-  phone: "0px",
+  mobile: "0px",
   tablet: "600px",
   laptop: "900px",
   desktop: "1200px",

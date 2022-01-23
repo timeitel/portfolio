@@ -10,16 +10,16 @@ interface Props {}
 
 export const Contact: FC<Props> = () => {
   const {
-    color: { whitePrimary, grey800, blackPrimary },
+    color: { whitePrimary, grey800 },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   return (
     <StyledSection id="contact" backgroundColor="grey800" textAlign="center">
-      <StyledContainer>
-        <animated.div
-          style={{ ...fadeInStyle, marginLeft: "8%" }}
-          ref={intersectionRef}
-        >
+      <animated.div
+        style={{ ...fadeInStyle, marginLeft: "8%" }}
+        ref={intersectionRef}
+      >
+        <StyledContainer>
           <hgroup>
             <h3
               className="section__subtitle contact-tag"
@@ -41,8 +41,8 @@ export const Contact: FC<Props> = () => {
               Say hello
             </PrimaryButton>
           </StyledLink>
-        </animated.div>
-      </StyledContainer>
+        </StyledContainer>
+      </animated.div>
     </StyledSection>
   );
 };

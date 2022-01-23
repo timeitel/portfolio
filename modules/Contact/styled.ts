@@ -24,15 +24,16 @@ export const StyledSection = styled(Section)`
     ${(p) => getHtmlTagStyles(p.theme, p.theme.color.blackPrimary)};
     content: "<Contact>";
     top: -3rem;
-    left: -0.8rem;
     font-size: 1rem;
+    ${(p) => p.theme.breakpoints.only("mobile")} {
+      /* left: -0.5rem; */
+    }
   }
 
   .contact-tag:after {
     ${(p) => getHtmlTagStyles(p.theme, p.theme.color.blackPrimary)};
     content: "</Contact>";
     bottom: -17rem;
-    left: -0.8rem;
     font-size: 1rem;
     ${(p) => p.theme.breakpoints.between("tablet", "laptop")} {
       bottom: -15rem;
@@ -51,17 +52,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledContainer = styled.div`
   position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    background-color: ${(p) => p.theme.color.grey600};
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 200px;
-    border-radius: 20px;
-  }
-  padding: 110px 40px;
+  padding: 110px 40px 110px 15%;
   border-radius: 20px;
   background-color: ${(p) => p.theme.color.grey600};
   max-width: 800px;

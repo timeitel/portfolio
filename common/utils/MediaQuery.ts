@@ -19,7 +19,7 @@ export const buildMediaQuery = ({ min, max }: IBuildMediaQuery) => {
 
 export const buildDeviceMediaQuery = (size: BreakpointType) => {
   switch (size) {
-    case "phone":
+    case "mobile":
       return buildMediaQuery({ min: size, max: "tablet" });
     case "tablet":
       return buildMediaQuery({ min: size, max: "laptop" });

@@ -87,13 +87,11 @@ const StyledSection = styled(Section)`
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "<Portfolio>";
     top: -2rem;
-    left: -0.85rem;
   }
 
   .portfolio-closing-tag:after {
     ${(p) => getHtmlTagStyles(p.theme)};
     content: "</Portfolio>";
     bottom: -6rem;
-    left: -0.85rem;
   }
 `;
