@@ -15,6 +15,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap-reverse;
 
   img {
     margin-left: 0.5rem;
@@ -31,5 +32,5 @@ export const StyledName = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 5rem 1rem 0;
+  margin: 1rem 2rem 0 0;
 `;
