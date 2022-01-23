@@ -7,20 +7,20 @@ import {
 } from "common/components/Icons";
 import { GithubContainedIcon } from "common/components/Icons/GithubContainedIcon";
 import React, { FC } from "react";
-import { StyledFooter, StyledList, StyledName } from "./styled";
+import { StyledFooter, StyledLinksContainer, StyledList } from "./styled";
 
 interface Props {}
 
 export const Footer: FC<Props> = () => {
   return (
     <StyledFooter>
-      <StyledName>
+      <div>
         <HtmlName>{"</Tim Eitel>"}</HtmlName>
-      </StyledName>
-      <div style={{ display: "flex" }}>
+      </div>
+      <StyledLinksContainer>
         <StyledList style={{ marginRight: "5rem" }}>
           <ListItem>
-            <Link href="#landing">Home</Link>
+            <Link href="/">Home</Link>
           </ListItem>
           <ListItem>
             <Link href="#about">About</Link>
@@ -65,7 +65,7 @@ export const Footer: FC<Props> = () => {
             </div>
           </ListItem>
         </StyledList>
-      </div>
+      </StyledLinksContainer>
     </StyledFooter>
   );
 };

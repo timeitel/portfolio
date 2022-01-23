@@ -9,13 +9,17 @@ interface Props {}
 
 export const About: FC<Props> = () => {
   const {
-    color: { grey800, blue600, whitePrimary },
+    color: { grey400, blue600, whitePrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
 
   return (
     <animated.div style={fadeInStyle} ref={intersectionRef}>
-      <Section id="about" backgroundColor="grey800">
+      <Section
+        id="about"
+        backgroundColor="grey800"
+        style={{ paddingTop: "2rem" }}
+      >
         <StyledContainer>
           <hgroup className="about-open-tag">
             <h3 className="section__subtitle" style={{ color: whitePrimary }}>
@@ -50,7 +54,7 @@ export const About: FC<Props> = () => {
               </p>
               <h6
                 style={{
-                  color: grey800,
+                  color: grey400,
                   margin: "0.5rem 0 0",
                   fontSize: "1rem",
                   fontWeight: 600,
@@ -66,7 +70,7 @@ export const About: FC<Props> = () => {
               </List>
               <h6
                 style={{
-                  color: grey800,
+                  color: grey400,
                   fontWeight: 600,
                   margin: "0.5rem 0 0",
                   fontSize: "1rem",
@@ -81,7 +85,7 @@ export const About: FC<Props> = () => {
               </StyledList>
               <h6
                 style={{
-                  color: grey800,
+                  color: grey400,
                   fontWeight: 600,
                   margin: "0.5rem 0 0",
                   fontSize: "1rem",

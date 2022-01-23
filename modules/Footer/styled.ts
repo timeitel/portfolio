@@ -10,27 +10,23 @@ export const StyledList = styled(List)`
 
 export const StyledFooter = styled.footer`
   width: 100%;
-  max-width: 1220px;
+  max-width: 800px;
   padding: 0 40px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap-reverse;
+  flex-direction: row;
 
-  img {
-    margin-left: 0.5rem;
-  }
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  ${(p) => p.theme.breakpoints.only("mobile")} {
+    flex-direction: column-reverse;
   }
 `;
 
-export const StyledName = styled.div`
+export const StyledLinksContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem 2rem 0 0;
+  ${(p) => p.theme.breakpoints.only("mobile")} {
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `;
