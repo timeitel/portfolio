@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 
 export const StyledContainer = styled.div`
-  background: ${(p) => p.theme.color.whitePrimary};
   max-width: 1000px;
   margin: 0 auto;
 

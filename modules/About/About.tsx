@@ -9,16 +9,20 @@ interface Props {}
 
 export const About: FC<Props> = () => {
   const {
-    color: { grey800, blue600 },
+    color: { grey800, blue600, whitePrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
 
   return (
-    <Section id="about" backgroundColor="whitePrimary">
-      <animated.div style={fadeInStyle} ref={intersectionRef}>
+    <animated.div style={fadeInStyle} ref={intersectionRef}>
+      <Section
+        id="about"
+        backgroundColor="grey800"
+        style={{ paddingTop: "1.35rem" }}
+      >
         <StyledContainer>
           <hgroup className="about-open-tag">
-            <h3 className="section__subtitle" style={{ color: grey800 }}>
+            <h3 className="section__subtitle" style={{ color: whitePrimary }}>
               About Me
             </h3>
           </hgroup>
@@ -102,7 +106,7 @@ export const About: FC<Props> = () => {
             </StyledImageContainer>
           </div>
         </StyledContainer>
-      </animated.div>
-    </Section>
+      </Section>
+    </animated.div>
   );
 };
