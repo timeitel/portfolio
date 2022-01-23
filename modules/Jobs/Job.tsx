@@ -13,9 +13,9 @@ interface Props {
 
 export const Job: FC<Props> = ({ active, duties, title, company, time }) => {
   const transitions = useTransition(active, {
-    from: { opacity: 0, transform: `translate3d(25px, 25px, 0)` },
+    from: { opacity: 0, transform: `translate3d(10px, 10px, 0)` },
     enter: { opacity: 1, transform: `translate3d(0px, 0px, 0)` },
-    leave: { opacity: 0, transform: `translate3d(25px, 25px, 0)` },
+    leave: { opacity: 0, transform: `translate3d(10px, 10px, 0)` },
   });
   const {
     color: { blue600 },
