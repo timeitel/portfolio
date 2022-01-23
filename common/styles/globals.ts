@@ -14,6 +14,7 @@ export const getGlobalStyles = (theme: ITheme) => css`
     overflow-x: clip;
     background: ${theme.color.grey800};
     line-height: 1.5;
+    scroll-padding-top: 50px;
   }
 
   a {
