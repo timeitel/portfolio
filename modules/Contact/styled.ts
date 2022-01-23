@@ -52,7 +52,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledContainer = styled.div`
   position: relative;
-  padding: 110px 40px 110px 15%;
+  padding: 110px 40px;
   border-radius: 20px;
   background-color: ${(p) => p.theme.color.grey600};
   max-width: 800px;

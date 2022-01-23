@@ -19,9 +19,10 @@ export const StyledNavInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100%;
-  max-width: 1440px;
+  width: 100%;
+  max-width: 1220px;
   padding: 0 20px;
+  margin: 0 auto;
 
   ${(p) => p.theme.breakpoints.up("desktop")} {
     padding: 0 40px;

@@ -19,6 +19,7 @@ export const StyledList = styled(List)`
 
 export const StyledFooter = styled.footer`
   width: 100%;
+  max-width: 1220px;
   padding: 0 40px 40px;
   display: flex;
   justify-content: center;
