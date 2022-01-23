@@ -5,14 +5,7 @@ export const StyledList = styled(List)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 5rem;
   line-height: 2rem;
-
-  @media (max-width: 768px) {
-    .section-links {
-      display: none;
-    }
-  }
 `;
 
 export const StyledFooter = styled.footer`
@@ -38,4 +31,5 @@ export const StyledName = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0 5rem 1rem 0;
 `;

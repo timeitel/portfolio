@@ -15,11 +15,7 @@ export const About: FC<Props> = () => {
 
   return (
     <animated.div style={fadeInStyle} ref={intersectionRef}>
-      <Section
-        id="about"
-        backgroundColor="grey800"
-        style={{ paddingTop: "1.35rem" }}
-      >
+      <Section id="about" backgroundColor="grey800">
         <StyledContainer>
           <hgroup className="about-open-tag">
             <h3 className="section__subtitle" style={{ color: whitePrimary }}>

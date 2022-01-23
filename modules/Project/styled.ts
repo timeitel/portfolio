@@ -66,6 +66,7 @@ export const StyledProject = styled.div`
     border-radius: 2px;
     object-fit: cover;
     object-position: center;
+    opacity: 0.5;
   }
 
   .project-content {

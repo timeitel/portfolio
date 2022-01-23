@@ -7,3 +7,4 @@ export * from "./Landing";
 export * from "./Navbar";
 export * from "./Portfolio";
 export * from "./Project";
+export * from "./Aside";

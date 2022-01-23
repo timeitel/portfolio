@@ -4,7 +4,7 @@ import { FC } from "react";
 interface Props {}
 
 export const HtmlName: FC<Props> = ({ children }) => {
-  return <StyledHtmlName href="/">{children}</StyledHtmlName>;
+  return <StyledHtmlName href="#landing">{children}</StyledHtmlName>;
 };
 
 const StyledHtmlName = styled.a`

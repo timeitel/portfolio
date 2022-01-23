@@ -12,6 +12,7 @@ import {
   Landing,
   Navbar,
   Portfolio,
+  Aside,
 } from "../modules";
 import { IJob, IProject } from "common/types";
 
@@ -32,6 +33,7 @@ const Home: FC<Props> = ({ jobs, projects }) => {
         />
       </Head>
 
+      {/* <Aside /> */}
       <Navbar />
       <StyledContainer>
         <StyledMain>

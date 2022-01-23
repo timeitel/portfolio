@@ -18,17 +18,17 @@ export const Footer: FC<Props> = () => {
         <HtmlName>{"</Tim Eitel>"}</HtmlName>
       </StyledName>
       <div style={{ display: "flex" }}>
-        <StyledList>
-          <ListItem className="section-links">
-            <Link href="/">Home</Link>
+        <StyledList style={{ marginRight: "5rem" }}>
+          <ListItem>
+            <Link href="#landing">Home</Link>
           </ListItem>
-          <ListItem className="section-links">
+          <ListItem>
             <Link href="#about">About</Link>
           </ListItem>
-          <ListItem className="section-links">
+          <ListItem>
             <Link href="#experience">Experience</Link>
           </ListItem>
-          <ListItem className="section-links">
+          <ListItem>
             <Link href="#portfolio">Portfolio</Link>
           </ListItem>
         </StyledList>

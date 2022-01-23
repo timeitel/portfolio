@@ -13,7 +13,10 @@ export const Landing: FC<Props> = () => {
   useChain([backgroundRef, foregroundRef]);
 
   return (
-    <StyledSection style={{ height: "100vh", position: "relative" }}>
+    <StyledSection
+      style={{ height: "100vh", position: "relative" }}
+      id="landing"
+    >
       <IntroBackground revealStyle={revealStyle} />
       <IntroForeground fadeUpStyle={fadeUpStyle} />
     </StyledSection>
