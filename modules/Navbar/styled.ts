@@ -3,7 +3,7 @@ import { animated } from "react-spring";
 
 export const StyledNav = styled(animated.nav)`
   padding: 17px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   display: flex;
@@ -50,14 +50,12 @@ export const StyledNavItem = styled.li`
     background: ${(p) => p.theme.color.whitePrimary};
     content: "";
     position: absolute;
-    width: 100%;
     height: 2px;
-    bottom: -5px;
-    left: 0;
+    bottom: -1.5rem;
+    left: -1rem;
+    right: -1rem;
     visibility: hidden;
-    -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
     transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
   }
 

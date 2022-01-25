@@ -1,9 +1,9 @@
-import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useIntersectionObserver } from "@hooks";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "common/components/Icons";
 import { Link } from "common/components/Link";
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import { useSpring } from "react-spring";
 import {
   StyledNav,
@@ -15,13 +15,16 @@ import {
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
-  const isPhone = useMediaQuery({ max: "tablet" });
+  const ref = useRef(null);
+  const intersectionRef = useIntersectionObserver({ rootMargin: "-50px", ref });
   const navStyle = useSpring({
-    transform: true ? `translate3d(0, 0rem, 0)` : `translate3d(0, -5rem, 0)`,
+    // transform: intersectionRef?.isIntersecting
+    //   ? `translate3d(0, 0rem, 0)`
+    //   : `translate3d(0, -5rem, 0)`,
   });
 
   return (
-    <StyledNav style={navStyle}>
+    <StyledNav style={navStyle} ref={ref}>
       <StyledNavInner>
         <HtmlName>{"<Tim Eitel>"}</HtmlName>
         <StyledNavList>
@@ -43,10 +46,7 @@ export const Navbar: FC<Props> = () => {
               target="_blank"
               href="resume.pdf"
             >
-              <SecondaryButton
-                style={{ marginTop: "4px" }}
-                size={isPhone ? "sm" : "md"}
-              >
+              <SecondaryButton size="sm">
                 Resume
                 <ExternalLinkIcon />
               </SecondaryButton>

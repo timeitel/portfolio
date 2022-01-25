@@ -18,10 +18,10 @@ const StyledSecondaryButton = styled(Button)`
     content: "";
     background: ${(p) => p.theme.color.blue600};
     position: absolute;
-    width: 97.5%;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
     height: 1px;
     bottom: 0;
-    left: 1.25%;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;
