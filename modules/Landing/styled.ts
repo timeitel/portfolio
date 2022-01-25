@@ -33,20 +33,23 @@ export const StyledTitle = styled.div`
 export const StyledSection = styled.section`
   .styled-intro {
     margin: 12vh auto 2rem;
+    font-size: 82px;
+  }
+  .styled-title {
+    white-space: nowrap;
+    font-size: 2rem;
+  }
+  .primary-btn {
+    margin-top: 3rem;
   }
 
-  @media only screen and (min-width: 380px) {
+  ${(p) => p.theme.breakpoints.only("mobile")} {
     .styled-intro {
-      font-size: 82px;
-    }
-
-    .styled-title {
-      white-space: nowrap;
-      font-size: 2rem;
+      margin: 2rem auto;
     }
   }
 
-  @media only screen and (min-width: 580px) {
+  ${(p) => p.theme.breakpoints.up("tablet")} {
     .styled-intro {
       color: ${(p) => p.theme.color.blackPrimary};
       font-size: 7.5rem;
@@ -72,10 +75,11 @@ export const StyledSection = styled.section`
       top: 100%;
       left: 50%;
       transform: translate(-50%, 85%);
+      margin-top: 2.5vh;
     }
   }
 
-  @media only screen and (min-width: 980px) {
+  ${(p) => p.theme.breakpoints.up("laptop")} {
     .styled-intro {
       font-size: 11.6rem;
     }

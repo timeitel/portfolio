@@ -18,7 +18,7 @@ export const IntroForeground: FC<Props> = ({ fadeUpStyle }) => {
       <animated.h4 style={fadeUpStyle}>Software Developer</animated.h4>
       <animated.div style={fadeUpStyle}>
         <Link className="styled-cta" href="#about">
-          <PrimaryButton size="lg" style={{ marginTop: "2.5vh" }}>
+          <PrimaryButton size="lg" className="primary-btn">
             Find out more
           </PrimaryButton>
         </Link>
