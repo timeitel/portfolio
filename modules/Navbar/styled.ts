@@ -61,7 +61,6 @@ export const StyledNavItem = styled.li`
 
   &:hover:before {
     visibility: visible;
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
 
@@ -71,5 +70,27 @@ export const StyledNavItem = styled.li`
 
   ${(p) => p.theme.breakpoints.up("desktop")} {
     margin-right: 58px;
+  }
+`;
+
+export const StyledResumeListItem = styled.li`
+  padding-left: 2rem;
+  position: relative;
+
+  ${(p) => p.theme.breakpoints.up("laptop")} {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      background-color: ${(p) => p.theme.color.grey600};
+      top: 3px;
+      bottom: 3px;
+      left: 0;
+    }
+  }
+
+  ${(p) => p.theme.breakpoints.up("desktop")} {
+    padding-left: 58px;
   }
 `;

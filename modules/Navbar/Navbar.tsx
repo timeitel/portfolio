@@ -10,6 +10,7 @@ import {
   StyledNavInner,
   StyledNavItem,
   StyledNavList,
+  StyledResumeListItem,
 } from "./styled";
 
 interface Props {}
@@ -40,7 +41,7 @@ export const Navbar: FC<Props> = () => {
           <StyledNavItem>
             <a href="#contact">Contact</a>
           </StyledNavItem>
-          <li>
+          <StyledResumeListItem>
             <Link
               style={{ display: "flex", alignItems: "center" }}
               target="_blank"
@@ -51,7 +52,7 @@ export const Navbar: FC<Props> = () => {
                 <ExternalLinkIcon />
               </SecondaryButton>
             </Link>
-          </li>
+          </StyledResumeListItem>
         </StyledNavList>
       </StyledNavInner>
     </StyledNav>
