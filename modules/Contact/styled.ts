@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "@styles/htmlTags";
 
 export const StyledSection = styled(Section)`
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
   position: relative;
   &:before {
     content: "";
@@ -57,4 +57,15 @@ export const StyledContainer = styled.div`
   background-color: ${(p) => p.theme.color.grey600};
   max-width: 800px;
   margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: ${(p) => p.theme.color.grey600};
+    bottom: -4rem;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+  }
 `;

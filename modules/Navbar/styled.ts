@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { animated } from "react-spring";
 
 export const StyledNav = styled(animated.nav)`
-  padding: 17px;
+  padding: 1rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -13,6 +13,10 @@ export const StyledNav = styled(animated.nav)`
   background-color: ${(p) => p.theme.color.grey800};
   z-index: 1;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+
+  ${(p) => p.theme.breakpoints.only("mobile")} {
+    padding: 1rem 0;
+  }
 `;
 
 export const StyledNavInner = styled.div`
@@ -51,7 +55,7 @@ export const StyledNavItem = styled.li`
     content: "";
     position: absolute;
     height: 2px;
-    bottom: -1.5rem;
+    bottom: -1.4rem;
     left: -1rem;
     right: -1rem;
     visibility: hidden;
