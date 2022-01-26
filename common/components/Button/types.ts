@@ -1,7 +1,9 @@
+import { themeDark } from "@styles/theme";
 import { CSSProperties, HTMLAttributes } from "react";
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  size?: keyof typeof ButtonSizes;
+  size?: keyof IButtonSizes;
+  variant?: keyof IButtonVariants;
 }
 
 interface IButtonSizes {
@@ -17,4 +19,16 @@ export const ButtonSizes: IButtonSizes = {
   },
   md: { padding: "6px 16px", fontSize: "1rem" },
   lg: { padding: "8px 22px", fontSize: "1.0625rem" },
+};
+
+type IButtonVariants = {
+  text: CSSProperties;
+  contained: CSSProperties;
+  outlined: CSSProperties;
+};
+
+export const ButtonVariants: IButtonVariants = {
+  text: {},
+  contained: { backgroundColor: themeDark.color.blue200 },
+  outlined: { border: "1px solid" },
 };
