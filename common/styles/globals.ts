@@ -6,8 +6,7 @@ export const getGlobalStyles = (theme: ITheme) => css`
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     color: ${theme.color.grey600};
     max-width: 100%;
@@ -28,6 +27,15 @@ export const getGlobalStyles = (theme: ITheme) => css`
 
   li {
     list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Raleway;
   }
 
   section {

@@ -18,7 +18,7 @@ export const Footer: FC<Props> = () => {
         <HtmlName>{"</Tim Eitel>"}</HtmlName>
       </div>
       <StyledLinksContainer>
-        <StyledList style={{ marginRight: "5rem" }}>
+        <StyledList style={{ marginRight: "5rem", fontFamily: "Raleway" }}>
           <ListItem>
             <Link href="/">Home</Link>
           </ListItem>

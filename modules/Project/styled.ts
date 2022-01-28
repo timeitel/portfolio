@@ -27,7 +27,7 @@ export const FigureCaption = styled.figcaption`
   border-radius: 5px;
 `;
 
-export const ProjectSubtitle = styled.div`
+export const ProjectSubtitle = styled.h6`
   font-size: clamp(14px, 5vw, 18px);
   line-height: 1.2;
   margin: 0.5rem 0 1.25rem;
@@ -36,7 +36,7 @@ export const ProjectSubtitle = styled.div`
   color: ${(p) => p.theme.color.blue600};
 `;
 
-export const ProjectTitle = styled.div`
+export const ProjectTitle = styled.h4`
   font-size: clamp(24px, 5vw, 28px);
   font-weight: 600;
   white-space: nowrap;

@@ -28,7 +28,7 @@ export const Navbar: FC<Props> = () => {
     <StyledNav style={navStyle} ref={ref}>
       <StyledNavInner>
         <HtmlName>{"<Tim Eitel>"}</HtmlName>
-        <StyledNavList>
+        <StyledNavList style={{ fontFamily: "Raleway" }}>
           <StyledNavItem>
             <a href="#about">About</a>
           </StyledNavItem>

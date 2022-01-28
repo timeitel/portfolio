@@ -53,9 +53,9 @@ export const Portfolio: FC<Props> = ({ projects }) => {
           }}
           className="portfolio-closing-tag"
         >
-          <p style={{ marginTop: "5rem" }} className="section__subtitle">
+          <h6 style={{ marginTop: "5rem" }} className="section__subtitle">
             Want to see more of my projects?
-          </p>
+          </h6>
           <Link
             href="https://github.com/timeitel/"
             target="_blank"
@@ -66,8 +66,8 @@ export const Portfolio: FC<Props> = ({ projects }) => {
               justifyContent: "center",
             }}
           >
-            <span>Browse</span>
             <ExternalLinkIcon />
+            <span style={{ marginLeft: "0.25rem" }}>Browse</span>
           </Link>
         </div>
       </animated.div>

@@ -31,6 +31,10 @@ const Home: FC<Props> = ({ jobs, projects }) => {
           href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       {/* <Aside /> */}
