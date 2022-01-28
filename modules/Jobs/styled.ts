@@ -99,7 +99,7 @@ export const StyledRole = styled.h4`
 `;
 
 export const StyledJobTime = styled.h5`
-  letter-spacing: 0.05em;
   margin: 0 0 1rem;
   font-weight: 400;
+  font-size: 1rem;
 `;

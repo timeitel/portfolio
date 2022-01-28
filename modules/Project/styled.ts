@@ -89,7 +89,7 @@ export const StyledProject = styled.div`
 export const ProjectTags = styled.ul`
   display: flex;
   justify-content: flex-end;
-  margin: 1rem 0;
+  margin: 0 0 2rem 0;
   font-size: 0.75rem;
 
   li {
@@ -104,14 +104,14 @@ export const ProjectLinks = styled(ProjectTags)`
   margin: 0;
 
   li {
-    margin: 0 1rem;
+    margin-left: 1rem;
     background-color: transparent;
     padding: 0;
   }
 
   svg {
-    height: 28px;
-    width: 28px;
+    height: 24px;
+    width: 24px;
     color: white;
   }
 `;

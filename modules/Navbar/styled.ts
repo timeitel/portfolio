@@ -56,8 +56,9 @@ export const StyledNavItem = styled.li`
     position: absolute;
     height: 2px;
     bottom: -1.4rem;
-    left: -1rem;
-    right: -1rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    border-radius: 5px 5px 0 0;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.35s cubic-bezier(1, 0.25, 0, 0.75) 0s;

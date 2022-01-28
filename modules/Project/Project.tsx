@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
 import { CodeIcon, ExternalLinkIcon } from "common/components/Icons";
 import { IProject } from "common/types";
@@ -28,6 +29,9 @@ export const Project: FC<IProject> = ({
     return <li key={tag}>{tag}</li>;
   });
   const projectDescription = content.replace(/(\r\n|\n|\r)/gm, "");
+  const {
+    color: { whitePrimary },
+  } = useTheme();
 
   return (
     <animated.div style={fadeInStyle} ref={intersectionRef}>
@@ -45,24 +49,44 @@ export const Project: FC<IProject> = ({
           </HGroup>
 
           <FigureCaption>
-            {projectDescription}
+            <p style={{ margin: "0 0 1rem 0" }}>{projectDescription}</p>
             <ProjectTags>{tagItems}</ProjectTags>
-            <ProjectLinks>
-              {!!github && (
-                <li>
-                  <a href={github} target="_blank">
-                    <CodeIcon />
-                  </a>
-                </li>
-              )}
-              {!!url && (
-                <li>
-                  <a href={url} target="_blank">
-                    <ExternalLinkIcon />
-                  </a>
-                </li>
-              )}
-            </ProjectLinks>
+            {(!!github || !!url) && (
+              <ProjectLinks>
+                {!!github && (
+                  <li>
+                    <a
+                      href={github}
+                      target="_blank"
+                      style={{ display: "flex", alignItems: "center" }}
+                    >
+                      <CodeIcon />
+                      <span
+                        style={{ marginLeft: "0.5rem", color: whitePrimary }}
+                      >
+                        Code
+                      </span>
+                    </a>
+                  </li>
+                )}
+                {!!url && (
+                  <li>
+                    <a
+                      href={url}
+                      target="_blank"
+                      style={{ display: "flex", alignItems: "center" }}
+                    >
+                      <ExternalLinkIcon />
+                      <span
+                        style={{ color: whitePrimary, marginLeft: "0.5rem" }}
+                      >
+                        Website
+                      </span>
+                    </a>
+                  </li>
+                )}
+              </ProjectLinks>
+            )}
           </FigureCaption>
         </ProjectContent>
       </StyledProject>
