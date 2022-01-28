@@ -27,7 +27,8 @@
       "@styles/*": ["common/styles/*"],
       "@theme": ["common/styles/theme"],
       "@types": ["common/types"]
-    }
+    },
+    "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
