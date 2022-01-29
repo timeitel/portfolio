@@ -1,18 +1,27 @@
 import { css } from "@emotion/react";
 import { ITheme } from "@theme";
 
-export const getGlobalStyles = (theme: ITheme) => css`
+// TODO: change to variable, pass theme from _index
+export const globalStyles = (theme: ITheme) => css`
   html,
   body {
-    padding: 0;
     margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
     scroll-behavior: smooth;
     color: ${theme.color.grey600};
     max-width: 100%;
-    overflow-x: clip;
     background: ${theme.color.grey800};
     line-height: 1.5;
     scroll-padding-top: 50px;
@@ -21,10 +30,6 @@ export const getGlobalStyles = (theme: ITheme) => css`
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
   }
 
   li {
