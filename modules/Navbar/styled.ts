@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { animated } from "react-spring";
 
-export const StyledNav = styled(animated.nav)`
+export const StyledNav = styled(animated.nav)<{ menuIsOpen: boolean }>`
   padding: 1rem;
   position: fixed;
   width: 100%;
@@ -10,9 +10,11 @@ export const StyledNav = styled(animated.nav)`
   justify-content: space-between;
   align-items: center;
   color: ${(p) => p.theme.color.whitePrimary};
-  background-color: ${(p) => p.theme.color.grey800};
+  background-color: ${(p) =>
+    p.menuIsOpen ? "transparent" : p.theme.color.grey800};
   z-index: 1;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+  box-shadow: ${(p) =>
+    p.menuIsOpen ? "none" : "0 2px 5px 0 rgb(0 0 0 / 25%)"};
 
   ${(p) => p.theme.breakpoints.only("mobile")} {
     padding: 1rem 0;
@@ -82,10 +84,11 @@ export const StyledNavItem = styled.li`
 export const StyledResumeListItem = styled.li`
   display: flex;
   align-items: center;
-  padding-left: 2rem;
   position: relative;
 
   ${(p) => p.theme.breakpoints.up("laptop")} {
+    padding-left: 2rem;
+
     &::before {
       content: "";
       position: absolute;

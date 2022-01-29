@@ -30,7 +30,7 @@ export const Navbar: FC<Props> = () => {
   });
 
   return (
-    <StyledNav style={navStyle} ref={ref}>
+    <StyledNav style={navStyle} ref={ref} menuIsOpen={open}>
       <StyledNavInner>
         <HtmlName>{"<Tim Eitel>"}</HtmlName>
         <StyledNavList style={{ fontFamily: "Raleway" }}>
@@ -57,9 +57,12 @@ export const Navbar: FC<Props> = () => {
                 <ExternalLinkIcon />
               </SecondaryButton>
             </Link>
-
             {showMenu && (
-              <Button disableHover style={{ marginLeft: "0.5rem" }}>
+              <Button
+                disableHover
+                style={{ marginLeft: "0.5rem" }}
+                onClick={() => setOpen((prev) => !prev)}
+              >
                 <MenuIcon />
               </Button>
             )}
@@ -68,7 +71,8 @@ export const Navbar: FC<Props> = () => {
       </StyledNavInner>
 
       <Modal isOpen={open} onClose={() => setOpen(false)}>
-        Testing modal<button onClick={() => setOpen(false)}>close</button>
+        Testing modal
+        <button onClick={() => setOpen(false)}>close</button>
       </Modal>
     </StyledNav>
   );
