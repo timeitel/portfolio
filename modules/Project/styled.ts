@@ -25,6 +25,7 @@ export const FigureCaption = styled.figcaption`
   background: ${(p) => p.theme.color.blackSecondary};
   margin-right: 2rem;
   border-radius: 5px;
+  box-shadow: ${(p) => p.theme.shadow.sm};
 `;
 
 export const ProjectSubtitle = styled.h6`
@@ -61,16 +62,17 @@ export const StyledProject = styled.div`
   margin: 5rem auto;
 
   img {
-    grid-area: 1 / 1 / -1 / 8;
+    grid-area: 1 / 1 / -1 / 10;
     height: 100%;
     border-radius: 2px;
     object-fit: cover;
     object-position: center;
     opacity: 0.5;
+    max-height: 500px;
   }
 
   .project-content {
-    grid-area: 1 / 6 / -1 / -1;
+    grid-area: 1 / 8 / -1 / -1;
     z-index: 2;
   }
 
@@ -89,8 +91,8 @@ export const StyledProject = styled.div`
 export const ProjectTags = styled.ul`
   display: flex;
   justify-content: flex-end;
-  margin: 0 0 2rem 0;
   font-size: 0.75rem;
+  margin: 0;
 
   li {
     margin-left: 10px;
@@ -101,7 +103,7 @@ export const ProjectTags = styled.ul`
 `;
 
 export const ProjectLinks = styled(ProjectTags)`
-  margin: 0;
+  margin: 2rem 0 0;
 
   li {
     margin-left: 1rem;

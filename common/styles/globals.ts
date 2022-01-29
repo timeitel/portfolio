@@ -6,7 +6,9 @@ export const getGlobalStyles = (theme: ITheme) => css`
   body {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
     scroll-behavior: smooth;
     color: ${theme.color.grey600};
     max-width: 100%;

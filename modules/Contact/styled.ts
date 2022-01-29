@@ -54,7 +54,7 @@ export const StyledContainer = styled.div`
   position: relative;
   padding: 110px 40px;
   border-radius: 20px;
-  background-color: ${(p) => p.theme.color.grey600};
+  background-color: ${(p) => p.theme.color.grey100};
   max-width: 800px;
   margin: 0 auto;
 

@@ -2,6 +2,7 @@ export interface IColors {
   blue200: string;
   blue400: string;
   blue600: string;
+  grey100: string;
   grey200: string;
   grey400: string;
   grey600: string;
@@ -16,6 +17,7 @@ export const themeDarkColors: IColors = {
   blue200: "#2b6cb0",
   blue400: "#cfd9e5",
   blue600: "#0069d9",
+  grey100: "#808782",
   grey200: "#e3e3e3",
   grey400: "#99a1a6",
   grey600: "#656a70",

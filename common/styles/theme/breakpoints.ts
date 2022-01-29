@@ -7,7 +7,7 @@ export interface IBreakpointFns {
   only: (deviceSize: BreakpointType) => string;
 }
 
-export const breakpointFns: IBreakpointFns = {
+export const breakpoints: IBreakpointFns = {
   up: (min) => buildMediaQuery({ min }),
   down: (max) => buildMediaQuery({ max }),
   between: (min, max) => buildMediaQuery({ min, max }),
