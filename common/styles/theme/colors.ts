@@ -26,4 +26,5 @@ export const themeDarkColors: IColors = {
   blackPrimary: "#0f1011",
   whiteSecondary: "#e3e3e3",
   whitePrimary: "#ffffff",
+  // blue secondary #86BBBD #76949F
 };

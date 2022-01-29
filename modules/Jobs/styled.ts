@@ -60,6 +60,7 @@ export const StyledContainer = styled.div`
     .styled-tablist {
       flex-direction: column;
       margin: 0 1rem 0 0;
+      min-height: 260px;
 
       .tab {
         border: none;
