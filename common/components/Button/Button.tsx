@@ -1,10 +1,21 @@
-import { ButtonProps, ButtonSizes } from "common/components/Button";
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { ButtonVariants } from "@components/Button/types";
+import { ButtonProps, ButtonSizes, ButtonVariants } from "./types";
 
-export const Button: FC<ButtonProps> = ({ children, ...rest }) => {
-  return <StyledDefaultButton {...rest}>{children}</StyledDefaultButton>;
+export const Button: FC<ButtonProps> = ({
+  startIcon,
+  endIcon,
+  children,
+  href,
+  ...rest
+}) => {
+  return (
+    <StyledDefaultButton {...rest} as={href ? "a" : "button"} href={href}>
+      {startIcon && <span style={{ margin: "0 8px 0 -4px" }}>{startIcon}</span>}
+      {children}
+      {endIcon && <span style={{ margin: "0 -4px 0 8px" }}>{endIcon}</span>}
+    </StyledDefaultButton>
+  );
 };
 
 const StyledDefaultButton = styled.button<ButtonProps>`

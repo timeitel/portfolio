@@ -37,6 +37,7 @@ export const StyledNavList = styled.ul`
   display: flex;
   align-items: center;
   margin: 0;
+  padding: 0;
 `;
 
 export const StyledNavItem = styled.li`

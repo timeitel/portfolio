@@ -1,10 +1,13 @@
 import { themeDark } from "@styles/theme";
-import { CSSProperties, HTMLAttributes } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   size?: keyof IButtonSizes;
   variant?: keyof IButtonVariants;
   disableHover?: boolean;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  href?: string;
 }
 
 interface IButtonSizes {
