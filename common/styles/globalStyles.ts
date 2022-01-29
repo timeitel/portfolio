@@ -7,6 +7,8 @@ export const globalStyles = (theme: ITheme) => css`
   body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
   }
 
   *,
@@ -19,12 +21,10 @@ export const globalStyles = (theme: ITheme) => css`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
-    scroll-behavior: smooth;
     color: ${theme.color.grey600};
     max-width: 100%;
     background: ${theme.color.grey800};
     line-height: 1.5;
-    scroll-padding-top: 50px;
   }
 
   a {

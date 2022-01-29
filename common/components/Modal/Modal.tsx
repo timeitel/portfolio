@@ -3,9 +3,10 @@ import ReactModal from "react-modal";
 
 export interface Props extends ReactModal.Props {
   isOpen: boolean;
+  onClose: () => void;
 }
 
-export const Modal: FC<Props> = ({ isOpen, children, ...rest }) => {
+export const Modal: FC<Props> = ({ isOpen, onClose, children, ...rest }) => {
   return (
     <ReactModal
       style={{
@@ -14,7 +15,6 @@ export const Modal: FC<Props> = ({ isOpen, children, ...rest }) => {
           left: "50%",
           right: "auto",
           bottom: "auto",
-          marginRight: "-50%",
           transform: "translate(-50%, -50%)",
         },
       }}
@@ -22,6 +22,7 @@ export const Modal: FC<Props> = ({ isOpen, children, ...rest }) => {
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}
       shouldFocusAfterRender={true}
+      onRequestClose={onClose}
       {...rest}
     >
       {children}

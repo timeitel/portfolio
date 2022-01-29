@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import styled from "@emotion/styled";
 import {
   About,
@@ -15,6 +15,7 @@ import {
   Aside,
 } from "../modules";
 import { IJob, IProject } from "common/types";
+import ReactModal from "react-modal";
 
 interface Props {
   jobs: IJob[];
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const Home: FC<Props> = ({ jobs, projects }) => {
+  useEffect(() => ReactModal.setAppElement("#__next"), []);
   return (
     <>
       <Head>
