@@ -1,3 +1,4 @@
+import { themeDarkColors } from "@styles/theme";
 import { FC } from "react";
 import ReactModal from "react-modal";
 
@@ -9,15 +10,7 @@ export interface Props extends ReactModal.Props {
 export const Modal: FC<Props> = ({ isOpen, onClose, children, ...rest }) => {
   return (
     <ReactModal
-      style={{
-        content: {
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          transform: "translate(-50%, -50%)",
-        },
-      }}
+      style={modalStyles}
       isOpen={isOpen}
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}
@@ -28,4 +21,17 @@ export const Modal: FC<Props> = ({ isOpen, onClose, children, ...rest }) => {
       {children}
     </ReactModal>
   );
+};
+
+const modalStyles: ReactModal.Styles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    transform: "translate(-50%, -50%)",
+  },
+  overlay: {
+    backgroundColor: `${themeDarkColors.blackPrimary}`,
+  },
 };

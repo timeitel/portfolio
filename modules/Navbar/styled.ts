@@ -79,6 +79,8 @@ export const StyledNavItem = styled.li`
 `;
 
 export const StyledResumeListItem = styled.li`
+  display: flex;
+  align-items: center;
   padding-left: 2rem;
   position: relative;
 

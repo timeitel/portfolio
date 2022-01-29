@@ -1,9 +1,12 @@
+import { Modal } from "@components";
+import { MenuIcon } from "@components/Icons/MenuIcon";
 import { useIntersectionObserver } from "@hooks";
-import { SecondaryButton } from "common/components/Button";
+import { useMediaQuery } from "@hooks/useMediaQuery";
+import { Button, SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import { ExternalLinkIcon } from "common/components/Icons";
 import { Link } from "common/components/Link";
-import React, { FC, useRef } from "react";
+import React, { FC, useRef, useState } from "react";
 import { useSpring } from "react-spring";
 import {
   StyledNav,
@@ -16,7 +19,9 @@ import {
 interface Props {}
 
 export const Navbar: FC<Props> = () => {
+  const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const showMenu = useMediaQuery({ max: "laptop" });
   const intersectionRef = useIntersectionObserver({ rootMargin: "-50px", ref });
   const navStyle = useSpring({
     // transform: intersectionRef?.isIntersecting
@@ -52,9 +57,19 @@ export const Navbar: FC<Props> = () => {
                 <ExternalLinkIcon />
               </SecondaryButton>
             </Link>
+
+            {showMenu && (
+              <Button disableHover style={{ marginLeft: "0.5rem" }}>
+                <MenuIcon />
+              </Button>
+            )}
           </StyledResumeListItem>
         </StyledNavList>
       </StyledNavInner>
+
+      <Modal isOpen={open} onClose={() => setOpen(false)}>
+        Testing modal<button onClick={() => setOpen(false)}>close</button>
+      </Modal>
     </StyledNav>
   );
 };

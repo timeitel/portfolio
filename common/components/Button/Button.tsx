@@ -22,9 +22,13 @@ const StyledDefaultButton = styled.button<ButtonProps>`
   position: relative;
   transition: background 0.25s ease-in 0.15s;
 
+  ${(p) =>
+    !p.disableHover &&
+    `
   &:hover {
-    background-color: ${(p) => p.theme.color.grey400};
+    background-color: ${p.theme.color.grey400};
   }
+  `}
 
   ${(p) => p.size && { ...ButtonSizes[p.size] }};
   ${(p) => p.variant && { ...ButtonVariants[p.variant] }};

@@ -4,6 +4,7 @@ import { CSSProperties, HTMLAttributes } from "react";
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   size?: keyof IButtonSizes;
   variant?: keyof IButtonVariants;
+  disableHover?: boolean;
 }
 
 interface IButtonSizes {

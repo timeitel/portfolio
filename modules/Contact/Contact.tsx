@@ -1,9 +1,8 @@
-import { Modal } from "@components/Modal";
 import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
 import { PrimaryButton } from "common/components/Button";
 import { MailIcon } from "common/components/Icons";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { animated } from "react-spring";
 import { StyledContainer, StyledLink, StyledSection } from "./styled";
 
@@ -14,7 +13,6 @@ export const Contact: FC<Props> = () => {
     color: { whitePrimary, grey800 },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
-  const [open, setOpen] = useState(false);
   return (
     <StyledSection id="contact" backgroundColor="grey800" textAlign="center">
       <animated.div style={{ ...fadeInStyle }} ref={intersectionRef}>
@@ -42,10 +40,6 @@ export const Contact: FC<Props> = () => {
               </PrimaryButton>
             </StyledLink>
           </div>
-          <PrimaryButton onClick={() => setOpen(true)}>Testing</PrimaryButton>
-          <Modal isOpen={open} onClose={() => setOpen(false)}>
-            Testing modal<button onClick={() => setOpen(false)}>close</button>
-          </Modal>
         </StyledContainer>
       </animated.div>
     </StyledSection>
