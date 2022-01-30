@@ -5,12 +5,22 @@ import ReactModal from "react-modal";
 export interface Props extends ReactModal.Props {
   isOpen: boolean;
   onClose: () => void;
+  modalStyles?: Partial<ReactModal.Styles>;
 }
 
-export const Modal: FC<Props> = ({ isOpen, onClose, children, ...rest }) => {
+export const Modal: FC<Props> = ({
+  isOpen,
+  onClose,
+  children,
+  modalStyles,
+  ...rest
+}) => {
   return (
     <ReactModal
-      style={modalStyles}
+      style={{
+        overlay: { ...defaultStyles.overlay, ...modalStyles?.overlay },
+        content: { ...defaultStyles.content, ...modalStyles?.content },
+      }}
       isOpen={isOpen}
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}
@@ -23,7 +33,7 @@ export const Modal: FC<Props> = ({ isOpen, onClose, children, ...rest }) => {
   );
 };
 
-const modalStyles: ReactModal.Styles = {
+const defaultStyles: ReactModal.Styles = {
   content: {
     top: "50%",
     left: "50%",

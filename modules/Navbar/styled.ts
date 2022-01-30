@@ -6,7 +6,6 @@ export const StyledNav = styled.nav<{ menuIsOpen: boolean }>`
   width: 100%;
   top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: ${(p) => p.theme.color.whitePrimary};
   background-color: ${(p) =>
@@ -37,7 +36,7 @@ export const StyledNavInner = styled.div`
 export const StyledNavList = styled.ul`
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
 `;
 
