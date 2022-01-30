@@ -1,33 +1,24 @@
 import { buildMediaQuery, IBuildMediaQuery } from "@utils";
-import { useEffect, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 
-export const useMediaQuery = (mediaQuery: IBuildMediaQuery): boolean => {
+export const useMediaQuery = (mediaQuery: IBuildMediaQuery) => {
   const query = buildMediaQuery(mediaQuery).replace("@media ", "");
+  const [match, setMatch] = useState(false);
+  const canMatch =
+    typeof window === "object" && typeof window.matchMedia === "function";
 
-  const getMatches = (query: string): boolean => {
-    // Prevents SSR issues
-    if (typeof window !== "undefined") {
-      return window.matchMedia(query).matches;
-    }
-    return false;
-  };
-
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
-  const handleChange = () => setMatches(getMatches(query));
+  const queryMedia = useCallback(() => {
+    const queryList = window.matchMedia(query);
+    setMatch((queryList && queryList.matches) || false);
+    return queryList;
+  }, [canMatch, query]);
 
   useEffect(() => {
-    const matchMedia = window.matchMedia(query);
+    if (!canMatch) return;
+    const queryList = queryMedia();
+    if (queryList) queryList.addListener(queryMedia);
+    return () => queryList && queryList.removeListener(queryMedia);
+  }, [queryMedia, canMatch]);
 
-    // Triggered at the first client-side load and if query changes
-    handleChange();
-
-    // Listen matchMedia
-    matchMedia.addEventListener("change", handleChange);
-
-    return () => {
-      matchMedia.removeEventListener("change", handleChange);
-    };
-  }, [query]);
-
-  return matches;
+  return match;
 };

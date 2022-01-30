@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
-import { animated } from "react-spring";
 
-export const StyledNav = styled(animated.nav)<{ menuIsOpen: boolean }>`
+export const StyledNav = styled.nav<{ menuIsOpen: boolean }>`
   padding: 1rem;
   position: fixed;
   width: 100%;
