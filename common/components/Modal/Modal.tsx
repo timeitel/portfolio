@@ -1,5 +1,5 @@
 import { themeDarkColors } from "@styles/theme";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import ReactModal from "react-modal";
 
 export interface Props extends ReactModal.Props {
@@ -15,6 +15,11 @@ export const Modal: FC<Props> = ({
   modalStyles,
   ...rest
 }) => {
+  useEffect(() => {
+    isOpen && (document.body.style.overflow = "hidden");
+    !isOpen && (document.body.style.overflow = "unset");
+  }, [isOpen]);
+
   return (
     <ReactModal
       style={{
