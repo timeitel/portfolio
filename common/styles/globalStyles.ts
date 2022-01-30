@@ -129,4 +129,17 @@ export const globalStyles = (theme: ITheme) => css`
       padding: 6rem 7.5rem;
     }
   }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
 `;

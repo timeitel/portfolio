@@ -27,6 +27,7 @@ export const Modal: FC<Props> = ({
         content: { ...defaultStyles.content, ...modalStyles?.content },
       }}
       isOpen={isOpen}
+      closeTimeoutMS={250}
       shouldCloseOnEsc={true}
       shouldCloseOnOverlayClick={true}
       shouldFocusAfterRender={true}
