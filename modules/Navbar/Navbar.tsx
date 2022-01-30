@@ -17,7 +17,7 @@ export const Navbar: FC<Props> = () => {
     <StyledNav menuIsOpen={isOpen}>
       <StyledNavInner>
         <HtmlName>{"<Tim Eitel>"}</HtmlName>
-        <NavList />
+        <NavList menuIsOpen={isOpen} />
         {showMenu && (
           <Button
             disableHover

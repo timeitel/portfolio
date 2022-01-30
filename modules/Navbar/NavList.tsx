@@ -1,13 +1,14 @@
 import { SecondaryButton } from "@components/Button";
 import { ExternalLinkIcon } from "@components/Icons";
 import { Link } from "@components/Link";
-import styled from "@emotion/styled";
 import { FC } from "react";
 import { StyledNavItem, StyledNavList, StyledResumeListItem } from "./styled";
 
-interface Props {}
+interface Props {
+  menuIsOpen: boolean;
+}
 
-export const NavList: FC<Props> = ({}) => {
+export const NavList: FC<Props> = ({ menuIsOpen }) => {
   return (
     <StyledNavList style={{ fontFamily: "Raleway" }}>
       <StyledNavItem>
@@ -22,18 +23,20 @@ export const NavList: FC<Props> = ({}) => {
       <StyledNavItem>
         <a href="#contact">Contact</a>
       </StyledNavItem>
-      <StyledResumeListItem>
-        <Link
-          style={{ display: "flex", alignItems: "center" }}
-          target="_blank"
-          href="resume.pdf"
-        >
-          <SecondaryButton size="sm">
-            Resume
-            <ExternalLinkIcon />
-          </SecondaryButton>
-        </Link>
-      </StyledResumeListItem>
+      {!menuIsOpen && (
+        <StyledResumeListItem>
+          <Link
+            style={{ display: "flex", alignItems: "center" }}
+            target="_blank"
+            href="resume.pdf"
+          >
+            <SecondaryButton size="sm">
+              Resume
+              <ExternalLinkIcon />
+            </SecondaryButton>
+          </Link>
+        </StyledResumeListItem>
+      )}
     </StyledNavList>
   );
 };
