@@ -15,7 +15,7 @@ export const AnimatedMenuIcon: FC<Props> = ({ isOpen, onClick }) => {
   });
   const second = useSpring({
     transform: isOpen
-      ? "translate(10px, 4px) rotate(45deg)"
+      ? "translate(8px, 4px) rotate(45deg)"
       : "translate(2px, 19px) rotate(0deg)",
   });
   const third = useSpring({
