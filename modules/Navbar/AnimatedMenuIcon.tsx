@@ -10,7 +10,7 @@ interface Props {
 export const AnimatedMenuIcon: FC<Props> = ({ isOpen, onClick }) => {
   const first = useSpring({
     transform: isOpen
-      ? "translate(5px, 32px) rotate(-45deg)"
+      ? "translate(5px, 32px) rotate(-42deg)"
       : "translate(2px, 7px) rotate(0deg)",
   });
   const second = useSpring({
@@ -20,7 +20,7 @@ export const AnimatedMenuIcon: FC<Props> = ({ isOpen, onClick }) => {
   });
   const third = useSpring({
     transform: isOpen
-      ? "translate(5px, 32px) rotate(-45deg)"
+      ? "translate(5px, 32px) rotate(-42deg)"
       : "translate(2px, 31px) rotate(0deg)",
   });
 
@@ -33,9 +33,9 @@ export const AnimatedMenuIcon: FC<Props> = ({ isOpen, onClick }) => {
         fill="#fafafa"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <animated.rect width="40" height="4" rx="2" style={first} />
-        <animated.rect width="40" height="4" rx="2" style={second} />
-        <animated.rect width="40" height="4" rx="2" style={third} />
+        <animated.rect width="40" height="2" rx="2" style={first} />
+        <animated.rect width="40" height="2" rx="2" style={second} />
+        <animated.rect width="40" height="2" rx="2" style={third} />
       </svg>
     </Button>
   );

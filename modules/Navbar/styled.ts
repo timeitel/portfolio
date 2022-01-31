@@ -9,11 +9,11 @@ export const StyledNav = styled.nav<{ menuIsOpen: boolean }>`
   align-items: center;
   color: ${(p) => p.theme.color.whitePrimary};
   background-color: ${(p) =>
-    p.menuIsOpen ? "transparent" : p.theme.color.grey800};
+    p.menuIsOpen ? p.theme.color.blackPrimary : p.theme.color.grey800};
   z-index: 1;
   box-shadow: ${(p) =>
     p.menuIsOpen ? "none" : "0 2px 5px 0 rgb(0 0 0 / 25%)"};
-  transition: background-color 250ms;
+  transition: background-color 300ms;
 
   ${(p) => p.theme.breakpoints.only("mobile")} {
     padding: 1rem 0;
