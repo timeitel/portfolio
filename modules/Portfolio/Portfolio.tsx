@@ -1,4 +1,3 @@
-import { ExternalLinkIcon, Link, Section } from "common/components";
 import { Project } from "modules";
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
@@ -7,6 +6,9 @@ import { IProject } from "common/types";
 import React, { FC } from "react";
 import { useIntersectionFadeIn } from "@hooks";
 import { animated } from "react-spring";
+import { Link } from "@components/Link";
+import { ExternalLinkIcon } from "@components/Icons";
+import { Section } from "@components/Section";
 
 interface Props {
   projects: IProject[];

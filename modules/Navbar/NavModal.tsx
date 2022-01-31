@@ -1,4 +1,5 @@
-import { Button, Modal } from "@components";
+import { Button } from "@components/Button";
+import { Modal } from "@components/Modal";
 import styled from "@emotion/styled";
 import { Dispatch, FC } from "react";
 

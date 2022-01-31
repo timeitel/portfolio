@@ -2,7 +2,7 @@ import { SecondaryButton } from "@components/Button";
 import { ExternalLinkIcon } from "@components/Icons";
 import { Link } from "@components/Link";
 import { FC } from "react";
-import { StyledNavItem, StyledNavList, StyledResumeListItem } from "./styled";
+import { StyledListItem, StyledList, StyledResumeListItem } from "./styled";
 
 interface Props {
   menuIsOpen: boolean;
@@ -10,19 +10,19 @@ interface Props {
 
 export const NavList: FC<Props> = ({ menuIsOpen }) => {
   return (
-    <StyledNavList style={{ fontFamily: "Raleway" }}>
-      <StyledNavItem>
+    <StyledList style={{ fontFamily: "Raleway" }}>
+      <StyledListItem>
         <a href="#about">About</a>
-      </StyledNavItem>
-      <StyledNavItem>
+      </StyledListItem>
+      <StyledListItem>
         <a href="#experience">Experience</a>
-      </StyledNavItem>
-      <StyledNavItem>
+      </StyledListItem>
+      <StyledListItem>
         <a href="#portfolio">Portfolio</a>
-      </StyledNavItem>
-      <StyledNavItem>
+      </StyledListItem>
+      <StyledListItem>
         <a href="#contact">Contact</a>
-      </StyledNavItem>
+      </StyledListItem>
       {!menuIsOpen && (
         <StyledResumeListItem>
           <Link
@@ -37,6 +37,6 @@ export const NavList: FC<Props> = ({ menuIsOpen }) => {
           </Link>
         </StyledResumeListItem>
       )}
-    </StyledNavList>
+    </StyledList>
   );
 };

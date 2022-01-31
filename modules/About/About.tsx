@@ -1,6 +1,8 @@
+import { Link } from "@components/Link";
+import { List } from "@components/List";
+import { Section } from "@components/Section";
 import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
-import { Link, List, Section } from "common/components";
 import React, { FC } from "react";
 import { animated } from "react-spring";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";

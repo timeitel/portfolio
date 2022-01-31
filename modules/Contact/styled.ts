@@ -1,4 +1,5 @@
-import { Link, Section } from "@components";
+import { Link } from "@components/Link";
+import { Section } from "@components/Section";
 import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "@styles/htmlTags";
 

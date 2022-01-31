@@ -1,4 +1,4 @@
-import { List } from "common/components";
+import { List } from "common/components/List";
 import styled from "@emotion/styled";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 

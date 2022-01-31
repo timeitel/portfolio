@@ -1,4 +1,3 @@
-import { Link } from "common/components";
 import styled from "@emotion/styled";
 
 export const StyledIntro = styled.div`

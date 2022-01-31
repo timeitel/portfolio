@@ -1,5 +1,5 @@
-import { Link, LinkedInContainedIcon } from "@components";
-import { GithubContainedIcon } from "@components/Icons/GithubContainedIcon";
+import { GithubContainedIcon, LinkedInContainedIcon } from "@components/Icons";
+import { Link } from "@components/Link";
 import styled from "@emotion/styled";
 import { FC } from "react";
 

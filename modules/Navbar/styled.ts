@@ -33,14 +33,14 @@ export const StyledNavInner = styled.div`
   }
 `;
 
-export const StyledNavList = styled.ul`
+export const StyledList = styled.ul`
   display: flex;
   align-items: center;
   margin: 0 0 0 auto;
   padding: 0;
 `;
 
-export const StyledNavItem = styled.li`
+export const StyledListItem = styled.li`
   margin-right: 32px;
   position: relative;
   transition: all 0.15s ease-out;

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Jobs } from "../Jobs/Jobs";
 import { IJob } from "common/types";
 import { useTheme } from "@emotion/react";
-import { Section } from "common/components";
+import { Section } from "common/components/Section";
 import { getHtmlTagStyles } from "common/styles/htmlTags";
 import { useIntersectionFadeIn } from "@hooks";
 import { animated } from "react-spring";

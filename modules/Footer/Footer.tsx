@@ -1,4 +1,5 @@
-import { Link, ListItem } from "common/components";
+import { Link } from "@components/Link";
+import { ListItem } from "@components/List";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import {

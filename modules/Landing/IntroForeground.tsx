@@ -1,4 +1,4 @@
-import { Link } from "common/components";
+import { Link } from "@components/Link";
 import { PrimaryButton } from "common/components/Button";
 import { FC } from "react";
 import { animated, SpringValue } from "react-spring";

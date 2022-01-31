@@ -1,4 +1,4 @@
-import { Button, Modal } from "@components";
+import { Button } from "@components/Button";
 import { useMediaQuery } from "@hooks/useMediaQuery";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import React, { FC, useState } from "react";
