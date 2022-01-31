@@ -13,6 +13,7 @@ export const StyledNav = styled.nav<{ menuIsOpen: boolean }>`
   z-index: 1;
   box-shadow: ${(p) =>
     p.menuIsOpen ? "none" : "0 2px 5px 0 rgb(0 0 0 / 25%)"};
+  transition: background-color 250ms;
 
   ${(p) => p.theme.breakpoints.only("mobile")} {
     padding: 1rem 0;
