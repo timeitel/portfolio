@@ -6,11 +6,11 @@ interface Props {}
 
 export const IntroBackground: FC<Props> = ({}) => {
   return (
-    <AnimatedReveal>
-      <StyledIntro>
+    <StyledIntro className="styled-intro">
+      <AnimatedReveal>
         <h2>Hi there,</h2>
         <h2>I'm</h2>
-      </StyledIntro>
-    </AnimatedReveal>
+      </AnimatedReveal>
+    </StyledIntro>
   );
 };

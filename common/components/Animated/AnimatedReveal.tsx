@@ -1,31 +1,21 @@
-import { FC, useState } from "react";
-import { animated, useSpring, useTransition } from "react-spring";
+import { StyledIntro } from "@modules/Landing/styled";
+import { FC } from "react";
+import { animated, config, useSpring } from "react-spring";
 
 interface Props {}
 
 export const AnimatedReveal: FC<Props> = ({ children }) => {
-  const [show, set] = useState(false);
   const styles = useSpring({
-    from: { opacity: 0, transform: `translate3d(0, ${50}px, 0)` },
-    enter: { opacity: 1, transform: `translate3d(0, ${0}px, 0)` },
-    reverse: show,
-    delay: 200,
-    onRest: () => set(true),
-  });
-  const transitions = useTransition(show, {
-    from: { opacity: 0, transform: `translate3d(0, ${50}px, 0)` },
-    enter: { opacity: 1, transform: `translate3d(0, ${0}px, 0)` },
-    reverse: show,
-    delay: 200,
-    onRest: () => set(true),
+    to: async (next) => {
+      await next({
+        opacity: 1,
+        color: "rgb(14,26,19)",
+        transform: `translate3d(20px, -50px, 100px)`,
+      });
+      await next({ color: "green" });
+    },
+    from: { opacity: 0, color: "red", transform: `translate3d(0px, 0px, 0px)` },
   });
 
-  return (
-    <animated.div style={styles}>
-      {transitions(
-        (styles, show) =>
-          show && <animated.div style={styles}>{children}</animated.div>
-      )}
-    </animated.div>
-  );
+  return <animated.div style={styles}>{children}</animated.div>;
 };
