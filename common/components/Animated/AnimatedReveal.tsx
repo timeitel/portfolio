@@ -1,37 +1,31 @@
-import { FC, useEffect, useState } from "react";
-import { animated, useSpring } from "react-spring";
+import { FC, useState } from "react";
+import { animated, useSpring, useTransition } from "react-spring";
 
-interface Props {
-  rotation: number;
-  timing: number;
-}
+interface Props {}
 
-export const AnimatedReveal: FC<Props> = ({
-  rotation = 0,
-  timing = 150,
-  children,
-}) => {
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const style = useSpring({
-    transform: isAnimating ? `rotate(${rotation}deg)` : `rotate(0deg)`,
+export const AnimatedReveal: FC<Props> = ({ children }) => {
+  const [show, set] = useState(false);
+  const styles = useSpring({
+    from: { opacity: 0, transform: `translate3d(0, ${50}px, 0)` },
+    enter: { opacity: 1, transform: `translate3d(0, ${0}px, 0)` },
+    reverse: show,
+    delay: 200,
+    onRest: () => set(true),
+  });
+  const transitions = useTransition(show, {
+    from: { opacity: 0, transform: `translate3d(0, ${50}px, 0)` },
+    enter: { opacity: 1, transform: `translate3d(0, ${0}px, 0)` },
+    reverse: show,
+    delay: 200,
+    onRest: () => set(true),
   });
 
-  useEffect(() => {
-    if (!isAnimating) {
-      return;
-    }
-    const timeoutId = window.setTimeout(() => {
-      setIsAnimating(false);
-    }, timing);
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isAnimating, timing]);
-
   return (
-    <animated.div onMouseEnter={() => setIsAnimating(true)} style={style}>
-      {children}
+    <animated.div style={styles}>
+      {transitions(
+        (styles, show) =>
+          show && <animated.div style={styles}>{children}</animated.div>
+      )}
     </animated.div>
   );
 };

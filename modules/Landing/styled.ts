@@ -9,6 +9,7 @@ export const StyledIntro = styled.div`
   line-height: 1;
   color: ${(p) => p.theme.color.blackPrimary};
   font-weight: 700;
+  margin: 12vh auto 2rem;
 
   h2 {
     font-size: clamp(5rem, 12vw, 10rem);

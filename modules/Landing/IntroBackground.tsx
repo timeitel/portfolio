@@ -1,34 +1,16 @@
-import { StyledIntro } from "./styled";
+import { AnimatedReveal } from "@components/Animated";
 import { FC } from "react";
-import { animated, SpringValue } from "react-spring";
+import { StyledIntro } from "./styled";
 
-interface Props {
-  revealStyle: {
-    opacity: SpringValue<number>;
-    transform: SpringValue<string>;
-  };
-}
+interface Props {}
 
-export const IntroBackground: FC<Props> = ({ revealStyle }) => {
+export const IntroBackground: FC<Props> = ({}) => {
   return (
-    <StyledIntro className="styled-intro">
-      <animated.h2
-        style={{
-          ...revealStyle,
-          whiteSpace: "nowrap",
-          cursor: "default",
-        }}
-      >
-        Hi there,
-      </animated.h2>
-      <animated.h2
-        style={{
-          ...revealStyle,
-          cursor: "default",
-        }}
-      >
-        I'm
-      </animated.h2>
-    </StyledIntro>
+    <AnimatedReveal>
+      <StyledIntro>
+        <h2>Hi there,</h2>
+        <h2>I'm</h2>
+      </StyledIntro>
+    </AnimatedReveal>
   );
 };
