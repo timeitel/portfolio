@@ -1,9 +1,11 @@
-import { FC, useState } from "react";
-import { animated, useSpring } from "react-spring";
+import { FC, forwardRef, useState } from "react";
+import { animated, SpringRef, useSpring } from "react-spring";
 import { useRevealText } from "./useRevealText";
 
 interface Props {
   backgroundColor?: string;
+  springRef: SpringRef;
+  delay: number;
 }
 
 const REVEAL_CONFIG = {
@@ -14,21 +16,26 @@ const REVEAL_CONFIG = {
 export const AnimatedReveal: FC<Props> = ({
   children,
   backgroundColor = "black",
+  springRef,
+  delay,
 }) => {
+  const [triggerRevealText, setTriggerRevealText] = useState(false);
   const [swipeEnd, setSwipeEnd] = useState(false);
-  const revealText = useRevealText();
+  const revealText = useRevealText(triggerRevealText);
   const swipeStyles = useSpring({
     from: {
-      left: "0%",
-      right: "100%",
+      left: "-5%",
+      right: "105%",
     },
     to: [
-      { left: "0%", right: "0%" },
-      { left: "100%", right: "0%" },
+      { left: "-5%", right: "-5%" },
+      { left: "105%", right: "-5%" },
     ],
     config: REVEAL_CONFIG,
-    delay: 450,
+    delay: delay,
     onRest: () => setSwipeEnd(true),
+    onStart: () => setTriggerRevealText(true),
+    ref: springRef,
   });
 
   return (
