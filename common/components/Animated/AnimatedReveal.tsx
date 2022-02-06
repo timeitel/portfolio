@@ -1,21 +1,48 @@
-import { StyledIntro } from "@modules/Landing/styled";
-import { FC } from "react";
-import { animated, config, useSpring } from "react-spring";
+import { FC, useState } from "react";
+import { animated, useSpring } from "react-spring";
+import { useRevealText } from "./useRevealText";
 
-interface Props {}
+interface Props {
+  backgroundColor?: string;
+}
 
-export const AnimatedReveal: FC<Props> = ({ children }) => {
-  const styles = useSpring({
-    to: async (next) => {
-      await next({
-        opacity: 1,
-        color: "rgb(14,26,19)",
-        transform: `translate3d(20px, -50px, 100px)`,
-      });
-      await next({ color: "green" });
+const REVEAL_CONFIG = {
+  tension: 530,
+  friction: 44,
+};
+
+export const AnimatedReveal: FC<Props> = ({
+  children,
+  backgroundColor = "black",
+}) => {
+  const [swipeEnd, setSwipeEnd] = useState(false);
+  const revealText = useRevealText();
+  const swipeStyles = useSpring({
+    from: {
+      left: "0%",
+      right: "100%",
     },
-    from: { opacity: 0, color: "red", transform: `translate3d(0px, 0px, 0px)` },
+    to: [
+      { left: "0%", right: "0%" },
+      { left: "100%", right: "0%" },
+    ],
+    config: REVEAL_CONFIG,
+    delay: 450,
+    onRest: () => setSwipeEnd(true),
   });
 
-  return <animated.div style={styles}>{children}</animated.div>;
+  return (
+    <div style={{ position: "relative" }}>
+      <div style={{ opacity: revealText ? 1 : 0 }}>{children}</div>
+      <animated.div
+        style={{
+          ...(!swipeEnd && { ...swipeStyles }),
+          position: "absolute",
+          backgroundColor,
+          top: "-5%",
+          bottom: "-5%",
+        }}
+      />
+    </div>
+  );
 };
