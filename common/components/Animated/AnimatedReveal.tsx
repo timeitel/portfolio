@@ -4,7 +4,7 @@ import { useRevealText } from "./useRevealText";
 
 interface Props {
   backgroundColor?: string;
-  springRef: SpringRef;
+  delay: number;
 }
 
 const REVEAL_CONFIG = {
@@ -15,7 +15,7 @@ const REVEAL_CONFIG = {
 export const AnimatedReveal: FC<Props> = ({
   children,
   backgroundColor = "black",
-  springRef,
+  delay,
 }) => {
   const [paused, setPaused] = useState(false);
   const [triggerRevealText, setTriggerRevealText] = useState(false);
@@ -41,7 +41,7 @@ export const AnimatedReveal: FC<Props> = ({
         }, 400);
       }
     },
-    ref: springRef,
+    delay,
   }));
 
   return (
