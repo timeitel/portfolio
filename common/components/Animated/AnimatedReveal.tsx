@@ -1,11 +1,10 @@
-import { FC, forwardRef, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { animated, SpringRef, useSpring } from "react-spring";
 import { useRevealText } from "./useRevealText";
 
 interface Props {
   backgroundColor?: string;
   springRef: SpringRef;
-  delay: number;
 }
 
 const REVEAL_CONFIG = {
@@ -17,12 +16,11 @@ export const AnimatedReveal: FC<Props> = ({
   children,
   backgroundColor = "black",
   springRef,
-  delay,
 }) => {
+  const [paused, setPaused] = useState(false);
   const [triggerRevealText, setTriggerRevealText] = useState(false);
-  const [swipeEnd, setSwipeEnd] = useState(false);
   const revealText = useRevealText(triggerRevealText);
-  const swipeStyles = useSpring({
+  const [swipeStyles, api] = useSpring(() => ({
     from: {
       left: "-5%",
       right: "105%",
@@ -32,18 +30,26 @@ export const AnimatedReveal: FC<Props> = ({
       { left: "105%", right: "-5%" },
     ],
     config: REVEAL_CONFIG,
-    delay: delay,
-    onRest: () => setSwipeEnd(true),
     onStart: () => setTriggerRevealText(true),
+    onProps: (props: any) => {
+      if (props.to?.right === "-5%" && !paused) {
+        setPaused(true);
+        api.pause();
+        setTimeout(() => {
+          api.resume();
+          setPaused(false);
+        }, 400);
+      }
+    },
     ref: springRef,
-  });
+  }));
 
   return (
     <div style={{ position: "relative" }}>
       <div style={{ opacity: revealText ? 1 : 0 }}>{children}</div>
       <animated.div
         style={{
-          ...(!swipeEnd && { ...swipeStyles }),
+          ...swipeStyles,
           position: "absolute",
           backgroundColor,
           top: "-5%",

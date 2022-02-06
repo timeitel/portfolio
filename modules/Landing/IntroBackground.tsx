@@ -12,18 +12,14 @@ export const IntroBackground: FC<Props> = ({}) => {
   } = useTheme();
   const refOne = useSpringRef();
   const refTwo = useSpringRef();
-  useChain([refOne, refTwo]);
+  useChain([refOne, refTwo], [0.45, 0.8]);
 
   return (
     <StyledIntro className="styled-intro">
-      <AnimatedReveal
-        backgroundColor={blackPrimary}
-        springRef={refOne}
-        delay={450}
-      >
+      <AnimatedReveal backgroundColor={blackPrimary} springRef={refOne}>
         <h2>Hi there,</h2>
       </AnimatedReveal>
-      <AnimatedReveal springRef={refTwo} delay={0}>
+      <AnimatedReveal springRef={refTwo}>
         <h2>I'm</h2>
       </AnimatedReveal>
     </StyledIntro>
