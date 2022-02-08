@@ -1,15 +1,17 @@
 import { useTheme } from "@emotion/react";
 import { FC } from "react";
 
-interface Props {}
+interface Props {
+  color?: string;
+}
 
-export const GithubContainedIcon: FC<Props> = ({}) => {
+export const GithubContainedIcon: FC<Props> = ({ color }) => {
   const {
     color: { grey400 },
   } = useTheme();
   return (
     <svg
-      fill={grey400}
+      fill={color || grey400}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 50 50"
       width="1.5rem"

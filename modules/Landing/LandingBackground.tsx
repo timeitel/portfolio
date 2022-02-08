@@ -6,13 +6,13 @@ import { StyledIntroBackground } from "./styled";
 
 interface Props {}
 
-export const IntroBackground: FC<Props> = ({}) => {
+export const LandingBackground: FC<Props> = ({}) => {
   const {
     color: { blackPrimary },
   } = useTheme();
 
   return (
-    <StyledIntroBackground className="styled-intro">
+    <StyledIntroBackground>
       <AnimatedReveal backgroundColor={blackPrimary} delay={350}>
         <StyledHiThere>Hi there,</StyledHiThere>
       </AnimatedReveal>
