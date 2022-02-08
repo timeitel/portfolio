@@ -1,3 +1,4 @@
+import { Button, PrimaryButton } from "@components/Button";
 import styled from "@emotion/styled";
 
 export const StyledIntroBackground = styled.div`
@@ -46,4 +47,12 @@ export const StyledTitle = styled.div`
     top: 51%;
     transform: translate(-50%, -50%);
   }
+`;
+
+export const StyledButton = styled(PrimaryButton)`
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 85%);
+  margin-top: 2.5vh;
 `;
