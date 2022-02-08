@@ -3,17 +3,16 @@ import { useSpring, useSpringRef } from "react-spring";
 interface Args {
   trigger?: boolean;
   fromY?: number;
-  toY?: number;
+  delay?: number;
 }
 
-export const useFadeIn = ({ fromY = 50, toY = 0 }: Args = {}) => {
-  const ref = useSpringRef();
+export const useFadeIn = ({ fromY = 50, delay }: Args = {}) => {
   const fadeInStyle = useSpring({
     from: { opacity: 0, transform: `translate3d(0, ${fromY}px, 0)` },
     opacity: 1,
-    transform: `translate3d(0, ${toY}px, 0)`,
-    ref,
+    transform: `translate3d(0, 0px, 0)`,
+    delay,
   });
 
-  return { fadeInStyle, ref };
+  return { fadeInStyle };
 };

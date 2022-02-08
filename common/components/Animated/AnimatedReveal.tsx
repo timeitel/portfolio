@@ -1,5 +1,5 @@
-import { FC, useEffect, useState } from "react";
-import { animated, SpringRef, useSpring } from "react-spring";
+import { FC, useState } from "react";
+import { animated, useSpring } from "react-spring";
 import { useRevealText } from "./useRevealText";
 
 interface Props {
@@ -38,7 +38,7 @@ export const AnimatedReveal: FC<Props> = ({
         setTimeout(() => {
           api.resume();
           setPaused(false);
-        }, 400);
+        }, 350);
       }
     },
     delay,
