@@ -30,11 +30,7 @@ const Home: FC<Props> = ({ jobs, projects }) => {
         <title>Tim Eitel | Software Developer</title>
         <link rel="icon" href="/favicon.svg" />
         <link
-          href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Raleway&family=La+Belle+Aurore&family=Neonderthaw&display=swap"
           rel="stylesheet"
         />
       </Head>

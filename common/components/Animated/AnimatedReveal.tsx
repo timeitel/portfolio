@@ -53,7 +53,7 @@ export const AnimatedReveal: FC<Props> = ({
           position: "absolute",
           backgroundColor,
           top: "-5%",
-          bottom: "-5%",
+          bottom: "-7.8%",
         }}
       />
     </div>

@@ -1,7 +1,8 @@
 import { AnimatedReveal } from "@components/Animated";
 import { useTheme } from "@emotion/react";
+import styled from "@emotion/styled";
 import { FC } from "react";
-import { StyledIntro } from "./styled";
+import { StyledIntroBackground } from "./styled";
 
 interface Props {}
 
@@ -11,13 +12,18 @@ export const IntroBackground: FC<Props> = ({}) => {
   } = useTheme();
 
   return (
-    <StyledIntro className="styled-intro">
-      <AnimatedReveal backgroundColor={blackPrimary} delay={450}>
-        <h2>Hi there,</h2>
+    <StyledIntroBackground className="styled-intro">
+      <AnimatedReveal backgroundColor={blackPrimary} delay={350}>
+        <StyledHiThere>Hi there,</StyledHiThere>
       </AnimatedReveal>
-      <AnimatedReveal delay={800}>
-        <h2>I'm</h2>
+      <AnimatedReveal delay={700}>
+        <StyledHiThere>my name's</StyledHiThere>
       </AnimatedReveal>
-    </StyledIntro>
+    </StyledIntroBackground>
   );
 };
+
+const StyledHiThere = styled.h2`
+  font-family: "Kanit";
+  margin: 0;
+`;

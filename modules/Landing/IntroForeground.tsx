@@ -8,7 +8,7 @@ import { StyledTitle } from "./styled";
 interface Props {}
 
 export const IntroForeground: FC<Props> = ({}) => {
-  const { fadeInStyle } = useFadeIn({ delay: 2200 });
+  const { fadeInStyle } = useFadeIn({ delay: 2000 });
   return (
     <StyledTitle className="styled-title" style={{ position: "relative" }}>
       <animated.div style={fadeInStyle}>

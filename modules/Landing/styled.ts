@@ -1,20 +1,17 @@
 import styled from "@emotion/styled";
 
-export const StyledIntro = styled.div`
+export const StyledIntroBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  line-height: 1;
-  color: ${(p) => p.theme.color.blackPrimary};
-  font-weight: 700;
+  line-height: 0.9;
+  color: #151618;
   margin: 12vh auto 2rem;
-
-  h2 {
-    font-size: clamp(5rem, 12vw, 10rem);
-    margin: 0;
-  }
+  width: 100%;
+  font-size: clamp(2.25rem, 10vw, 7.75rem);
+  line-height: 0.9;
 `;
 
 export const StyledTitle = styled.div`
@@ -33,7 +30,6 @@ export const StyledTitle = styled.div`
 export const StyledSection = styled.section`
   .styled-intro {
     margin: 12vh auto 2rem;
-    font-size: 82px;
   }
   .styled-title {
     white-space: nowrap;
@@ -45,17 +41,15 @@ export const StyledSection = styled.section`
 
   ${(p) => p.theme.breakpoints.only("mobile")} {
     .styled-intro {
-      margin: 2rem auto;
+      margin: 4rem auto 2rem;
     }
   }
 
   ${(p) => p.theme.breakpoints.up("tablet")} {
     .styled-intro {
       color: ${(p) => p.theme.color.blackPrimary};
-      font-size: 7.5rem;
       left: 50%;
       top: 50%;
-      line-height: 1.2;
       position: absolute;
       margin: 0;
       transform: translate(-50%, -50%);
@@ -66,7 +60,7 @@ export const StyledSection = styled.section`
       left: 50%;
       position: absolute;
       text-align: center;
-      top: 50%;
+      top: 51%;
       transform: translate(-50%, -50%);
     }
 
@@ -80,10 +74,6 @@ export const StyledSection = styled.section`
   }
 
   ${(p) => p.theme.breakpoints.up("laptop")} {
-    .styled-intro {
-      font-size: 11.6rem;
-    }
-
     .styled-title {
       font-size: 3.25rem;
     }
