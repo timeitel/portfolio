@@ -1,4 +1,5 @@
 import { Link } from "@components/Link";
+import styled from "@emotion/styled";
 import { useFadeIn } from "@hooks";
 import { PrimaryButton } from "common/components/Button";
 import { FC } from "react";
@@ -10,16 +11,22 @@ interface Props {}
 export const IntroForeground: FC<Props> = ({}) => {
   const { fadeInStyle } = useFadeIn({ delay: 2000 });
   return (
-    <StyledTitle className="styled-title" style={{ position: "relative" }}>
+    <StyledTitle style={{ position: "relative" }}>
       <animated.div style={fadeInStyle}>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
-        <Link className="styled-cta" href="#about">
-          <PrimaryButton size="lg" className="primary-btn">
-            Find out more
-          </PrimaryButton>
-        </Link>
+        <StyledLink href="#about">
+          <PrimaryButton size="lg">Find out more</PrimaryButton>
+        </StyledLink>
       </animated.div>
     </StyledTitle>
   );
 };
+
+const StyledLink = styled(Link)`
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 85%);
+  margin-top: 2.5vh;
+`;
