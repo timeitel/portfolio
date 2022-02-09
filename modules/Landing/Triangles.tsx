@@ -10,12 +10,12 @@ export const Triangles: FC<Props> = ({}) => {
     color: { blackPrimary, blue600 },
   } = useTheme();
   const outlineStyles = useSpring({
-    from: { opacity: 0, transform: `rotate(360deg)`, left: "55%" },
+    from: { opacity: 0, transform: `rotate(315deg)`, left: "50%" },
     opacity: 1,
     transform: `rotate(0deg)`,
     left: "35%",
     delay: 2500,
-    config: { tension: 530, friction: 300 },
+    config: { tension: 800, friction: 400 },
   });
   const filledStyles = useSpring({
     from: { opacity: 0, transform: `rotate(90deg)`, top: "20%" },
@@ -29,7 +29,7 @@ export const Triangles: FC<Props> = ({}) => {
   return (
     <>
       <animated.div
-        style={{ ...outlineStyles, position: "absolute", top: "30%" }}
+        style={{ ...outlineStyles, position: "absolute", top: "28%" }}
       >
         <TriangleIcon color={blue600} />
       </animated.div>
