@@ -39,6 +39,7 @@ export const Triangles: FC<Props> = ({}) => {
           ...outlineStyles,
           position: "absolute",
           top: largeScreen ? "28%" : "32%",
+          zIndex: 1,
         }}
       >
         <TriangleIcon color={blue600} />
@@ -48,6 +49,7 @@ export const Triangles: FC<Props> = ({}) => {
           ...filledStyles,
           position: "absolute",
           left: "55%",
+          zIndex: 1,
         }}
       >
         <TriangleIcon
