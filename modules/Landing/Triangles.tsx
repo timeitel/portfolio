@@ -1,11 +1,13 @@
 import { TriangleIcon } from "@components/Icons";
 import { useTheme } from "@emotion/react";
+import { useMediaQuery } from "@hooks/useMediaQuery";
 import { FC } from "react";
 import { animated, useSpring } from "react-spring";
 
 interface Props {}
 
 export const Triangles: FC<Props> = ({}) => {
+  const largeScreen = useMediaQuery({ min: "laptop" });
   const {
     color: { blackPrimary, blue600 },
   } = useTheme();
@@ -13,15 +15,19 @@ export const Triangles: FC<Props> = ({}) => {
     from: { opacity: 0, transform: `rotate(315deg)`, left: "50%" },
     opacity: 1,
     transform: `rotate(0deg)`,
-    left: "35%",
+    left: largeScreen ? "35%" : "20%",
     delay: 2500,
     config: { tension: 800, friction: 400 },
   });
   const filledStyles = useSpring({
-    from: { opacity: 0, transform: `rotate(90deg)`, top: "20%" },
+    from: {
+      opacity: 0,
+      transform: `rotate(90deg)`,
+      top: largeScreen ? "20%" : "12%",
+    },
     opacity: 1,
     transform: `rotate(0deg)`,
-    top: "22%",
+    top: largeScreen ? "22%" : "14%",
     delay: 3500,
     config: { tension: 530, friction: 100 },
   });
@@ -29,7 +35,11 @@ export const Triangles: FC<Props> = ({}) => {
   return (
     <>
       <animated.div
-        style={{ ...outlineStyles, position: "absolute", top: "28%" }}
+        style={{
+          ...outlineStyles,
+          position: "absolute",
+          top: largeScreen ? "28%" : "32%",
+        }}
       >
         <TriangleIcon color={blue600} />
       </animated.div>
