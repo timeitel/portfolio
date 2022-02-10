@@ -6,12 +6,14 @@ import {
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useFadeIn } from "@hooks";
+import { useMediaQuery } from "@hooks/useMediaQuery";
 import { FC } from "react";
 import { animated } from "react-spring";
 
 interface Props {}
 
 export const LandingSocials: FC<Props> = ({}) => {
+  const largeScreen = useMediaQuery({ min: "laptop" });
   const {
     color: { whitePrimary, whiteSecondary },
   } = useTheme();
@@ -34,28 +36,41 @@ export const LandingSocials: FC<Props> = ({}) => {
 
   return (
     <>
-      <StyledLeftSocials>
+      <StyledLeftSocials largeScreen={largeScreen}>
         <animated.div style={secondStyle}>
           <StyledLink>
             <LinkedInContainedIcon color={whiteSecondary} />
-            <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
-            <span>LinkedIn</span>
+            {largeScreen && (
+              <>
+                <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>
+                  --
+                </span>
+                <span>LinkedIn</span>
+              </>
+            )}
           </StyledLink>
         </animated.div>
         <animated.div style={firstStyle}>
           <StyledLink>
             <GithubContainedIcon color={whiteSecondary} />
-            <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
-            <span>Github</span>
+            {largeScreen && (
+              <>
+                <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>
+                  --
+                </span>
+                <span>Github</span>
+              </>
+            )}
           </StyledLink>
         </animated.div>
       </StyledLeftSocials>
-      <StyledRightSocials>
+
+      <StyledRightSocials largeScreen={largeScreen}>
         <animated.div style={thirdStyle}>
           <StyledLink>
             <TriangleCtaIcon />
             <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
-            <span>About me</span>
+            <span>About{largeScreen && " me"}</span>
           </StyledLink>
         </animated.div>
       </StyledRightSocials>
@@ -63,9 +78,9 @@ export const LandingSocials: FC<Props> = ({}) => {
   );
 };
 
-export const StyledLeftSocials = styled.div`
-  bottom: 16.5rem;
-  left: -4rem;
+const StyledLeftSocials = styled.div<{ largeScreen: boolean }>`
+  bottom: ${(p) => (p.largeScreen ? "16.5rem" : "10rem")};
+  left: ${(p) => (p.largeScreen ? "-4rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
   position: absolute;
@@ -73,9 +88,9 @@ export const StyledLeftSocials = styled.div`
   align-items: center;
 `;
 
-export const StyledRightSocials = styled.div`
-  bottom: 14.5rem;
-  right: 0;
+const StyledRightSocials = styled.div<{ largeScreen: boolean }>`
+  bottom: ${(p) => (p.largeScreen ? "11.75rem" : "10rem")};
+  right: ${(p) => (p.largeScreen ? "0.5rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
   position: absolute;
@@ -83,7 +98,7 @@ export const StyledRightSocials = styled.div`
   align-items: center;
 `;
 
-export const StyledLink = styled.div`
+const StyledLink = styled.div`
   margin-right: 2.5rem;
   display: flex;
   align-items: center;
