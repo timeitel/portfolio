@@ -14,6 +14,7 @@ export const TriangleCtaIcon: FC<Props> = ({}) => {
         width: "0.75rem",
         height: "0.75rem",
         transform: "rotate(180deg)",
+        marginTop: "2px",
       }}
       fill={whitePrimary}
       stroke="none"
