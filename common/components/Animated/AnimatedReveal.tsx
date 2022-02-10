@@ -45,7 +45,7 @@ export const AnimatedReveal: FC<Props> = ({
   }));
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", zIndex: 2 }}>
       <div style={{ opacity: revealText ? 1 : 0 }}>{children}</div>
       <animated.div
         style={{

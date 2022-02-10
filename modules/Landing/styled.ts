@@ -1,4 +1,4 @@
-import { Button, PrimaryButton } from "@components/Button";
+import { PrimaryButton } from "@components/Button";
 import styled from "@emotion/styled";
 
 export const StyledIntroBackground = styled.div`

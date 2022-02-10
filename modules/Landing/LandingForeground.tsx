@@ -8,7 +8,7 @@ interface Props {}
 export const LandingForeground: FC<Props> = ({}) => {
   const { fadeInStyle } = useFadeIn({ delay: 2000 });
   return (
-    <StyledTitle style={{ position: "relative" }}>
+    <StyledTitle style={{ position: "relative", zIndex: 2 }}>
       <animated.div style={fadeInStyle}>
         <h1>Tim Eitel</h1>
         <h4>Software Developer</h4>
