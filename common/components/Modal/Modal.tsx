@@ -46,8 +46,10 @@ const defaultStyles: ReactModal.Styles = {
     right: "auto",
     bottom: "auto",
     transform: "translate(-50%, -50%)",
+    zIndex: 99,
   },
   overlay: {
     backgroundColor: `${themeDarkColors.blackPrimary}`,
+    zIndex: 99,
   },
 };

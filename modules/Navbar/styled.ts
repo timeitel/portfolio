@@ -10,7 +10,7 @@ export const StyledNav = styled.nav<{ menuIsOpen: boolean }>`
   color: ${(p) => p.theme.color.whitePrimary};
   background-color: ${(p) =>
     p.menuIsOpen ? p.theme.color.blackPrimary : p.theme.color.grey800};
-  z-index: 5;
+  z-index: 100;
   box-shadow: ${(p) =>
     p.menuIsOpen ? "none" : "0 2px 5px 0 rgb(0 0 0 / 25%)"};
   transition: background-color 300ms;
