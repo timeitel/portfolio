@@ -83,7 +83,7 @@ export const LandingSocials: FC<Props> = ({}) => {
 
 const StyledLeftSocials = styled.div<{ largeScreen: boolean }>`
   bottom: ${(p) => (p.largeScreen ? "16.5rem" : "10rem")};
-  left: ${(p) => (p.largeScreen ? "-4rem" : 0)};
+  left: ${(p) => (p.largeScreen ? "-5rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
   position: ${(p) => (p.largeScreen ? "fixed" : "absolute")};
@@ -94,7 +94,7 @@ const StyledLeftSocials = styled.div<{ largeScreen: boolean }>`
 
 const StyledRightSocials = styled.div<{ largeScreen: boolean }>`
   bottom: ${(p) => (p.largeScreen ? "11.75rem" : "10rem")};
-  right: ${(p) => (p.largeScreen ? "0.5rem" : 0)};
+  right: ${(p) => (p.largeScreen ? "-0.5rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
   position: absolute;
