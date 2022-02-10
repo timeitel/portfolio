@@ -86,9 +86,10 @@ const StyledLeftSocials = styled.div<{ largeScreen: boolean }>`
   left: ${(p) => (p.largeScreen ? "-4rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
-  position: absolute;
+  position: ${(p) => (p.largeScreen ? "fixed" : "absolute")};
   display: flex;
   align-items: center;
+  z-index: 1;
 `;
 
 const StyledRightSocials = styled.div<{ largeScreen: boolean }>`
