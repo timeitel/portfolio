@@ -1,12 +1,10 @@
 import { useTheme } from "@emotion/react";
-import { useMediaQuery } from "@hooks/useMediaQuery";
 import { FC } from "react";
 import { animated, useSpring } from "react-spring";
 
 interface Props {}
 
 export const Rectangles: FC<Props> = ({}) => {
-  const largeScreen = useMediaQuery({ min: "laptop" });
   const {
     color: { blackPrimary },
   } = useTheme();
@@ -34,8 +32,8 @@ export const Rectangles: FC<Props> = ({}) => {
         style={{
           ...leftRectangle,
           position: "absolute",
-          top: largeScreen ? "45%" : "32%",
-          left: largeScreen ? "12%" : "20%",
+          top: "45%",
+          left: "12%",
           backgroundColor: blackPrimary,
           width: "3px",
         }}
@@ -46,8 +44,8 @@ export const Rectangles: FC<Props> = ({}) => {
         style={{
           ...bottomRectangle,
           position: "absolute",
-          bottom: largeScreen ? "15%" : "20%",
-          left: "55%",
+          bottom: "15%",
+          left: "65%",
           height: "5px",
           backgroundColor: blackPrimary,
         }}
