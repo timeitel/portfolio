@@ -38,7 +38,10 @@ export const LandingSocials: FC<Props> = ({}) => {
     <>
       <StyledLeftSocials largeScreen={largeScreen}>
         <animated.div style={secondStyle}>
-          <StyledLink>
+          <StyledLink
+            href="https://www.linkedin.com/in/tim-eitel/"
+            target="_blank"
+          >
             <LinkedInContainedIcon color={whiteSecondary} />
             {largeScreen && (
               <>
@@ -51,7 +54,7 @@ export const LandingSocials: FC<Props> = ({}) => {
           </StyledLink>
         </animated.div>
         <animated.div style={firstStyle}>
-          <StyledLink>
+          <StyledLink href="https://github.com/timeitel/" target="_blank">
             <GithubContainedIcon color={whiteSecondary} />
             {largeScreen && (
               <>
@@ -67,7 +70,7 @@ export const LandingSocials: FC<Props> = ({}) => {
 
       <StyledRightSocials largeScreen={largeScreen}>
         <animated.div style={thirdStyle}>
-          <StyledLink>
+          <StyledLink href="#about">
             <TriangleCtaIcon />
             <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
             <span>About{largeScreen && " me"}</span>
@@ -98,7 +101,7 @@ const StyledRightSocials = styled.div<{ largeScreen: boolean }>`
   align-items: center;
 `;
 
-const StyledLink = styled.div`
+const StyledLink = styled.a`
   margin-right: 2.5rem;
   display: flex;
   align-items: center;
