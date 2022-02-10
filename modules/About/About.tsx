@@ -4,7 +4,7 @@ import { Section } from "@components/Section";
 import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
 import React, { FC } from "react";
-import { animated } from "react-spring";
+import { animated, useSpring } from "react-spring";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 
 interface Props {}
@@ -14,6 +14,7 @@ export const About: FC<Props> = () => {
     color: { grey400, blue600, whitePrimary, blackPrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
+  const [styles, api] = useSpring(() => ({ top: "18%", left: "12%" }));
 
   return (
     <animated.div style={fadeInStyle} ref={intersectionRef}>
@@ -104,11 +105,10 @@ export const About: FC<Props> = () => {
               </StyledList>
             </div>
             <StyledImageContainer className="desktop">
-              <div
+              <animated.div
                 style={{
+                  ...styles,
                   position: "absolute",
-                  top: "18%",
-                  left: "12%",
                   width: "100%",
                   height: "100%",
                   backgroundColor: blackPrimary,
@@ -116,7 +116,11 @@ export const About: FC<Props> = () => {
                   zIndex: 0,
                 }}
               />
-              <img src="./profile-pic.jpg" />
+              <img
+                src="./profile-pic.jpg"
+                onMouseEnter={() => api({ left: "15%", top: "20%" })}
+                onMouseLeave={() => api({ left: "12%", top: "18%" })}
+              />
             </StyledImageContainer>
           </div>
         </StyledContainer>
