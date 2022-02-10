@@ -26,4 +26,5 @@ export const LandingBackground: FC<Props> = ({}) => {
 const StyledHiThere = styled.h2`
   font-family: "Kanit";
   margin: 0;
+  color: ${(p) => p.theme.color.blackPrimary};
 `;

@@ -11,7 +11,7 @@ interface Props {}
 
 export const About: FC<Props> = () => {
   const {
-    color: { grey400, blue600, whitePrimary },
+    color: { grey400, blue600, whitePrimary, blackPrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
 
@@ -104,6 +104,18 @@ export const About: FC<Props> = () => {
               </StyledList>
             </div>
             <StyledImageContainer className="desktop">
+              <div
+                style={{
+                  position: "absolute",
+                  top: "18%",
+                  left: "12%",
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: blackPrimary,
+                  borderRadius: "4px",
+                  zIndex: 0,
+                }}
+              />
               <img src="./profile-pic.jpg" />
             </StyledImageContainer>
           </div>

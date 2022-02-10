@@ -35,7 +35,8 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledImageContainer = styled.div`
-  margin-left: 80px;
+  margin-left: 120px;
+  position: relative;
 
   img {
     object-fit: cover;
