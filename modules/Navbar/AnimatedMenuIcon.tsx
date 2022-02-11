@@ -25,7 +25,11 @@ export const AnimatedMenuIcon: FC<Props> = ({ isOpen, onClick }) => {
   });
 
   return (
-    <Button disableHover style={{ marginLeft: "0.5rem" }} onClick={onClick}>
+    <Button
+      disableHover
+      style={{ marginLeft: "20px", padding: 0 }}
+      onClick={onClick}
+    >
       <svg
         width="30"
         height="30"

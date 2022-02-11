@@ -1,11 +1,10 @@
-import { Button } from "@components/Button";
 import { useMediaQuery } from "@hooks/useMediaQuery";
+import { NavModal } from "@modules/Navbar/NavModal";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import React, { FC, useState } from "react";
-import { StyledNav, StyledNavInner } from "./styled";
-import { NavList } from "./NavList";
 import { AnimatedMenuIcon } from "./AnimatedMenuIcon";
-import { NavModal } from "@modules/Navbar/NavModal";
+import { NavList } from "./NavList";
+import { StyledNav, StyledNavInner } from "./styled";
 
 interface Props {}
 
