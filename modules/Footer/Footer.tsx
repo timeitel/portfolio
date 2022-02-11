@@ -9,6 +9,7 @@ import {
 import { GithubContainedIcon } from "common/components/Icons/GithubContainedIcon";
 import React, { FC } from "react";
 import { StyledFooter, StyledLinksContainer, StyledList } from "./styled";
+import { Link as ScrollLink } from "react-scroll";
 
 interface Props {}
 
@@ -24,13 +25,34 @@ export const Footer: FC<Props> = () => {
             <Link href="/">Home</Link>
           </ListItem>
           <ListItem>
-            <Link href="#about">About</Link>
+            <ScrollLink
+              smooth
+              offset={-100}
+              style={{ cursor: "pointer" }}
+              to="about"
+            >
+              About
+            </ScrollLink>
           </ListItem>
           <ListItem>
-            <Link href="#experience">Experience</Link>
+            <ScrollLink
+              smooth
+              offset={-50}
+              style={{ cursor: "pointer" }}
+              to="experience"
+            >
+              Experience
+            </ScrollLink>
           </ListItem>
           <ListItem>
-            <Link href="#portfolio">Portfolio</Link>
+            <ScrollLink
+              smooth
+              offset={-50}
+              style={{ cursor: "pointer" }}
+              to="portfolio"
+            >
+              Portfolio
+            </ScrollLink>
           </ListItem>
         </StyledList>
         <StyledList>

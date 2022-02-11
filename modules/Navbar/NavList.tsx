@@ -1,6 +1,7 @@
 import { SecondaryButton } from "@components/Button";
 import { ExternalLinkIcon } from "@components/Icons";
 import { Link } from "@components/Link";
+import { Link as ScrollLink } from "react-scroll";
 import { FC } from "react";
 import { StyledListItem, StyledList, StyledResumeListItem } from "./styled";
 
@@ -12,16 +13,44 @@ export const NavList: FC<Props> = ({ menuIsOpen }) => {
   return (
     <StyledList style={{ fontFamily: "Raleway" }}>
       <StyledListItem>
-        <a href="#about">About</a>
+        <ScrollLink
+          to="about"
+          smooth
+          offset={-100}
+          style={{ cursor: "pointer" }}
+        >
+          About
+        </ScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <a href="#experience">Experience</a>
+        <ScrollLink
+          to="experience"
+          smooth
+          offset={-50}
+          style={{ cursor: "pointer" }}
+        >
+          Experience
+        </ScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <a href="#portfolio">Portfolio</a>
+        <ScrollLink
+          to="portfolio"
+          smooth
+          offset={-50}
+          style={{ cursor: "pointer" }}
+        >
+          Portfolio
+        </ScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <a href="#contact">Contact</a>
+        <ScrollLink
+          to="contact"
+          smooth
+          offset={-50}
+          style={{ cursor: "pointer" }}
+        >
+          Contact
+        </ScrollLink>
       </StyledListItem>
       {!menuIsOpen && (
         <StyledResumeListItem>

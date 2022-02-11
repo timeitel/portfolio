@@ -12,7 +12,6 @@ import {
   Landing,
   Navbar,
   Portfolio,
-  Aside,
 } from "../modules";
 import { IJob, IProject } from "common/types";
 import ReactModal from "react-modal";
@@ -35,7 +34,6 @@ const Home: FC<Props> = ({ jobs, projects }) => {
         />
       </Head>
 
-      {/* <Aside /> */}
       <Navbar />
       <StyledContainer>
         <StyledMain>

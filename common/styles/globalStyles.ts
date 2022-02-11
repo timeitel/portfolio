@@ -7,8 +7,6 @@ export const globalStyles = (theme: ITheme) => css`
   body {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
   }
 
   *,
