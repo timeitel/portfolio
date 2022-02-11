@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { Dispatch, FC } from "react";
 import styled from "@emotion/styled";
 import { Jobs } from "../Jobs/Jobs";
 import { IJob } from "common/types";
@@ -10,9 +10,11 @@ import { animated } from "react-spring";
 
 interface Props {
   jobs: IJob[];
+  activeTab: number;
+  setActiveTab: Dispatch<React.SetStateAction<number>>;
 }
 
-export const Experience: FC<Props> = ({ jobs }) => {
+export const Experience: FC<Props> = ({ jobs, activeTab, setActiveTab }) => {
   const {
     color: { whitePrimary },
   } = useTheme();
@@ -30,7 +32,7 @@ export const Experience: FC<Props> = ({ jobs }) => {
               Where I've Worked
             </h3>
           </hgroup>
-          <Jobs jobs={jobs} />
+          <Jobs jobs={jobs} activeTab={activeTab} setActiveTab={setActiveTab} />
         </StyledContainer>
       </animated.div>
     </StyledSection>

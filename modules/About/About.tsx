@@ -3,21 +3,24 @@ import { List } from "@components/List";
 import { Section } from "@components/Section";
 import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
-import React, { FC } from "react";
+import React, { Dispatch, FC } from "react";
 import { scroller } from "react-scroll";
 import { animated, useSpring } from "react-spring";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 
-interface Props {}
+interface Props {
+  setActiveExpTab: Dispatch<React.SetStateAction<number>>;
+}
 
-export const About: FC<Props> = () => {
+export const About: FC<Props> = ({ setActiveExpTab }) => {
   const {
     color: { grey400, blue600, whitePrimary, blackPrimary },
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   const [styles, api] = useSpring(() => ({ top: "18%", left: "12%" }));
-  const scrollAndClose = (to: string, offset = -100) => {
+  const scrollAndSet = (to: string, offset = -100) => {
     scroller.scrollTo(to, { smooth: true, offset });
+    setActiveExpTab(0);
   };
 
   return (
@@ -51,7 +54,7 @@ export const About: FC<Props> = () => {
                 I'm currently working for{" "}
                 <span style={{ color: blue600 }}>
                   <Button
-                    onClick={() => scrollAndClose("experience")}
+                    onClick={() => scrollAndSet("experience")}
                     disableHover
                     style={{ padding: 0 }}
                   >

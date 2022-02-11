@@ -15,7 +15,7 @@ import { animated } from "react-spring";
 interface Props {}
 
 export const LandingSocials: FC<Props> = ({}) => {
-  const scrollAndClose = (to: string, offset = -100) => {
+  const scrollTo = (to: string, offset = -100) => {
     scroller.scrollTo(to, { smooth: true, offset });
   };
   const largeScreen = useMediaQuery({ min: "laptop" });
@@ -75,7 +75,7 @@ export const LandingSocials: FC<Props> = ({}) => {
 
       <StyledRightSocials largeScreen={largeScreen}>
         <animated.div style={thirdStyle}>
-          <Button disableHover onClick={() => scrollAndClose("about")}>
+          <Button disableHover onClick={() => scrollTo("about")}>
             <TriangleCtaIcon />
             <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
             <span>About{largeScreen && " me"}</span>

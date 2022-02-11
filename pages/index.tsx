@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import {
   About,
@@ -22,6 +22,7 @@ interface Props {
 }
 
 const Home: FC<Props> = ({ jobs, projects }) => {
+  const [activeExpTab, setActiveExpTab] = useState(0);
   useEffect(() => ReactModal.setAppElement("#__next"), []);
   return (
     <>
@@ -38,8 +39,12 @@ const Home: FC<Props> = ({ jobs, projects }) => {
       <StyledContainer>
         <StyledMain>
           <Landing />
-          <About />
-          <Experience jobs={jobs} />
+          <About setActiveExpTab={setActiveExpTab} />
+          <Experience
+            jobs={jobs}
+            activeTab={activeExpTab}
+            setActiveTab={setActiveExpTab}
+          />
           <Portfolio projects={projects} />
           <Contact />
         </StyledMain>

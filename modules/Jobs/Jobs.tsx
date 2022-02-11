@@ -1,14 +1,15 @@
 import { IJob } from "common/types";
-import React, { FC, useState } from "react";
+import React, { Dispatch, FC, useState } from "react";
 import { Job } from "./Job";
 import { StyledContainer, StyledTabList } from "./styled";
 
 interface Props {
   jobs: IJob[];
+  activeTab: number;
+  setActiveTab: Dispatch<React.SetStateAction<number>>;
 }
 
-export const Jobs: FC<Props> = ({ jobs }) => {
-  const [active, setActive] = useState(0);
+export const Jobs: FC<Props> = ({ jobs, activeTab, setActiveTab }) => {
   const companies = jobs.map((j) => j.company);
 
   return (
@@ -16,9 +17,9 @@ export const Jobs: FC<Props> = ({ jobs }) => {
       <StyledTabList className="styled-tablist">
         {companies.map((company, i) => (
           <li
-            onClick={() => setActive(i)}
+            onClick={() => setActiveTab(i)}
             key={company}
-            className={`tab${i === active ? " active" : ""}`}
+            className={`tab${i === activeTab ? " active" : ""}`}
           >
             {company}
           </li>
@@ -32,7 +33,7 @@ export const Jobs: FC<Props> = ({ jobs }) => {
           duties={duties}
           time={dates}
           key={i}
-          active={i === active}
+          active={i === activeTab}
         />
       ))}
     </StyledContainer>
