@@ -1,9 +1,10 @@
-import { Link } from "@components/Link";
+import { Button } from "@components/Button";
 import { List } from "@components/List";
 import { Section } from "@components/Section";
 import { useTheme } from "@emotion/react";
 import { useIntersectionFadeIn } from "@hooks";
 import React, { FC } from "react";
+import { scroller } from "react-scroll";
 import { animated, useSpring } from "react-spring";
 import { StyledContainer, StyledImageContainer, StyledList } from "./styled";
 
@@ -15,6 +16,9 @@ export const About: FC<Props> = () => {
   } = useTheme();
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   const [styles, api] = useSpring(() => ({ top: "18%", left: "12%" }));
+  const scrollAndClose = (to: string, offset = -100) => {
+    scroller.scrollTo(to, { smooth: true, offset });
+  };
 
   return (
     <animated.div style={fadeInStyle} ref={intersectionRef}>
@@ -46,7 +50,13 @@ export const About: FC<Props> = () => {
               <p style={{ marginTop: "0.5rem" }}>
                 I'm currently working for{" "}
                 <span style={{ color: blue600 }}>
-                  <Link href="#experience">Komo Digital Engagement</Link>
+                  <Button
+                    onClick={() => scrollAndClose("experience")}
+                    disableHover
+                    style={{ padding: 0 }}
+                  >
+                    Komo Digital Engagement
+                  </Button>
                 </span>{" "}
                 where I get to work on a range of technologies from full stack
                 .NET and React to Node microservices.
