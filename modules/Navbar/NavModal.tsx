@@ -1,42 +1,46 @@
 import { Button } from "@components/Button";
 import { Modal } from "@components/Modal";
 import styled from "@emotion/styled";
-import { Dispatch, FC } from "react";
+import { FC } from "react";
+import { scroller } from "react-scroll";
 
 interface Props {
   isOpen: boolean;
-  setIsOpen: Dispatch<React.SetStateAction<boolean>>;
+  onClose: () => void;
 }
 
-export const NavModal: FC<Props> = ({ isOpen, setIsOpen }) => {
+export const NavModal: FC<Props> = ({ isOpen, onClose }) => {
+  const scrollAndClose = (to: string, offset = -50) => {
+    scroller.scrollTo(to, { smooth: true, offset });
+  };
   return (
     <Modal
       isOpen={isOpen}
-      onClose={() => setIsOpen(false)}
+      onClose={onClose}
       modalStyles={{
         content: {
           backgroundColor: "black",
         },
       }}
     >
-      <StyledNavList onClick={() => setIsOpen(false)}>
+      <StyledNavList onClick={onClose}>
         <li>
-          <Button disableHover href="#about">
+          <Button disableHover onClick={() => scrollAndClose("about", -100)}>
             About
           </Button>
         </li>
         <li>
-          <Button disableHover href="#experience">
+          <Button disableHover onClick={() => scrollAndClose("experience")}>
             Experience
           </Button>
         </li>
         <li>
-          <Button disableHover href="#portfolio">
+          <Button disableHover onClick={() => scrollAndClose("portfolio")}>
             Portfolio
           </Button>
         </li>
         <li>
-          <Button disableHover href="#contact">
+          <Button disableHover onClick={() => scrollAndClose("contact")}>
             Contact
           </Button>
         </li>

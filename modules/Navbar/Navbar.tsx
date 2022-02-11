@@ -24,7 +24,7 @@ export const Navbar: FC<Props> = () => {
           />
         )}
       </StyledNavInner>
-      <NavModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <NavModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </StyledNav>
   );
 };
