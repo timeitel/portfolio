@@ -1,3 +1,4 @@
+import { Button } from "@components/Button";
 import {
   GithubContainedIcon,
   LinkedInContainedIcon,
@@ -8,11 +9,15 @@ import styled from "@emotion/styled";
 import { useFadeIn } from "@hooks";
 import { useMediaQuery } from "@hooks/useMediaQuery";
 import { FC } from "react";
+import { scroller } from "react-scroll";
 import { animated } from "react-spring";
 
 interface Props {}
 
 export const LandingSocials: FC<Props> = ({}) => {
+  const scrollAndClose = (to: string, offset = -100) => {
+    scroller.scrollTo(to, { smooth: true, offset });
+  };
   const largeScreen = useMediaQuery({ min: "laptop" });
   const {
     color: { whitePrimary, whiteSecondary },
@@ -70,11 +75,11 @@ export const LandingSocials: FC<Props> = ({}) => {
 
       <StyledRightSocials largeScreen={largeScreen}>
         <animated.div style={thirdStyle}>
-          <StyledLink href="#about">
+          <Button disableHover onClick={() => scrollAndClose("about")}>
             <TriangleCtaIcon />
             <span style={{ color: whitePrimary, margin: "0 0.5rem" }}>--</span>
             <span>About{largeScreen && " me"}</span>
-          </StyledLink>
+          </Button>
         </animated.div>
       </StyledRightSocials>
     </>
