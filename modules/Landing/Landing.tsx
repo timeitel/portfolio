@@ -1,3 +1,4 @@
+import { useElementSize } from "@hooks";
 import { useMediaQuery } from "@hooks/useMediaQuery";
 import React, { FC } from "react";
 import { LandingBackground } from "./LandingBackground";
@@ -10,13 +11,14 @@ interface Props {}
 
 export const Landing: FC<Props> = () => {
   const largeScreen = useMediaQuery({ min: "laptop" });
+  const [ref, { height }] = useElementSize();
   return (
-    <section style={{ height: "100vh", position: "relative" }}>
+    <section style={{ height: "100vh", position: "relative" }} ref={ref}>
       <Triangles />
       {largeScreen && <Rectangles />}
       <LandingBackground />
       <LandingForeground />
-      <LandingSocials />
+      {height > 700 && <LandingSocials />}
     </section>
   );
 };
