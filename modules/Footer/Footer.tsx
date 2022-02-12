@@ -24,8 +24,8 @@ export const Footer: FC<Props> = () => {
           justifyContent: "space-between",
         }}
       >
-        <p style={{ margin: "0 0 0.6125rem" }}>Perth, Western Australia</p>
-        <p style={{ margin: 0 }}>timeitel@outlook.com</p>
+        <p style={{ margin: "0 0 0.6125rem" }}>timeitel@outlook.com</p>
+        <p style={{ margin: 0 }}>Perth, Western Australia</p>
         <div style={{ marginTop: "auto" }}>
           <HtmlName>{"</Tim Eitel>"}</HtmlName>
         </div>
