@@ -23,6 +23,9 @@ interface Props {
 
 const Home: FC<Props> = ({ jobs, projects }) => {
   const [activeExpTab, setActiveExpTab] = useState(0);
+  if (typeof document === "undefined") {
+    React.useLayoutEffect = React.useEffect;
+  }
   useEffect(() => ReactModal.setAppElement("#__next"), []);
   return (
     <>
