@@ -14,10 +14,11 @@ import { animated } from "react-spring";
 
 interface Props {}
 
-export const LandingSocials: FC<Props> = ({}) => {
+export const LandingLinks: FC<Props> = ({}) => {
   const scrollTo = (to: string, offset = -100) => {
     scroller.scrollTo(to, { smooth: true, offset });
   };
+  const isDesktop = useMediaQuery({ min: "desktop" });
   const largeScreen = useMediaQuery({ min: "laptop" });
   const {
     color: { whitePrimary, whiteSecondary },
@@ -41,7 +42,7 @@ export const LandingSocials: FC<Props> = ({}) => {
 
   return (
     <>
-      <StyledLeftSocials largeScreen={largeScreen}>
+      <StyledLeftSocials largeScreen={largeScreen} isDesktop={isDesktop}>
         <animated.div style={secondStyle}>
           <StyledLink
             href="https://www.linkedin.com/in/tim-eitel/"
@@ -86,19 +87,22 @@ export const LandingSocials: FC<Props> = ({}) => {
   );
 };
 
-const StyledLeftSocials = styled.div<{ largeScreen: boolean }>`
+const StyledLeftSocials = styled.div<{
+  largeScreen: boolean;
+  isDesktop: boolean;
+}>`
   bottom: ${(p) => (p.largeScreen ? "16.5rem" : "10rem")};
   left: ${(p) => (p.largeScreen ? "-5rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);
-  position: ${(p) => (p.largeScreen ? "fixed" : "absolute")};
+  position: ${(p) => (p.isDesktop ? "fixed" : "absolute")};
   display: flex;
   align-items: center;
   z-index: 1;
 `;
 
 const StyledRightSocials = styled.div<{ largeScreen: boolean }>`
-  bottom: ${(p) => (p.largeScreen ? "11.75rem" : "10rem")};
+  bottom: ${(p) => (p.largeScreen ? "10.125rem" : "8rem")};
   right: ${(p) => (p.largeScreen ? "-0.5rem" : 0)};
   padding: 0.75rem 0;
   transform: rotate(-90deg);

@@ -3,7 +3,7 @@ import { useMediaQuery } from "@hooks/useMediaQuery";
 import React, { FC } from "react";
 import { LandingBackground } from "./LandingBackground";
 import { LandingForeground } from "./LandingForeground";
-import { LandingSocials } from "./LandingSocials";
+import { LandingLinks } from "./LandingSocials";
 import { Rectangles } from "./Rectangles";
 import { Triangles } from "./Triangles";
 
@@ -18,7 +18,7 @@ export const Landing: FC<Props> = () => {
       {largeScreen && <Rectangles />}
       <LandingBackground />
       <LandingForeground />
-      {height > 700 && <LandingSocials />}
+      {height > 700 && <LandingLinks />}
     </section>
   );
 };
