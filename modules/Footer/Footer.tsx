@@ -1,5 +1,6 @@
 import { Link } from "@components/Link";
 import { ListItem } from "@components/List";
+import { useMediaQuery } from "@hooks/useMediaQuery";
 import { SecondaryButton } from "common/components/Button";
 import { HtmlName } from "common/components/HtmlName/HtmlName";
 import {
@@ -8,12 +9,13 @@ import {
 } from "common/components/Icons";
 import { GithubContainedIcon } from "common/components/Icons/GithubContainedIcon";
 import React, { FC } from "react";
-import { StyledFooter, StyledLinksContainer, StyledList } from "./styled";
 import { Link as ScrollLink } from "react-scroll";
+import { StyledFooter, StyledLinksContainer, StyledList } from "./styled";
 
 interface Props {}
 
 export const Footer: FC<Props> = () => {
+  const isMobile = useMediaQuery({ max: "tablet" });
   return (
     <StyledFooter style={{ fontFamily: "Raleway" }}>
       <div
@@ -21,11 +23,12 @@ export const Footer: FC<Props> = () => {
           alignSelf: "stretch",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
         }}
       >
         <p style={{ margin: "0 0 0.6125rem" }}>timeitel@outlook.com</p>
-        <p style={{ margin: 0 }}>Perth, Western Australia</p>
+        <p style={{ margin: isMobile ? "0 0 1.2rem" : "0 0 0.6125rem" }}>
+          Perth, Western Australia
+        </p>
         <div style={{ marginTop: "auto" }}>
           <HtmlName>{"</Tim Eitel>"}</HtmlName>
         </div>
