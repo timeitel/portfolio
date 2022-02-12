@@ -51,16 +51,14 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
                 applications.
               </p>
               <p style={{ marginTop: "0.5rem" }}>
-                I'm currently working for{" "}
-                <span style={{ color: blue600 }}>
-                  <Button
-                    onClick={() => scrollAndSet("experience")}
-                    disableHover
-                    style={{ padding: 0 }}
-                  >
-                    Komo Digital Engagement
-                  </Button>
-                </span>{" "}
+                I'm currently working for
+                <span
+                  style={{ color: blue600 }}
+                  onClick={() => scrollAndSet("experience")}
+                >
+                  {" "}
+                  Komo Digital Engagement{" "}
+                </span>
                 where I get to work on a range of technologies from full stack
                 .NET and React to Node microservices.
               </p>
