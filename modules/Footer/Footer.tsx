@@ -15,12 +15,23 @@ interface Props {}
 
 export const Footer: FC<Props> = () => {
   return (
-    <StyledFooter>
-      <div>
-        <HtmlName>{"</Tim Eitel>"}</HtmlName>
+    <StyledFooter style={{ fontFamily: "Raleway" }}>
+      <div
+        style={{
+          alignSelf: "stretch",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <p style={{ margin: "0 0 0.6125rem" }}>Perth, Western Australia</p>
+        <p style={{ margin: 0 }}>timeitel@outlook.com</p>
+        <div style={{ marginTop: "auto" }}>
+          <HtmlName>{"</Tim Eitel>"}</HtmlName>
+        </div>
       </div>
       <StyledLinksContainer>
-        <StyledList style={{ marginRight: "5rem", fontFamily: "Raleway" }}>
+        <StyledList style={{ marginRight: "5rem" }}>
           <ListItem>
             <Link href="/">Home</Link>
           </ListItem>
