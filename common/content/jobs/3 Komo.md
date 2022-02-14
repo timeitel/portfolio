@@ -1,5 +1,5 @@
 ---
-title: Junior Software Developer
+title: Software Developer
 company: Komo Digital Engagement
 dates: Jan 2021 - Present
 ---
