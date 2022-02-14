@@ -53,7 +53,7 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
               <p style={{ marginTop: "0.5rem" }}>
                 I'm currently working for
                 <span
-                  style={{ color: blue600 }}
+                  style={{ color: blue600, cursor: "pointer" }}
                   onClick={() => scrollAndSet("experience")}
                 >
                   {" "}
