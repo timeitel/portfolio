@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"timeitel.com\" >> out/CNAME",
+    "build": "next build && next export",
     "start": "next start",
     "tsc": "tsc --pretty --noEmit"
   },
