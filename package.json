@@ -8,6 +8,7 @@
     "start": "next start",
     "tsc": "tsc --pretty --noEmit"
   },
+  "homepage": "/software_portfolio_website",
   "dependencies": {
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.7.1",
