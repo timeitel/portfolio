@@ -69,7 +69,7 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
               <h6
                 style={{
                   color: grey400,
-                  margin: "0.5rem 0 0",
+                  margin: "1rem 0 0",
                   fontSize: "1rem",
                   fontWeight: 600,
                 }}
@@ -79,14 +79,28 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
               <List className="list">
                 <li>HTML & CSS</li>
                 <li>.NET & C#</li>
-                <li>JavaScript & React</li>
+                <li>JavaScript</li>
+                <li>React</li>
+              </List>
+              <h6
+                style={{
+                  color: grey400,
+                  margin: "1rem 0 0",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                }}
+              >
+                Native (Mobile, Desktop)
+              </h6>
+              <List className="list">
+                <li>Dart</li>
                 <li>Flutter</li>
               </List>
               <h6
                 style={{
                   color: grey400,
                   fontWeight: 600,
-                  margin: "0.5rem 0 0",
+                  margin: "1rem 0 0",
                   fontSize: "1rem",
                 }}
               >
@@ -101,7 +115,7 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
                 style={{
                   color: grey400,
                   fontWeight: 600,
-                  margin: "0.5rem 0 0",
+                  margin: "1rem 0 0",
                   fontSize: "1rem",
                 }}
               >
