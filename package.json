@@ -6,8 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "tsc": "tsc --pretty --noEmit",
-    "build": "next build && next export",
-    "deploy": "npm run build && gsutil rsync out gs://software_portfolio_website"
+    "build": "next build && next export"
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",

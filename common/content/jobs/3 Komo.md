@@ -1,7 +1,7 @@
 ---
 title: Software Developer
-company: Komo Digital Engagement
-dates: Jan 2021 - Present
+company: Komo Technologies
+dates: Jan 2021 - Dec 2022
 ---
 
 - Full-stack web development using React, .Net, Node, and PostgreSQL.

@@ -15,9 +15,7 @@ interface Props {
 }
 
 export const Experience: FC<Props> = ({ jobs, activeTab, setActiveTab }) => {
-  const {
-    color: { whitePrimary },
-  } = useTheme();
+  const { whitePrimary } = useTheme().color;
   const { fadeInStyle, intersectionRef } = useIntersectionFadeIn();
   return (
     <StyledSection

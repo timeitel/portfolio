@@ -1,5 +1,5 @@
 import { IJob } from "common/types";
-import React, { Dispatch, FC, useState } from "react";
+import React, { Dispatch, FC } from "react";
 import { Job } from "./Job";
 import { StyledContainer, StyledTabList } from "./styled";
 

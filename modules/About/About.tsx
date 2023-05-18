@@ -46,21 +46,20 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
           >
             <div style={{ maxWidth: "550px" }}>
               <p style={{ marginTop: 0 }}>
-                Hi, my name's Tim. I'm a software developer based in Perth, WA
-                and I enjoy building interesting software for all platforms and
-                applications.
+                Hi, my name's Tim. I'm a software developer based in Melbourne,
+                VIC and I enjoy building interesting software for all platforms
+                and applications.
               </p>
               <p style={{ marginTop: "0.5rem" }}>
-                I'm currently working for
+                I'm currently working for{" "}
                 <span
                   style={{ color: blue600, cursor: "pointer" }}
                   onClick={() => scrollAndSet("experience")}
                 >
-                  {" "}
-                  Komo Digital Engagement{" "}
+                  News Corp{" "}
                 </span>
-                where I get to work on a range of technologies from full stack
-                .NET and React to Node microservices.
+                where I get to work on a range of technologies from React and
+                Node to GCP and SQL.
               </p>
               <p style={{ marginTop: "0.5rem" }}>
                 I'm flexible with what tech I use, but here's what I've been
@@ -93,8 +92,8 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
                 Native (Mobile, Desktop)
               </h6>
               <List className="list">
-                <li>Dart</li>
-                <li>Flutter</li>
+                <li>Rust</li>
+                <li>Bevy</li>
               </List>
               <h6
                 style={{
