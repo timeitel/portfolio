@@ -78,7 +78,7 @@ export const About: FC<Props> = ({ setActiveExpTab }) => {
               <List className="list">
                 <li>HTML & CSS</li>
                 <li>.NET & C#</li>
-                <li>JavaScript</li>
+                <li>JavaScript / TypeScript</li>
                 <li>React</li>
               </List>
               <h6

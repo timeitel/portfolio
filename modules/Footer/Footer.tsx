@@ -15,7 +15,6 @@ import { StyledFooter, StyledLinksContainer, StyledList } from "./styled";
 interface Props {}
 
 export const Footer: FC<Props> = () => {
-  const isMobile = useMediaQuery({ max: "tablet" });
   return (
     <StyledFooter style={{ fontFamily: "Raleway" }}>
       <div
@@ -25,10 +24,6 @@ export const Footer: FC<Props> = () => {
           flexDirection: "column",
         }}
       >
-        <p style={{ margin: "0 0 0.6125rem" }}>timeitel@outlook.com</p>
-        <p style={{ margin: isMobile ? "0 0 1.2rem" : "0 0 0.6125rem" }}>
-          Perth, Western Australia
-        </p>
         <div style={{ marginTop: "auto" }}>
           <HtmlName>{"</Tim Eitel>"}</HtmlName>
         </div>
